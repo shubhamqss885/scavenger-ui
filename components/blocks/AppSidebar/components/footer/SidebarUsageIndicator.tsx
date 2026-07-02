@@ -78,8 +78,8 @@ export const SidebarUsageIndicator = ({
               )}
             >
               <span
-                className={fillColor}
-                style={{ width: `${percent}%`, display: "block" }}
+                className={cn("block", fillColor)}
+                style={{ width: `${percent}%` }}
               />
             </span>
           </Button>
@@ -123,8 +123,8 @@ export const SidebarUsageIndicator = ({
         )}
       >
         <span
-          className={fillColor}
-          style={{ width: `${percent}%`, display: "block" }}
+          className={cn("block", fillColor)}
+          style={{ width: `${percent}%` }}
         />
       </span>
     </Button>

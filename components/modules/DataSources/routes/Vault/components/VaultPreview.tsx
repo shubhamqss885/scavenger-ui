@@ -5,8 +5,7 @@ import { Icon } from "@/components/ui/icon";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import LazyCodeHighlighter from "@/components/ui/lazy-code-highlighter";
 import { useTranslation } from "@/lib/i18n/client";
 import { useVault } from "../context/VaultContext";
 
@@ -48,9 +47,9 @@ const GoldenQueryPreview = ({
               {copyLabel}
             </Button>
           </div>
-          <SyntaxHighlighter
+          <LazyCodeHighlighter
             language="sql"
-            style={vscDarkPlus}
+            styleName="vscDarkPlus"
             customStyle={{
               margin: 0,
               padding: "1rem",
@@ -59,7 +58,7 @@ const GoldenQueryPreview = ({
             }}
           >
             {sql}
-          </SyntaxHighlighter>
+          </LazyCodeHighlighter>
         </div>
       )}
       {resultSummary && (

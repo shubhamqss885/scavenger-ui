@@ -8,8 +8,7 @@ import { useTranslation } from "@/lib/i18n/client";
 import { cn } from "@/lib/utils";
 import { H4, P } from "@/components/ui/typography";
 import { format } from "sql-formatter";
-import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+import LazyCodeHighlighter from "@/components/ui/lazy-code-highlighter";
 import {
   ValidateSqlExampleResponse,
   OrgDbExample,
@@ -214,9 +213,9 @@ export const ExampleCard = ({
                 </Button>
               </div>
               <div className="rounded-md bg-gray-100 p-3">
-                <SyntaxHighlighter
+                <LazyCodeHighlighter
                   language="sql"
-                  style={coy}
+                  styleName="coy"
                   customStyle={{
                     backgroundColor: "transparent",
                     margin: 0,
@@ -229,7 +228,7 @@ export const ExampleCard = ({
                   }}
                 >
                   {formattedSql}
-                </SyntaxHighlighter>
+                </LazyCodeHighlighter>
               </div>
               {validationResult && (
                 <div

@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect, useMemo } from "react";
-import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+import LazyCodeHighlighter from "@/components/ui/lazy-code-highlighter";
 import { cn } from "@/lib/utils";
 import { Icon } from "@/components/ui/icon";
 import { Button } from "@/components/ui/button";
@@ -45,9 +44,9 @@ export const SqlTabContent = ({ sql }: SqlTabContentProps) => {
         >
           <Icon name={copied ? "Check" : "Copy"} size="xs" />
         </Button>
-        <SyntaxHighlighter
+        <LazyCodeHighlighter
           language="sql"
-          style={coy}
+          styleName="coy"
           customStyle={{
             backgroundColor: "transparent",
             margin: 0,
@@ -65,7 +64,7 @@ export const SqlTabContent = ({ sql }: SqlTabContentProps) => {
           wrapLongLines
         >
           {formattedSql}
-        </SyntaxHighlighter>
+        </LazyCodeHighlighter>
       </div>
     </div>
   );

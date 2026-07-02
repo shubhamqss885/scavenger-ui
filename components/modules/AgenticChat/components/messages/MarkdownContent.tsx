@@ -1,8 +1,7 @@
 import React from "react";
 import ReactMarkdown, { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+import LazyCodeHighlighter from "@/components/ui/lazy-code-highlighter";
 import { PluggableList } from "unified";
 import { cn } from "@/lib/utils";
 import { formatSql } from "../../utils";
@@ -45,9 +44,9 @@ const MARKDOWN_COMPONENTS: Components = {
       const raw = String(children).replace(/\n$/, "");
       const code = language === "sql" ? formatSql(raw) : raw;
       return (
-        <SyntaxHighlighter
+        <LazyCodeHighlighter
           language={language}
-          style={coy}
+          styleName="coy"
           customStyle={{
             backgroundColor: "transparent",
             margin: 0,
@@ -64,7 +63,7 @@ const MARKDOWN_COMPONENTS: Components = {
           wrapLongLines
         >
           {code}
-        </SyntaxHighlighter>
+        </LazyCodeHighlighter>
       );
     }
     // Block code (multiline) — minimal styling, pre wrapper handles the rest

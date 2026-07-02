@@ -23,7 +23,13 @@ import {
 import { useUIState } from "@/lib/context/UIStateContext";
 import { usePathname } from "next/navigation";
 import { useTransitionRouter } from "next-view-transitions";
-import { useState, useMemo, useEffect, useCallback } from "react";
+import {
+  useState,
+  useMemo,
+  useEffect,
+  useCallback,
+  useDeferredValue,
+} from "react";
 import { useTranslation } from "@/lib/i18n/client";
 import { toUtcMs } from "@/lib/utils/date";
 import { toast } from "sonner";
@@ -69,19 +75,10 @@ import {
   CollapsedCtaItem,
   CollapsedActionItem,
 } from "./components/shared/SidebarActions";
+import DashboardsSection from "./components/sections/DashboardsSection";
+import GroupsSection from "./components/sections/GroupsSection";
+import DatabasesSection from "./components/sections/DatabasesSection";
 import { convertProjectToGroup } from "@/lib/services/projectService";
-
-// --- Constants (hoisted to module level) ---
-
-const INGEST_STATUS_MAP: Record<
-  string,
-  "connected" | "connecting" | "not_connected"
-> = {
-  COMPLETED: "connected",
-  IN_PROGRESS: "connecting",
-  FAILED: "not_connected",
-  NOT_STARTED: "not_connected",
-};
 
 // --- Main Component ---
 
@@ -155,6 +152,9 @@ export const AppSidebar = () => {
   const [searchScope, setSearchScope] = useState<
     "chats" | "data" | "dashboards" | "groups" | null
   >(null);
+  // Filtering reads the deferred value so typing stays responsive on large
+  // orgs; the input itself still shows `searchQuery` (instant feedback).
+  const deferredSearchQuery = useDeferredValue(searchQuery);
   const [activityKey, setActivityKey] = useState(0);
   const [clickedCta, setClickedCta] = useState<"chat" | "data" | null>(null);
   const [collapsedSections, setCollapsedSections] = useState<
@@ -546,30 +546,31 @@ export const AppSidebar = () => {
   );
 
   const filteredProjects = useMemo(() => {
-    if (!searchQuery || searchScope !== "chats") return sortedProjects;
-    const q = searchQuery.toLowerCase();
+    if (!deferredSearchQuery || searchScope !== "chats") return sortedProjects;
+    const q = deferredSearchQuery.toLowerCase();
     return sortedProjects.filter((p) =>
       (p.project_name || "").toLowerCase().includes(q),
     );
-  }, [sortedProjects, searchQuery, searchScope]);
+  }, [sortedProjects, deferredSearchQuery, searchScope]);
 
   const filteredDashboards = useMemo(() => {
-    if (!searchQuery || searchScope !== "dashboards") return sortedDashboards;
-    const q = searchQuery.toLowerCase();
+    if (!deferredSearchQuery || searchScope !== "dashboards")
+      return sortedDashboards;
+    const q = deferredSearchQuery.toLowerCase();
     return sortedDashboards.filter((d) =>
       (d.name || "").toLowerCase().includes(q),
     );
-  }, [sortedDashboards, searchQuery, searchScope]);
+  }, [sortedDashboards, deferredSearchQuery, searchScope]);
 
   const filteredDatabases = useMemo(() => {
-    if (!searchQuery || searchScope !== "data") return sortedDatabases;
-    const q = searchQuery.toLowerCase();
+    if (!deferredSearchQuery || searchScope !== "data") return sortedDatabases;
+    const q = deferredSearchQuery.toLowerCase();
     return sortedDatabases.filter((db) =>
       (db.display_name || db.orgdb_name_decrypted || "")
         .toLowerCase()
         .includes(q),
     );
-  }, [sortedDatabases, searchQuery, searchScope]);
+  }, [sortedDatabases, deferredSearchQuery, searchScope]);
 
   const sortedGroups = useMemo(
     () =>
@@ -582,12 +583,12 @@ export const AppSidebar = () => {
   );
 
   const filteredGroups = useMemo(() => {
-    if (!searchQuery || searchScope !== "groups") return sortedGroups;
-    const q = searchQuery.toLowerCase();
+    if (!deferredSearchQuery || searchScope !== "groups") return sortedGroups;
+    const q = deferredSearchQuery.toLowerCase();
     return sortedGroups.filter((g) =>
       (g.group_name || "").toLowerCase().includes(q),
     );
-  }, [sortedGroups, searchQuery, searchScope]);
+  }, [sortedGroups, deferredSearchQuery, searchScope]);
 
   // --- Collapsed Sidebar ---
 
@@ -751,50 +752,25 @@ export const AppSidebar = () => {
 
         {/* Dashboards */}
         {ORG_DASHBOARD_ENABLED && (
-          <SidebarContentCollapsibleGroup
-            title={t("sidebar.dashboards.title", "Dashboards")}
-            icon="PieChart"
+          <DashboardsSection
+            dashboards={filteredDashboards}
+            pathname={pathname}
+            editEnabled={EDIT_DASHBOARDS_ENABLED}
+            renamingDashId={renamingDashId}
+            renameDashValue={renameDashValue}
+            onRenameChange={setRenameDashValue}
+            onRenameSubmit={submitRenameDash}
+            onRenameCancel={cancelRenameDash}
+            onRenameStart={startRenameDash}
+            onDelete={handleDeleteDashboard}
             searchActive={searchScope === "dashboards"}
-            searchQuery={searchQuery}
+            searchQuery={searchScope === "dashboards" ? searchQuery : ""}
             onSearchChange={setSearchQuery}
-            onSearchClick={() => handleSearchClick("dashboards")}
+            onSearchClick={handleSearchClick}
             onSearchClear={clearSearch}
-            searchPlaceholder={t("sidebar.search.placeholder", "Search...")}
             collapsed={collapsedSections["dashboards"] ?? false}
-            onToggleCollapse={() => toggleSection("dashboards")}
-          >
-            {filteredDashboards.map((d) => (
-              <SidebarLinkItem
-                key={d.dashboard_id}
-                href={`/dashboard/${d.dashboard_id}`}
-                label={d.name}
-                active={pathname === `/dashboard/${d.dashboard_id}`}
-                isRenaming={renamingDashId === d.dashboard_id}
-                renameValue={
-                  renamingDashId === d.dashboard_id ? renameDashValue : ""
-                }
-                onRenameChange={setRenameDashValue}
-                onRenameSubmit={() => submitRenameDash(d.dashboard_id, d.name)}
-                onRenameCancel={cancelRenameDash}
-                actions={
-                  EDIT_DASHBOARDS_ENABLED
-                    ? [
-                        {
-                          label: t("sidebar.projectActions.rename", "Rename"),
-                          onClick: () =>
-                            startRenameDash(d.dashboard_id, d.name),
-                        },
-                        {
-                          label: t("sidebar.projectActions.delete", "Delete"),
-                          onClick: () => handleDeleteDashboard(d.dashboard_id),
-                          variant: "destructive" as const,
-                        },
-                      ]
-                    : undefined
-                }
-              />
-            ))}
-          </SidebarContentCollapsibleGroup>
+            onToggleCollapse={toggleSection}
+          />
         )}
 
         {/* Chats */}
@@ -891,151 +867,49 @@ export const AppSidebar = () => {
 
         {/* Groups */}
         {VIEW_GROUPS_ENABLED && (
-          <SidebarContentCollapsibleGroup
-            title={t("sidebar.groups.title", "Groups")}
-            icon="Users"
-            badge={
-              <Badge variant="secondary" className="px-1 py-0 text-[9px]">
-                Beta
-              </Badge>
-            }
+          <GroupsSection
+            groups={filteredGroups}
+            pathname={pathname}
+            renamingGroupId={renamingGroupId}
+            renameGroupValue={renameGroupValue}
+            onRenameChange={setRenameGroupValue}
+            onRenameSubmit={submitRenameGroup}
+            onRenameCancel={cancelRenameGroup}
+            onRenameStart={startRenameGroup}
+            onDelete={setDeletingGroupId}
             searchActive={searchScope === "groups"}
-            searchQuery={searchQuery}
+            searchQuery={searchScope === "groups" ? searchQuery : ""}
             onSearchChange={setSearchQuery}
-            onSearchClick={() => handleSearchClick("groups")}
+            onSearchClick={handleSearchClick}
             onSearchClear={clearSearch}
-            searchPlaceholder={t("sidebar.search.placeholder", "Search...")}
             collapsed={collapsedSections["groups"] ?? false}
-            onToggleCollapse={() => toggleSection("groups")}
-          >
-            {filteredGroups.map((g) => (
-              <SidebarLinkItem
-                key={g.group_id}
-                href={`/groups/${g.group_id}`}
-                label={g.group_name}
-                active={pathname.startsWith(`/groups/${g.group_id}`)}
-                isRenaming={renamingGroupId === g.group_id}
-                renameValue={
-                  renamingGroupId === g.group_id ? renameGroupValue : ""
-                }
-                onRenameChange={setRenameGroupValue}
-                onRenameSubmit={() =>
-                  submitRenameGroup(g.group_id, g.group_name)
-                }
-                onRenameCancel={cancelRenameGroup}
-                actions={
-                  g.user_role === "admin"
-                    ? [
-                        {
-                          label: t("sidebar.projectActions.rename", "Rename"),
-                          onClick: () =>
-                            startRenameGroup(g.group_id, g.group_name),
-                        },
-                        {
-                          label: t("sidebar.projectActions.delete", "Delete"),
-                          onClick: () => setDeletingGroupId(g.group_id),
-                          variant: "destructive" as const,
-                        },
-                      ]
-                    : undefined
-                }
-              />
-            ))}
-          </SidebarContentCollapsibleGroup>
+            onToggleCollapse={toggleSection}
+          />
         )}
 
         {/* Data */}
         {VIEW_DATABASES_ENABLED && (
-          <div data-tour="datasources-section">
-            <SidebarContentCollapsibleGroup
-              title={t("sidebar.data.title", "Data")}
-              icon="Database"
-              searchActive={searchScope === "data"}
-              searchQuery={searchQuery}
-              onSearchChange={setSearchQuery}
-              onSearchClick={() => handleSearchClick("data")}
-              onSearchClear={clearSearch}
-              searchPlaceholder={t("sidebar.search.placeholder", "Search...")}
-              collapsed={collapsedSections["data"] ?? false}
-              onToggleCollapse={() => toggleSection("data")}
-            >
-              {filteredDatabases.map((db) => {
-                const dbStatus = db.has_data_source
-                  ? INGEST_STATUS_MAP[db.unified_status]
-                  : db.is_connected
-                    ? "connected"
-                    : "not_connected";
-                return (
-                  <SidebarLinkItem
-                    key={db.orgdb_id}
-                    href={`/data-sources/${db.orgdb_id}/data`}
-                    label={
-                      db.display_name || db.orgdb_name_decrypted || "Database"
-                    }
-                    active={pathname.startsWith(`/data-sources/${db.orgdb_id}`)}
-                    badge={db.is_default ? "default" : undefined}
-                    status={dbStatus}
-                    statusLabel={t(`sidebar.dataSources.status.${dbStatus}`)}
-                    isRenaming={renamingDbId === db.orgdb_id}
-                    renameValue={
-                      renamingDbId === db.orgdb_id ? renameDbValue : ""
-                    }
-                    onRenameChange={setRenameDbValue}
-                    onRenameSubmit={() =>
-                      submitRenameDb(
-                        db.orgdb_id,
-                        db.display_name || db.orgdb_name_decrypted || "",
-                      )
-                    }
-                    onRenameCancel={cancelRenameDb}
-                    actions={
-                      IS_DEMO_MODE
-                        ? undefined
-                        : [
-                            ...(db.is_default
-                              ? []
-                              : [
-                                  {
-                                    label: t(
-                                      "sidebar.dataSources.actions.setDefault",
-                                      "Set as default",
-                                    ),
-                                    onClick: () =>
-                                      setDefaultDatabase(db.orgdb_id),
-                                  },
-                                ]),
-                            ...(EDIT_DATASOURCES_ENABLED
-                              ? [
-                                  {
-                                    label: t(
-                                      "sidebar.dataSources.actions.rename",
-                                      "Rename",
-                                    ),
-                                    onClick: () =>
-                                      startRenameDb(
-                                        db.orgdb_id,
-                                        db.display_name ||
-                                          db.orgdb_name_decrypted ||
-                                          "",
-                                      ),
-                                  },
-                                ]
-                              : []),
-                            {
-                              label: t(
-                                "sidebar.dataSources.actions.delete",
-                                "Delete",
-                              ),
-                              onClick: () => handleDeleteDb(db.orgdb_id),
-                              variant: "destructive" as const,
-                            },
-                          ]
-                    }
-                  />
-                );
-              })}
-            </SidebarContentCollapsibleGroup>
-          </div>
+          <DatabasesSection
+            databases={filteredDatabases}
+            pathname={pathname}
+            demoMode={IS_DEMO_MODE}
+            editEnabled={EDIT_DATASOURCES_ENABLED}
+            renamingDbId={renamingDbId}
+            renameDbValue={renameDbValue}
+            onRenameChange={setRenameDbValue}
+            onRenameSubmit={submitRenameDb}
+            onRenameCancel={cancelRenameDb}
+            onRenameStart={startRenameDb}
+            onSetDefault={setDefaultDatabase}
+            onDelete={handleDeleteDb}
+            searchActive={searchScope === "data"}
+            searchQuery={searchScope === "data" ? searchQuery : ""}
+            onSearchChange={setSearchQuery}
+            onSearchClick={handleSearchClick}
+            onSearchClear={clearSearch}
+            collapsed={collapsedSections["data"] ?? false}
+            onToggleCollapse={toggleSection}
+          />
         )}
       </SidebarContent>
 

@@ -7,10 +7,12 @@ import AgenticInputBar from "./AgenticInputBar";
 import NotifyMeBanner from "./NotifyMeBanner";
 import ToggleSidebar from "@/components/blocks/ToggleSidebar";
 import ConvertToGroupButton from "./ConvertToGroupButton";
-import AgenticMessageList from "../messages/AgenticMessageList";
+import AgenticMessageList, {
+  type AgenticMessageListHandle,
+} from "../messages/AgenticMessageList";
+import RotatingStatus from "../messages/RotatingStatus";
 import { useContextSelector } from "use-context-selector";
 import { AgenticChatContext } from "../../AgenticChatContext";
-import { useScrollToBottom } from "../../hooks/useScrollToBottom";
 import { useTranslation } from "@/lib/i18n/client";
 import { Icon } from "@/components/ui/icon";
 import { AnimatedBorderButton } from "@/components/ui/animated-border-button";
@@ -66,11 +68,14 @@ const AgenticChatLayout = ({
   const [barCollapsed, setBarCollapsed] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const { containerRef, endRef, isAtBottom, scrollToBottom } =
-    useScrollToBottom({
-      enabled: !isLoadingHistory,
-      active: isStreaming,
-    });
+  // Virtualized message list now owns scrolling (react-virtuoso). We keep the
+  // scroll-to-bottom button and input-bar-collapse behaviour by driving them
+  // off the list's at-bottom callback + onScroll, and calling into its handle.
+  const listRef = useRef<AgenticMessageListHandle>(null);
+  const [isAtBottom, setIsAtBottom] = useState(true);
+  const scrollToBottom = useCallback(() => {
+    listRef.current?.scrollToBottom();
+  }, []);
 
   // Stable handler so AgentMessage's React.memo isn't broken by a fresh inline
   // function on every layout re-render (setters are stable, so deps are empty).
@@ -122,16 +127,15 @@ const AgenticChatLayout = ({
   }, [pendingClarification]);
 
   // Collapse on scroll — but not while a clarification is active
-  const handleScroll = useCallback(() => {
-    const el = containerRef.current;
+  const handleScroll = useCallback(
+    (scrollTop: number) => {
+      const delta = scrollTop - lastScrollTop.current;
 
-    if (!el) return;
-    const scrollTop = el.scrollTop;
-    const delta = scrollTop - lastScrollTop.current;
-
-    if (Math.abs(delta) > 5 && !pendingClarification) setBarCollapsed(true);
-    lastScrollTop.current = scrollTop;
-  }, [pendingClarification, containerRef]);
+      if (Math.abs(delta) > 5 && !pendingClarification) setBarCollapsed(true);
+      lastScrollTop.current = scrollTop;
+    },
+    [pendingClarification],
+  );
 
   const spacerHeight = !pendingClarification
     ? "h-24"
@@ -155,22 +159,30 @@ const AgenticChatLayout = ({
       <NotifyMeBanner />
 
       {/* Messages — full height, scrolls beneath input bar */}
-      <div
-        ref={containerRef}
-        onScroll={handleScroll}
-        className="flex-1 overflow-y-auto"
-      >
-        <div className="mx-auto max-w-4xl px-3 pb-4 pt-14 sidebar-breakpoint:pt-4">
-          {emptyHint && !hasMessages && !isLoadingHistory && (
-            <div className="flex min-h-[40vh] items-center justify-center px-4">
-              <p className="max-w-md text-center text-sm text-muted-foreground">
-                {emptyHint}
-              </p>
-            </div>
-          )}
-          <AgenticMessageList onSqlBlockClick={handleSqlBlockClick} />
-          <div ref={endRef} className={spacerHeight} />
-        </div>
+      <div className="relative min-h-0 flex-1">
+        {!hasMessages ? (
+          <div className="mx-auto max-w-4xl px-3 pt-14 sidebar-breakpoint:pt-4">
+            {isLoadingHistory ? (
+              <div className="flex min-h-[40vh] items-center justify-center">
+                <RotatingStatus active statusMessage="loading" />
+              </div>
+            ) : emptyHint ? (
+              <div className="flex min-h-[40vh] items-center justify-center px-4">
+                <p className="max-w-md text-center text-sm text-muted-foreground">
+                  {emptyHint}
+                </p>
+              </div>
+            ) : null}
+          </div>
+        ) : (
+          <AgenticMessageList
+            ref={listRef}
+            onSqlBlockClick={handleSqlBlockClick}
+            onAtBottomStateChange={setIsAtBottom}
+            onScroll={handleScroll}
+            spacerClass={spacerHeight}
+          />
+        )}
       </div>
 
       {/* Input bar — pinned to bottom */}

@@ -92,6 +92,7 @@ export const EventsProvider = ({ children }: EventsProviderProps) => {
     const eventsUrl = `${wsBaseUrl}/llm/notifications/stream`;
     let socket: WebSocket | null = null;
     let reconnectTimeout: ReturnType<typeof setTimeout> | null = null;
+    let reconnectAttempts = 0;
     let isUnmounted = false;
 
     const connect = () => {
@@ -101,6 +102,9 @@ export const EventsProvider = ({ children }: EventsProviderProps) => {
 
       socket.onopen = () => {
         if (isUnmounted) return;
+        // Connected successfully — reset the backoff so the next drop starts
+        // from a short delay again.
+        reconnectAttempts = 0;
         // Authenticate
         socket?.send(JSON.stringify({ auth_token: token }));
       };
@@ -191,8 +195,15 @@ export const EventsProvider = ({ children }: EventsProviderProps) => {
 
       socket.onclose = () => {
         if (isUnmounted) return;
-        // Reconnect after 5 seconds
-        reconnectTimeout = setTimeout(connect, 5000);
+        // Don't reconnect while the tab is backgrounded — the visibilitychange
+        // handler kicks a fresh attempt when the user returns. This stops a
+        // dead endpoint from being hammered every few seconds in the background.
+        if (typeof document !== "undefined" && document.hidden) return;
+        // Exponential backoff with jitter, capped at 30s (was a fixed 5s loop).
+        const delay =
+          Math.min(30000, 1000 * 2 ** reconnectAttempts) + Math.random() * 1000;
+        reconnectAttempts += 1;
+        reconnectTimeout = setTimeout(connect, delay);
       };
 
       socket.onerror = (error) => {
@@ -200,10 +211,34 @@ export const EventsProvider = ({ children }: EventsProviderProps) => {
       };
     };
 
+    // When the tab becomes visible again, reconnect immediately (fresh backoff)
+    // if the socket isn't already open — covers drops that happened in the
+    // background and the paused-reconnect case above.
+    const handleVisibility = () => {
+      if (isUnmounted || (typeof document !== "undefined" && document.hidden)) {
+        return;
+      }
+      if (!socket || socket.readyState === WebSocket.CLOSED) {
+        reconnectAttempts = 0;
+        if (reconnectTimeout) {
+          clearTimeout(reconnectTimeout);
+          reconnectTimeout = null;
+        }
+        connect();
+      }
+    };
+
     connect();
+
+    if (typeof document !== "undefined") {
+      document.addEventListener("visibilitychange", handleVisibility);
+    }
 
     return () => {
       isUnmounted = true;
+      if (typeof document !== "undefined") {
+        document.removeEventListener("visibilitychange", handleVisibility);
+      }
       if (reconnectTimeout) clearTimeout(reconnectTimeout);
       if (socket) socket.close();
     };
