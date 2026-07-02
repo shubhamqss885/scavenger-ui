@@ -1,0 +1,15 @@
+export const SET_ORGANIZATION_DBS = "SET_ORGANIZATION_DBS" as const;
+
+export const ADD_ORGANIZATION_DB = "ADD_ORGANIZATION_DB" as const;
+
+export const UPDATE_ORGANIZATION_DB = "UPDATE_ORGANIZATION_DB" as const;
+
+export const DELETE_ORGANIZATION_DB = "DELETE_ORGANIZATION_DB" as const;
+
+export const SET_DEFAULT_DB = "SET_DEFAULT_DB" as const;
+
+export const FETCH_ORGANIZATION_DBS = "FETCH_ORGANIZATION_DBS" as const;
+
+export const SET_DECRYPTED_DBS = "SET_DECRYPTED_DBS" as const;
+
+export const UPDATE_UNIFIED_STATUS = "UPDATE_UNIFIED_STATUS" as const;

@@ -1,0 +1,82 @@
+{
+  "page": {
+    "title": "Projects",
+    "create": "Create Project",
+    "edit": "Edit Project",
+    "delete": "Delete Project",
+    "name": "Project Name",
+    "description": "Description"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "archived": "Archived"
+  },
+  "actions": {
+    "view": "View Project",
+    "share": "Share Project",
+    "duplicate": "Duplicate Project",
+    "addFailed": "Failed to add project",
+    "renameSuccess": "Project renamed successfully",
+    "renameFailed": "Failed to update project name",
+    "deleteFailed": "Failed to delete project",
+    "pinSuccess": "Project pinned",
+    "pinFailed": "Failed to pin project",
+    "unpinSuccess": "Project unpinned",
+    "unpinFailed": "Failed to unpin project",
+    "cancel": "Cancel",
+    "continue": "Continue"
+  },
+  "chat": {
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "typing": "Typing...",
+    "online": "Online",
+    "offline": "Offline",
+    "messages": {
+      "empty": "No messages yet",
+      "failed": "Message failed to send",
+      "retry": "Retry"
+    }
+  },
+  "files": {
+    "upload": "Upload",
+    "uploadFiles": "Upload project files",
+    "processing": "Processing...",
+    "success": "Upload successful",
+    "failed": "Upload failed",
+    "noFiles": "No files to upload",
+    "sizeExceeded": "File exceeds the maximum size limit of 100 MB",
+    "allSuccess": "All files uploaded successfully",
+    "partialSuccess": "{{successCount}} files uploaded successfully, {{failureCount}} failed",
+    "uploadFailed": "Upload failed",
+    "qaFailed": "Failed to process QA possible",
+    "indexFailed": "Failed to index file",
+    "tokenLimitExceeded": "Indexing skipped: File exceeds token limits"
+  },
+  "date": {
+    "yesterdayAt": "Yesterday at {{time}}",
+    "invalidDate": "Invalid date"
+  },
+  "database": {
+    "updateSuccess": "Database updated successfully",
+    "updateFailed": "Failed to update database"
+  },
+  "serverMessages": {
+    "Project successfully created.": "Project successfully created.",
+    "Project successfully deleted.": "Project successfully deleted.",
+    "Project files deleted successfully.": "Project files deleted successfully."
+  },
+  "table": {
+    "search": "Search...",
+    "columns": "Columns",
+    "toggleColumns": "Toggle columns",
+    "previewWarning": "Showing preview of first 50 rows. The complete dataset can be",
+    "downloadFullData": "downloaded here"
+  },
+  "nonAgentic": {
+    "title": "This project isn't available",
+    "description": "It uses an older chat experience that's no longer supported. Please contact your admin to migrate this project.",
+    "backToHome": "Back to home"
+  }
+}

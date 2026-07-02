@@ -1,0 +1,58 @@
+{
+  "verify": {
+    "title": "Please verify your email address.",
+    "description": "To continue using Scavenger, please verify your email address:",
+    "supportText": "Didn't get an email? Check your spam folder or",
+    "supportLink": "contact support",
+    "buttons": {
+      "sending": "Sending...",
+      "resendIn": "Resend in {{count}}s",
+      "sendVerification": "Send verification email",
+      "checking": "Checking...",
+      "verified": "I have verified my email"
+    },
+    "toasts": {
+      "emailSentSuccess": "Verification email sent successfully! Please check your inbox.",
+      "emailSentError": "Failed to send verification email. Please try again.",
+      "verifiedSuccess": "Email verified successfully! Redirecting...",
+      "verifiedError": "Email not yet verified. Please verify your email and try again."
+    }
+  },
+  "welcome": {
+    "title": "Welcome to Scavenger, your AI business consultant!",
+    "emailConfirmed": "Your email",
+    "hasBeenConfirmed": "has been confirmed.",
+    "letsCreate": "Let's create your account.",
+    "agreeText": "I agree to Scavenger's",
+    "termsLink": "terms and conditions",
+    "and": "and",
+    "privacyLink": "privacy policy",
+    "endText": "",
+    "validationError": "You must agree to the terms and conditions and privacy policy to continue.",
+    "buttons": {
+      "submitting": "Submitting...",
+      "continue": "Continue"
+    }
+  },
+  "planSelection": {
+    "title": "Choose your plan to get started",
+    "description": "Transform your data into insights with Scavenger AI. Start with our free Demo plan or unlock advanced features with a paid subscription.",
+    "frequency": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "discount": "{{percent}}% off"
+    },
+    "buttons": {
+      "continueDemo": "Continue with Demo (Free)"
+    },
+    "toasts": {
+      "checkoutError": "Failed to create checkout session"
+    }
+  },
+  "regionNotice": {
+    "title": "Welcome to Scavenger AI",
+    "description": "Scavenger AI is a data analysis agent for chatting with SQL-based datasets. If you're looking for Home Depot penny deals or similar deals, you're probably looking for a different website.",
+    "continueButton": "Yes, continue to Scavenger",
+    "leaveButton": "No, I'm looking for penny deals"
+  }
+}

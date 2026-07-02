@@ -1,0 +1,26 @@
+{
+  "common": {
+    "cancel": "Abbrechen",
+    "action": "Upgrade"
+  },
+  "message": {
+    "title": "Du hast die maximale Anzahl an Nachrichten erreicht",
+    "description": "Erweitere deinen Plan, um weiter mit deinen Daten zu chatten."
+  },
+  "token": {
+    "title": "Du hast dein Token-Limit erreicht",
+    "description": "Erweitere deinen Plan, um weiter mit deinen Daten zu chatten."
+  },
+  "project": {
+    "title": "Du hast die maximale Anzahl an Projekten erreicht",
+    "description": "Erweitere deinen Plan, um mehr Projekte anzulegen."
+  },
+  "datasource": {
+    "title": "Du hast die maximale Anzahl an Datenquellen erreicht",
+    "description": "Entferne eine Datenquelle oder erweitere deinen Plan, um mehr hinzuzufügen."
+  },
+  "storage": {
+    "title": "Du hast dein Speicher-Limit erreicht",
+    "description": "Gib Speicher frei oder erweitere deinen Plan, um weitere Dateien hochzuladen."
+  }
+}

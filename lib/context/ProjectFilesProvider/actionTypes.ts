@@ -1,0 +1,20 @@
+export const START_FILES_FETCHING = "START_FILES_FETCHING" as const;
+
+export const UPDATE_PROJECT_FILES = "UPDATE_PROJECT_FILES" as const;
+
+export const SET_PROJECT_FILES = "SET_PROJECT_FILES" as const;
+
+export const SET_FILES_TO_UPLOAD = "SET_FILES_TO_UPLOAD" as const;
+
+export const REMOVE_UPLOADED_FILE = "REMOVE_UPLOADED_FILE" as const;
+
+export const SET_UPLOAD_PROGRESS = "SET_UPLOAD_PROGRESS" as const;
+
+export const SET_UPLOAD_ERROR = "SET_UPLOAD_ERROR" as const;
+
+export const SET_DEFAULT_STATE = "SET_DEFAULT_STATE" as const;
+
+export const SET_FILE_UPLOAD_COMPLETE_STATUS =
+  "SET_FILE_UPLOAD_COMPLETE_STATUS" as const;
+
+export const CLEAR_CURRENT_BATCH_FILES = "CLEAR_CURRENT_BATCH_FILES";

@@ -1,0 +1,235 @@
+{
+  "panel": {
+    "title": "Connect a data source",
+    "subtitle": "Choose from our integrations to start querying with natural language",
+    "needHelp": "Can't find my connector or need help?"
+  },
+  "grid": {
+    "searchPlaceholder": "Search connectors...",
+    "available": "{{count}} available",
+    "empty": {
+      "title": "No connectors found",
+      "subtitle": "Try a different search term or category"
+    },
+    "categories": {
+      "all": "All",
+      "relational": "Relational",
+      "warehouse": "Cloud Warehouses",
+      "analytics": "Analytics",
+      "nosql": "NoSQL",
+      "biTools": "BI Tools",
+      "files": "Files & Spreadsheets",
+      "enterprise": "Enterprise"
+    },
+    "sectionLabels": {
+      "relational": "Relational Databases",
+      "warehouse": "Cloud Warehouses & Lakehouses",
+      "nosql": "NoSQL & Document Stores",
+      "analytics": "Analytics & OLAP",
+      "enterprise": "Enterprise",
+      "files": "Files & Spreadsheets",
+      "biTools": "BI & Visualization Tools"
+    }
+  },
+  "card": {
+    "comingSoonBadge": "Soon",
+    "comingSoonTooltip": "Coming soon"
+  },
+  "leftPanel": {
+    "configureConnection": "Configure connection",
+    "preview": "Preview",
+    "setupInstructions": {
+      "ariaLabel": "Setup instructions"
+    },
+    "ipWhitelist": {
+      "title": "Need to allowlist our IPs?",
+      "desc": "If your database is behind a firewall, contact us to get our IP addresses.",
+      "scheduleCall": "Schedule a call",
+      "emailSupport": "Email support"
+    },
+    "db": {
+      "encrypted": {
+        "title": "Encrypted",
+        "desc": "Credentials encrypted in transit, never stored in plaintext"
+      },
+      "autoDiscovery": {
+        "title": "Auto-discovery",
+        "desc": "Tables, columns, and relationships detected automatically"
+      },
+      "readOnly": {
+        "title": "Read-only",
+        "desc": "We recommend a read-only database user"
+      }
+    },
+    "bi": {
+      "encrypted": {
+        "title": "Encrypted",
+        "desc": "Credentials encrypted in transit, never stored in plaintext"
+      },
+      "apiBased": {
+        "title": "API-based",
+        "desc": "Uses your BI platform's official API or service token"
+      },
+      "readAccess": {
+        "title": "Read access",
+        "desc": "Reads dashboards, reports, and datasets — no modifications"
+      }
+    }
+  },
+  "form": {
+    "backToAll": "All connectors",
+    "connectSecurely": "Connect securely",
+    "saveChanges": "Save changes",
+    "connecting": "Connecting…",
+    "modeForm": "Form",
+    "modeConnectionString": "Connection String",
+    "connectionStringLabel": "Connection string",
+    "connectionStringHint": "SQLAlchemy URL, JDBC URL, or any standard connection string",
+    "fieldOptional": "(optional)",
+    "needHelp": "Can't find my connector or need help?",
+    "successTitle": "Connected successfully",
+    "successSubtitle": "{{dialect}} is ready to query with natural language",
+    "goToDataSource": "Go to data source"
+  },
+  "security": {
+    "ssl": {
+      "title": "SSL Settings",
+      "disabled": "(Disabled)",
+      "status": "({{mode}})",
+      "modeLabel": "SSL Mode",
+      "modes": {
+        "disable": "Disable",
+        "require": "Require",
+        "verify-ca": "Verify CA",
+        "verify-full": "Verify Full"
+      },
+      "caLabel": "CA Certificate (.pem / .crt)",
+      "caUploadLabel": "Upload CA certificate",
+      "caHint": "Verifies the server's identity (e.g. root.crt)",
+      "certLabel": "Client Certificate (.pem / .crt)",
+      "certUploadLabel": "Upload client certificate",
+      "certHint": "Proves your identity to the server — optional unless server requires mTLS",
+      "keyLabel": "Client Private Key (.pem / .key)",
+      "keyUploadLabel": "Upload private key",
+      "keyHint": "Required with client certificate for mTLS — keep this file secret",
+      "mssqlCaWarning": "SQL Server (standard auth) does not support custom CA certificate verification. Use Azure Active Directory authentication for full certificate validation.",
+      "errors": {
+        "caRequired": "A CA certificate is required for verify-ca and verify-full modes.",
+        "certNeedsKey": "Client certificate requires a matching private key for mTLS.",
+        "keyNeedsCert": "Private key requires a matching client certificate for mTLS."
+      }
+    },
+    "ssh": {
+      "title": "SSH Tunnel",
+      "disabled": "(Disabled)",
+      "enabled": "(Enabled)",
+      "host": "({{host}})",
+      "hostLabel": "SSH Host",
+      "portLabel": "SSH Port",
+      "userLabel": "SSH User",
+      "keyLabel": "SSH Private Key",
+      "keyUploadLabel": "Upload private key",
+      "passphraseLabel": "Passphrase",
+      "passphraseOptional": "(optional)"
+    },
+    "sslFileUpload": {
+      "uploadFile": "Upload certificate",
+      "uploading": "Uploading certificate…",
+      "uploadFailed": "Certificate upload failed. Please try again.",
+      "networkError": "Network error. Could not upload certificate."
+    }
+  },
+  "test": {
+    "title": "Test Connection",
+    "button": "Test",
+    "testing": "Testing…",
+    "success": "Connection successful",
+    "defaultError": "Connection test failed",
+    "networkError": "Network error — is the backend running?",
+    "details": "Details"
+  },
+  "fileUpload": {
+    "datasetNameLabel": "Dataset name",
+    "datasetNamePlaceholder": "e.g. Q4 Sales Data",
+    "dropHint": "Drop your {{fileLabel}} files here",
+    "browseHint": "or click to browse — max {{maxSizeMb}}MB each",
+    "addMoreFiles": "Add more files",
+    "clearAll": "Clear all",
+    "uploading": "Uploading...",
+    "ingesting": "Ingesting data...",
+    "processing": "Processing data...",
+    "uploadAndConnect": "Upload & connect",
+    "removeFile": "Remove file",
+    "tryAgain": "Try again",
+    "timeoutHint": "This is taking longer than usual.",
+    "openDataSource": "Open data source",
+    "next": "Next",
+    "rowFailed": "Failed",
+    "rowReady": "Ready",
+    "rowUploading": "Uploading…",
+    "rowIngesting": "Ingesting…",
+    "rowProcessing": "Processing…",
+    "processingCount_one": "Processing {{count}} table…",
+    "processingCount_other": "Processing {{count}} tables…",
+    "partialSummary": "{{success}} of {{total}} tables created",
+    "errors": {
+      "invalidType": "Please select a {{allowed}} file",
+      "tooLarge": "File must be under {{maxSizeMb}}MB",
+      "uploadFailed": "Upload failed",
+      "ingestionFailed": "We couldn't ingest your file. Please try again.",
+      "multipleInvalid": "{{count}} files were skipped (invalid type or too large)"
+    }
+  },
+  "oauth": {
+    "gcpAccountLabel": "Google Account",
+    "openingPicker": "Opening file picker…",
+    "connecting": "Connecting…",
+    "ingesting": "Ingesting data…",
+    "noSpreadsheet": "No file selected.",
+    "pickSheet": "Pick a CSV file",
+    "csvOnlyNote": "Only CSV files from Google Drive are supported.",
+    "pickerConfigFailed": "Could not load picker configuration.",
+    "gapiFailed": "Failed to load Google API script",
+    "pickerFailed": "Failed to open file picker.",
+    "connectionFailed": "Connection failed",
+    "credentialsRetrievalFailed": "Failed to retrieve credentials. Please sign in again."
+  },
+  "gcpButton": {
+    "signIn": "Sign in with Google",
+    "connecting": "Connecting…",
+    "connected": "Connected",
+    "disconnect": "Disconnect Google account",
+    "popupBlocked": "Popup was blocked. Please allow popups and try again.",
+    "authFailed": "Authentication failed. Please try again.",
+    "grantsReadAccess": "Grants read access to BigQuery, Spanner, Drive, Sheets, and Firestore"
+  },
+  "progress": {
+    "defaultDialect": "Database",
+    "title": "{{dialect}} Connection",
+    "stages": {
+      "connect": "Connect",
+      "validate": "Validate",
+      "register": "Register",
+      "complete": "Complete"
+    },
+    "status": {
+      "connectingTo": "Establishing connection to {{host}}…",
+      "validating": "Validating database connection and discovering schema…",
+      "registering": "Registering database in the platform…",
+      "completeTitle": "Connected successfully",
+      "completeSubtitle": "{{dialect}} is ready to query with natural language",
+      "genericError": "Connection failed",
+      "incompleteError": "Connection did not complete successfully."
+    },
+    "openDataSource": "Open data source",
+    "tryAgain": "Try again",
+    "showLogs": "Show logs",
+    "noLogs": "No logs yet…"
+  },
+  "actions": {
+    "startOver": "Start over"
+  },
+  "setupInstructions": {
+    "fabric": "<p><strong>Before connecting Microsoft Fabric, ensure the following prerequisites are met:</strong></p><ol><li><strong>Register a Service Principal</strong> — Create an App Registration in Microsoft Entra ID (Azure AD). Note the Application (Client) ID and generate a Client Secret.</li><li><strong>Enable Service Principal access in Fabric</strong> — In the Fabric Admin Portal, under Tenant Settings, ensure \"Service principals can use Fabric APIs\" is enabled for your security group.</li><li><strong>Grant workspace permissions</strong> — Add the Service Principal as at least a <strong>Contributor</strong> on the Fabric workspace containing your Lakehouse or Data Warehouse. Without this, the connection succeeds but no tables are visible.</li><li><strong>Verify the SQL analytics endpoint is active</strong> — For Lakehouses, open the SQL analytics endpoint in Fabric and confirm tables appear. If the endpoint shows no tables, your Delta tables may not be committed or the endpoint hasn't synced yet.</li><li><strong>Confirm tables exist</strong> — The Lakehouse must contain committed Delta tables (or the Data Warehouse must have created tables). Empty lakehouses will connect successfully but report zero tables.</li></ol>"
+  }
+}

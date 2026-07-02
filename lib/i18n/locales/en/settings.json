@@ -1,0 +1,259 @@
+{
+  "modal": {
+    "title": "Settings",
+    "description": "Manage your account settings and preferences.",
+    "tabs": {
+      "account": "Account",
+      "databases": "Databases",
+      "preferences": "Preferences",
+      "billing": "Billing",
+      "usage": "Usage"
+    }
+  },
+  "usage": {
+    "title": "Usage",
+    "description": "Track your current usage against your plan limits.",
+    "needMoreSpace": "Need more space?",
+    "upgradeToEnterprise": "Upgrade to Enterprise",
+    "metrics": {
+      "dataSources": "Data Sources",
+      "storage": "Storage",
+      "projects": "Projects",
+      "messages": "Messages",
+      "tokens": "Tokens"
+    }
+  },
+  "account": {
+    "title": "Account Settings",
+    "profile": {
+      "title": "Profile",
+      "email": "Email:",
+      "displayName": "Display Name",
+      "companyName": "Company Name",
+      "jobTitle": "Job Title",
+      "profileImage": "Profile Image URL"
+    },
+    "password": {
+      "title": "Password",
+      "description": "Send a password reset link to your email.",
+      "resetButton": "Reset password",
+      "sendingButton": "Sending...",
+      "sentButton": "Reset email sent",
+      "cooldown": "Try again in {{seconds}}s"
+    },
+    "dangerZone": {
+      "title": "Danger Zone"
+    },
+    "deleteAccount": {
+      "title": "Delete account",
+      "description": "This action will permanently delete your account and all associated data. This action is irreversible.",
+      "button": "Delete account",
+      "deletingButton": "Deleting...",
+      "confirmTitle": "Delete account?",
+      "confirmDescription": "This will permanently delete your account and all associated data. This action cannot be undone.",
+      "confirmButton": "Delete account",
+      "cancelButton": "Cancel"
+    },
+    "validation": {
+      "displayNameMin": "Display name must be at least 2 characters.",
+      "displayNameMax": "Display name must not be longer than 30 characters.",
+      "companyNameMin": "Company name must be at least 2 characters.",
+      "companyNameMax": "Company name must not be longer than 100 characters.",
+      "jobTitleMin": "Job title must be at least 2 characters.",
+      "jobTitleMax": "Job title must not be longer than 100 characters.",
+      "validUrl": "Please enter a valid URL."
+    },
+    "messages": {
+      "accountDeleted": "User Account deleted successfully",
+      "accountDeleteFailed": "Failed to delete user profile",
+      "dataDeleteFailed": "Failed to delete user data",
+      "profileUpdateFailed": "Failed to update user profile.",
+      "resetEmailFailed": "Failed to send password reset email"
+    }
+  },
+  "profile": {
+    "updateFailed": "Failed to update profile",
+    "updateSettingsFailed": "Failed to update account settings.",
+    "imageUpdateSuccess": "Profile image updated successfully",
+    "imageUpdateFailed": "Failed to upload profile image."
+  },
+  "databases": {
+    "title": "Database Settings",
+    "addNew": {
+      "title": "Add new database connection",
+      "button": "Connect Database"
+    },
+    "list": {
+      "title": "Connected Databases",
+      "empty": "No databases connected. Add a database to get started."
+    },
+    "connection": {
+      "connectionDetails": "Connection Details",
+      "connectionName": "Connection Name",
+      "requiredInfo": "Required Information",
+      "additionalSecurity": "Additional Security (Optional)",
+      "readUserCredentials": "Read User Credentials",
+      "readUserDescription": "Required for database connections",
+      "enableRLS": "Enable RLS (Row Level Security)",
+      "rlsNote": "Row Level Security requires separate write user credentials  to manage database schema and security policies.",
+      "writeUserCredentials": "Write User Credentials",
+      "databaseName": "Database Name",
+      "databaseHost": "Database Host",
+      "host": "Host",
+      "port": "Port",
+      "username": "Username",
+      "password": "Password",
+      "schema": "Schema",
+      "databaseType": "Database Type",
+      "selectDatabaseType": "Select database type",
+      "ipWhitelist": "IP Whitelist",
+      "ipWhitelistPlaceholder": "Comma separated IPs",
+      "companyBackground": "Company Background",
+      "databaseDescription": "Database Description",
+      "tableSpecs": "Table Specifications",
+      "cancel": "Cancel",
+      "connect": "Connect",
+      "connecting": "Connecting...",
+      "update": "Update",
+      "updating": "Updating..."
+    },
+    "card": {
+      "default": "Default",
+      "actions": {
+        "manageDescription": "Manage Description",
+        "setDefault": "Set as default",
+        "edit": "Edit connection",
+        "delete": "Delete connection"
+      }
+    },
+    "validation": {
+      "nameRequired": "Database name is required",
+      "nameExists": "A database with this name already exists",
+      "hostRequired": "Host is required",
+      "portNumber": "Port must be a number",
+      "portRange": "Port must be between 1 and 65535",
+      "usernameRequired": "Username is required",
+      "passwordRequired": "Password is required",
+      "writeUsernameRequired": "Write username is required when RLS is enabled",
+      "writePasswordRequired": "Write password is required when RLS is enabled",
+      "writeCredentialsRequired": "Write user credentials are required when RLS is enabled",
+      "schemaPublicOnly": "Only 'public' schema is currently supported"
+    },
+    "messages": {
+      "orgIdRequired": "Organization ID is required",
+      "cannotDeleteDefault": "Cannot delete default database. Please set another database as default first.",
+      "setDefaultFailed": "Failed to set default database",
+      "deleteFailed": "Failed to delete database"
+    },
+    "types": {
+      "mysql": "MySQL",
+      "postgresql": "PostgreSQL",
+      "microsoftsqlserver": "Microsoft SQL Server"
+    }
+  },
+  "preferences": {
+    "title": "Preferences",
+    "placeholder": "Preferences setting go here",
+    "saveButton": "Save preferences"
+  },
+  "billing": {
+    "title": "Billing Settings",
+    "currentPlan": "Current Plan",
+    "activeSince": "Active since",
+    "nextBilling": "Next billing",
+    "subscriptionCancelled": "Subscription cancelled",
+    "activeTill": "Active till",
+    "month": "month",
+    "year": "year",
+    "usageOverview": "Usage Overview",
+    "needMoreSpace": "Need more space?",
+    "upgradeToEnterprise": "Upgrade to Enterprise",
+    "dataSources": "Data Sources",
+    "storage": "Storage",
+    "projects": "Projects",
+    "messages": "Messages",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "subscriptionActive": "Your subscription is active",
+    "subscriptionInactive": "Subscription status unknown",
+    "usageDescription": "Track your current usage against plan limits",
+    "management": "Billing Management",
+    "managementDescription": "Manage your payment methods and billing history",
+    "managePayment": "Manage Payments",
+    "managingPayment": "Opening portal...",
+    "renew": "Renew",
+    "refundRequest": {
+      "title": "Refund Request",
+      "description": "Need a refund? Contact our customer support team for assistance",
+      "button": "Contact Support",
+      "contactingSupport": "Contacting support..."
+    },
+    "downloadInvoices": "Download Invoices",
+    "dangerZone": "Danger Zone",
+    "dangerZoneDescription": "Permanently cancel your subscription and downgrade to demo plan",
+    "cancelSubscription": {
+      "title": "Cancel Subscription",
+      "button": "Downgrade Account",
+      "downgradingButton": "Downgrading...",
+      "description": "This action will downgrade your account to a free demo account with limited features"
+    },
+    "processing": "Processing payment...",
+    "processingDescription": "We're activating your subscription. This usually takes just a few moments.",
+    "checkoutCompleted": "Checkout completed",
+    "processingSubscription": "Processing subscription",
+    "settingUpAccount": "Setting up your account",
+    "verifyingActivation": "Verifying subscription activation...",
+    "almostReady": "Almost ready...",
+    "paymentSuccessRedirecting": "Payment successful! Redirecting...",
+    "processingTimeout": "Payment processing is taking longer than expected. Please contact support if this persists.",
+    "havingTrouble": "Having trouble? Please contact support.",
+    "unableToComplete": "Unable to complete setup automatically.",
+    "retry": "Retry",
+    "subscriptionActivated": "🎉 Subscription activated successfully!",
+    "noSubscription": "No active subscription found",
+    "cancelConfirm": "Are you sure you want to cancel your subscription and downgrade to demo plan?",
+    "subscriptionCanceled": "Subscription canceled successfully. You'll keep full access until the end of your current billing period.",
+    "cancelFailed": "Failed to cancel subscription. Please try again or contact support.",
+    "processingFailed": "Payment processing failed. Please try again or contact support.",
+    "portalError": "Failed to open billing portal. Please try again.",
+    "paymentMethod": {
+      "title": "Payment Method",
+      "current": "Visa ending in 1234",
+      "description": "Current payment method.",
+      "change": "Change Payment Method"
+    },
+    "deletePayment": {
+      "title": "Delete Payment Method",
+      "button": "Delete Payment Method"
+    },
+    "deleteAccount": {
+      "title": "Delete account",
+      "button": "Delete account"
+    },
+    "cancelDialog": {
+      "title": "Cancel Subscription",
+      "description": "Are you sure you want to cancel your subscription and downgrade to demo plan? This action cannot be undone.",
+      "cancel": "Keep Subscription",
+      "confirm": "Cancel Subscription"
+    },
+    "inactive": {
+      "unlockPower": "Unlock the Full Power of Scavenger AI",
+      "noSubscription": "No Active Subscription",
+      "upgradeDescription": "Everything in Demo, plus:",
+      "upgradePremium": "Everything in Demo, plus:",
+      "features": {
+        "dataSources": "Upload your own data (up to 20 CSVs or PDFs)",
+        "fileStorage": "Create business logic & rules",
+        "unlimitedProjects": "Context awareness and personal dashboard",
+        "security": "Full compliance with GDPR and other privacy laws"
+      },
+      "upgradeButton": "Upgrade to Private",
+      "viewPricing": "View detailed pricing and features",
+      "currentPlan": "Currently on Demo Plan: 1 datasource • 1 project • 10 messages"
+    },
+    "saveButton": "Save changes"
+  },
+  "serverMessages": {
+    "User profile details successfully updated.": "User profile details successfully updated."
+  }
+}

@@ -1,0 +1,88 @@
+/* Web-component-only style overrides.
+ *
+ * next/font is absent in the web-component build, so Tailwind's `font-sans`
+ * falls back to its default stack and elements without `.font-sans` inherit the
+ * browser-default serif. Define a clean system --font-sans and set it on the
+ * light-DOM element so the whole subtree inherits sans-serif. Loaded via
+ * index.tsx AFTER globals.css, so this wins on the cascade. */
+scavenger-chat {
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-sans);
+  /* The element is light-DOM and inline by default; make it a block that fills
+   * the box the host gives it so the height chain below has something to resolve
+   * against. */
+  display: block;
+  height: 100%;
+}
+
+/* shadcn's SidebarProvider wrapper hard-codes `min-h-svh` (min-height: 100svh) —
+ * i.e. it sizes to the VIEWPORT, not to this embedded element, and sets no
+ * definite `height`. That breaks the `h-full` (height:100%) chain underneath it
+ * (the chat workspace + sidebar collapse to content height) and overflows the
+ * element by the bar height. Pin the wrapper to the element's height instead so
+ * the workspace and sidebar fill the container. */
+scavenger-chat > [data-slot="sidebar-wrapper"] {
+  height: 100%;
+  min-height: 0;
+}
+
+/* --- Responsive sidebar (narrow-viewport) ---------------------------------
+ * The widget is light-DOM and embedded, so the relevant width is the ELEMENT's
+ * width, not the viewport → drive the layout with CONTAINER queries. The
+ * workspace is the size container; the sidebar is a static side-by-side column
+ * on wide and an off-canvas overlay (hamburger + backdrop) on narrow. */
+scavenger-chat .wc-workspace {
+  container-type: inline-size;
+  container-name: scav-wc;
+}
+
+/* Narrow (default): the sidebar is an off-canvas overlay, hidden until opened. */
+scavenger-chat [data-wc-sidebar] {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  z-index: 30;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+}
+scavenger-chat [data-wc-sidebar][data-open="true"] {
+  transform: translateX(0);
+}
+scavenger-chat [data-wc-toggle] {
+  display: inline-flex;
+}
+/* AgenticChatLayout renders the app's OWN floating sidebar toggle
+   (`absolute left-2 top-2 z-30` → ToggleSidebar) which drives shadcn's collapse
+   — inert here because our <Sidebar collapsible="none"> never collapses — and it
+   sits exactly over our hamburger (z-30 > our z-10), stealing the click so the
+   overlay never opens. Hide it inside the widget at every width; the
+   `:not([data-wc-toggle])` guard spares our own button. (Couples to the app's
+   `left-2 top-2` utilities — the sole user of that pair in the chat module.) */
+scavenger-chat .wc-workspace .absolute.left-2.top-2:not([data-wc-toggle]) {
+  display: none;
+}
+scavenger-chat [data-wc-backdrop] {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Wide (element ≥ 700px): static side-by-side sidebar; no overlay chrome.
+ * position:static / transform:none also clears any open-overlay transform, so
+ * resizing narrow→wide while open never leaves a stuck off-canvas sidebar. */
+@container scav-wc (min-width: 700px) {
+  scavenger-chat [data-wc-sidebar] {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    z-index: auto;
+  }
+  scavenger-chat [data-wc-toggle],
+  scavenger-chat [data-wc-backdrop] {
+    display: none;
+  }
+}

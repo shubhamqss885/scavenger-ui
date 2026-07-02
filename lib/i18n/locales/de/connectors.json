@@ -1,0 +1,235 @@
+{
+  "panel": {
+    "title": "Datenquelle verbinden",
+    "subtitle": "Wähle aus unseren Integrationen, um mit natürlicher Sprache Abfragen zu stellen",
+    "needHelp": "Meinen Connector nicht gefunden oder brauchst Du Hilfe?"
+  },
+  "grid": {
+    "searchPlaceholder": "Connectors suchen...",
+    "available": "{{count}} verfügbar",
+    "empty": {
+      "title": "Keine Connectors gefunden",
+      "subtitle": "Versuche einen anderen Suchbegriff oder eine andere Kategorie"
+    },
+    "categories": {
+      "all": "Alle",
+      "relational": "Relational",
+      "warehouse": "Cloud Warehouses",
+      "analytics": "Analytics",
+      "nosql": "NoSQL",
+      "biTools": "BI-Tools",
+      "files": "Dateien & Tabellen",
+      "enterprise": "Enterprise"
+    },
+    "sectionLabels": {
+      "relational": "Relationale Datenbanken",
+      "warehouse": "Cloud Warehouses & Lakehouses",
+      "nosql": "NoSQL & Document Stores",
+      "analytics": "Analytics & OLAP",
+      "enterprise": "Enterprise",
+      "files": "Dateien & Tabellen",
+      "biTools": "BI- & Visualisierungstools"
+    }
+  },
+  "card": {
+    "comingSoonBadge": "Bald",
+    "comingSoonTooltip": "Demnächst verfügbar"
+  },
+  "leftPanel": {
+    "configureConnection": "Verbindung konfigurieren",
+    "preview": "Vorschau",
+    "setupInstructions": {
+      "ariaLabel": "Einrichtungshinweise"
+    },
+    "ipWhitelist": {
+      "title": "Unsere IPs freischalten?",
+      "desc": "Wenn Deine Datenbank hinter einer Firewall liegt, kontaktiere uns für unsere IP-Adressen.",
+      "scheduleCall": "Termin buchen",
+      "emailSupport": "Support schreiben"
+    },
+    "db": {
+      "encrypted": {
+        "title": "Verschlüsselt",
+        "desc": "Anmeldedaten werden bei der Übertragung verschlüsselt und nie im Klartext gespeichert"
+      },
+      "autoDiscovery": {
+        "title": "Auto-Erkennung",
+        "desc": "Tabellen, Spalten und Beziehungen werden automatisch erkannt"
+      },
+      "readOnly": {
+        "title": "Nur-Lesen",
+        "desc": "Wir empfehlen Dir einen Datenbankbenutzer mit Nur-Lese-Rechten"
+      }
+    },
+    "bi": {
+      "encrypted": {
+        "title": "Verschlüsselt",
+        "desc": "Anmeldedaten werden bei der Übertragung verschlüsselt und nie im Klartext gespeichert"
+      },
+      "apiBased": {
+        "title": "API-basiert",
+        "desc": "Nutzt die offizielle API oder das Service-Token Deiner BI-Plattform"
+      },
+      "readAccess": {
+        "title": "Lesezugriff",
+        "desc": "Liest Dashboards, Berichte und Datensätze — keine Änderungen"
+      }
+    }
+  },
+  "form": {
+    "backToAll": "Alle Connectors",
+    "connectSecurely": "Sicher verbinden",
+    "saveChanges": "Änderungen speichern",
+    "connecting": "Verbinde…",
+    "modeForm": "Formular",
+    "modeConnectionString": "Connection String",
+    "connectionStringLabel": "Connection String",
+    "connectionStringHint": "SQLAlchemy-URL, JDBC-URL oder ein beliebiger Standard-Connection-String",
+    "fieldOptional": "(optional)",
+    "needHelp": "Meinen Connector nicht gefunden oder brauchst Du Hilfe?",
+    "successTitle": "Erfolgreich verbunden",
+    "successSubtitle": "{{dialect}} ist bereit für Abfragen mit natürlicher Sprache",
+    "goToDataSource": "Zur Datenquelle"
+  },
+  "security": {
+    "ssl": {
+      "title": "SSL-Einstellungen",
+      "disabled": "(Deaktiviert)",
+      "status": "({{mode}})",
+      "modeLabel": "SSL-Modus",
+      "modes": {
+        "disable": "Deaktivieren",
+        "require": "Erforderlich",
+        "verify-ca": "CA verifizieren",
+        "verify-full": "Vollständig verifizieren"
+      },
+      "caLabel": "CA-Zertifikat (.pem / .crt)",
+      "caUploadLabel": "CA-Zertifikat hochladen",
+      "caHint": "Verifiziert die Identität des Servers (z. B. root.crt)",
+      "certLabel": "Client-Zertifikat (.pem / .crt)",
+      "certUploadLabel": "Client-Zertifikat hochladen",
+      "certHint": "Beweist Ihre Identität gegenüber dem Server — optional, außer der Server erfordert mTLS",
+      "keyLabel": "Privater Client-Schlüssel (.pem / .key)",
+      "keyUploadLabel": "Privaten Schlüssel hochladen",
+      "keyHint": "Erforderlich zusammen mit dem Client-Zertifikat für mTLS — diese Datei geheim halten",
+      "mssqlCaWarning": "SQL Server (Standard-Authentifizierung) unterstützt keine benutzerdefinierte CA-Zertifikatsprüfung. Verwenden Sie Azure Active Directory-Authentifizierung für vollständige Zertifikatsvalidierung.",
+      "errors": {
+        "caRequired": "Für die Modi verify-ca und verify-full ist ein CA-Zertifikat erforderlich.",
+        "certNeedsKey": "Client-Zertifikat erfordert einen passenden privaten Schlüssel für mTLS.",
+        "keyNeedsCert": "Privater Schlüssel erfordert ein passendes Client-Zertifikat für mTLS."
+      }
+    },
+    "ssh": {
+      "title": "SSH-Tunnel",
+      "disabled": "(Deaktiviert)",
+      "enabled": "(Aktiviert)",
+      "host": "({{host}})",
+      "hostLabel": "SSH-Host",
+      "portLabel": "SSH-Port",
+      "userLabel": "SSH-Benutzer",
+      "keyLabel": "Privater SSH-Schlüssel",
+      "keyUploadLabel": "Privaten Schlüssel hochladen",
+      "passphraseLabel": "Passphrase",
+      "passphraseOptional": "(optional)"
+    },
+    "sslFileUpload": {
+      "uploadFile": "Zertifikat hochladen",
+      "uploading": "Zertifikat wird hochgeladen…",
+      "uploadFailed": "Zertifikat-Upload fehlgeschlagen. Bitte erneut versuchen.",
+      "networkError": "Netzwerkfehler. Zertifikat konnte nicht hochgeladen werden."
+    }
+  },
+  "test": {
+    "title": "Verbindung testen",
+    "button": "Testen",
+    "testing": "Teste…",
+    "success": "Verbindung erfolgreich",
+    "defaultError": "Verbindungstest fehlgeschlagen",
+    "networkError": "Netzwerkfehler — läuft das Backend?",
+    "details": "Einzelheiten"
+  },
+  "fileUpload": {
+    "datasetNameLabel": "Name des Datensatzes",
+    "datasetNamePlaceholder": "z.B. Q4 Verkaufsdaten",
+    "dropHint": "Ziehe Deine {{fileLabel}}-Dateien hierher",
+    "browseHint": "oder klicke zum Auswählen — max. {{maxSizeMb}} MB pro Datei",
+    "addMoreFiles": "Weitere Dateien hinzufügen",
+    "clearAll": "Alle entfernen",
+    "uploading": "Lade hoch...",
+    "ingesting": "Daten werden eingelesen...",
+    "processing": "Verarbeite Daten...",
+    "uploadAndConnect": "Hochladen & verbinden",
+    "removeFile": "Datei entfernen",
+    "tryAgain": "Erneut versuchen",
+    "timeoutHint": "Das dauert länger als gewöhnlich.",
+    "openDataSource": "Datenquelle öffnen",
+    "next": "Weiter",
+    "rowFailed": "Fehlgeschlagen",
+    "rowReady": "Bereit",
+    "rowUploading": "Wird hochgeladen…",
+    "rowIngesting": "Wird eingelesen…",
+    "rowProcessing": "Wird verarbeitet…",
+    "processingCount_one": "Verarbeite {{count}} Tabelle…",
+    "processingCount_other": "Verarbeite {{count}} Tabellen…",
+    "partialSummary": "{{success}} von {{total}} Tabellen erstellt",
+    "errors": {
+      "invalidType": "Bitte wähle eine {{allowed}}-Datei",
+      "tooLarge": "Die Datei darf maximal {{maxSizeMb}} MB groß sein",
+      "uploadFailed": "Upload fehlgeschlagen",
+      "ingestionFailed": "Deine Datei konnte nicht eingelesen werden. Bitte versuche es erneut.",
+      "multipleInvalid": "{{count}} Dateien wurden übersprungen (ungültiger Typ oder zu groß)"
+    }
+  },
+  "oauth": {
+    "gcpAccountLabel": "Google-Konto",
+    "openingPicker": "Dateiauswahl wird geöffnet…",
+    "connecting": "Verbinde…",
+    "ingesting": "Daten werden eingelesen…",
+    "noSpreadsheet": "Keine Datei ausgewählt.",
+    "pickSheet": "CSV-Datei auswählen",
+    "csvOnlyNote": "Es werden nur CSV-Dateien aus Google Drive unterstützt.",
+    "pickerConfigFailed": "Picker-Konfiguration konnte nicht geladen werden.",
+    "gapiFailed": "Google-API-Skript konnte nicht geladen werden",
+    "pickerFailed": "Dateiauswahl konnte nicht geöffnet werden.",
+    "connectionFailed": "Verbindung fehlgeschlagen",
+    "credentialsRetrievalFailed": "Anmeldedaten konnten nicht abgerufen werden. Bitte melde Dich erneut an."
+  },
+  "gcpButton": {
+    "signIn": "Mit Google anmelden",
+    "connecting": "Verbinde…",
+    "connected": "Verbunden",
+    "disconnect": "Google-Konto trennen",
+    "popupBlocked": "Pop-up wurde blockiert. Bitte erlaube Pop-ups und versuche es erneut.",
+    "authFailed": "Authentifizierung fehlgeschlagen. Bitte versuche es erneut.",
+    "grantsReadAccess": "Gewährt Lesezugriff auf BigQuery, Spanner, Drive, Sheets und Firestore"
+  },
+  "progress": {
+    "defaultDialect": "Datenbank",
+    "title": "{{dialect}}-Verbindung",
+    "stages": {
+      "connect": "Verbinden",
+      "validate": "Validieren",
+      "register": "Registrieren",
+      "complete": "Fertig"
+    },
+    "status": {
+      "connectingTo": "Verbindung zu {{host}} wird aufgebaut…",
+      "validating": "Datenbankverbindung wird validiert und Schema erkannt…",
+      "registering": "Datenbank wird in der Plattform registriert…",
+      "completeTitle": "Erfolgreich verbunden",
+      "completeSubtitle": "{{dialect}} ist bereit für Abfragen mit natürlicher Sprache",
+      "genericError": "Verbindung fehlgeschlagen",
+      "incompleteError": "Die Verbindung wurde nicht erfolgreich abgeschlossen."
+    },
+    "openDataSource": "Datenquelle öffnen",
+    "tryAgain": "Erneut versuchen",
+    "showLogs": "Protokolle anzeigen",
+    "noLogs": "Noch keine Protokolle…"
+  },
+  "actions": {
+    "startOver": "Neu starten"
+  },
+  "setupInstructions": {
+    "fabric": "<p><strong>Bevor Du Microsoft Fabric verbindest, stelle sicher, dass die folgenden Voraussetzungen erfüllt sind:</strong></p><ol><li><strong>Service Principal registrieren</strong> — Erstelle eine App-Registrierung in Microsoft Entra ID (Azure AD). Notiere Dir die Anwendungs-ID (Client-ID) und generiere ein Client Secret.</li><li><strong>Service-Principal-Zugriff in Fabric aktivieren</strong> — Stelle im Fabric Admin Portal unter „Tenant Settings\" sicher, dass „Service principals can use Fabric APIs\" für Deine Sicherheitsgruppe aktiviert ist.</li><li><strong>Workspace-Berechtigungen vergeben</strong> — Füge den Service Principal mindestens als <strong>Contributor</strong> zum Fabric-Workspace hinzu, der Dein Lakehouse oder Data Warehouse enthält. Ohne diese Berechtigung ist die Verbindung zwar erfolgreich, aber es sind keine Tabellen sichtbar.</li><li><strong>SQL-Analytics-Endpunkt prüfen</strong> — Öffne bei Lakehouses den SQL-Analytics-Endpunkt in Fabric und bestätige, dass Tabellen angezeigt werden. Wenn der Endpunkt keine Tabellen zeigt, wurden Deine Delta-Tabellen möglicherweise noch nicht committet oder der Endpunkt ist noch nicht synchronisiert.</li><li><strong>Existenz der Tabellen bestätigen</strong> — Das Lakehouse muss committete Delta-Tabellen enthalten (oder das Data Warehouse muss angelegte Tabellen haben). Leere Lakehouses verbinden sich erfolgreich, melden aber null Tabellen.</li></ol>"
+  }
+}

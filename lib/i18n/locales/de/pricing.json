@@ -1,0 +1,80 @@
+{
+  "page": {
+    "title": "Preise",
+    "heading": "Einfache, transparente Preise",
+    "subheading": "Verwandeln Sie Ihre Daten in Erkenntnisse mit Scavenger AI. Wählen Sie den Plan, der zu Ihren Datenanalyseanforderungen passt.",
+    "billing": {
+      "monthly": "Monatlich",
+      "yearly": "Jährlich",
+      "yearlyDiscount": "Rabatt"
+    }
+  },
+  "plans": {
+    "demo": {
+      "name": "Demo",
+      "displayName": "Demo Plan",
+      "description": "Eine kostenlose Demo-Umgebung mit einer Beispieldatenbank zur Präsentation der Funktionen.",
+      "price": {
+        "text": "Für immer kostenlos"
+      },
+      "cta": "Kostenlos starten",
+      "features": {
+        "chatDatabase": "Chat mit einer Beispieldatenbank",
+        "visualsAndInsights": "Erstellen Sie Visualisierungen, Code und statistische Erkenntnisse"
+      }
+    },
+    "private": {
+      "name": "Private",
+      "displayName": "Private Plan",
+      "description": "Ein sicherer Arbeitsbereich für Geschäftsleute, Freelancer oder Studenten.",
+      "cta": "Loslegen",
+      "monthBilled": {
+        "monthly": "/Monat, monatlich abgerechnet",
+        "yearly": "/Monat, jährlich abgerechnet"
+      },
+      "features": {
+        "inheritDemo": "Alles in Demo, plus:",
+        "uploadData": "Laden Sie Ihre eigenen Daten hoch (bis zu 20 CSVs oder PDFs)",
+        "businessLogic": "Erstellen Sie eine Geschäftslogik & Regeln",
+        "contextAwareness": "Kontextbewusstsein und persönliches Dashboard",
+        "gdprCompliance": "Vollständige Einhaltung der DSGVO und anderer Datenschutzgesetze"
+      }
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "displayName": "Enterprise Plan",
+      "description": "KI, BI & Datenanalyse mit Support und Engineering für das gesamte Unternehmen.",
+      "price": {
+        "text": "Individuelle Preise"
+      },
+      "cta": "Meeting buchen",
+      "features": {
+        "inheritPrivate": "Alles in Private, plus:",
+        "connections": "Verbindungen zu über 200 Datenquellen (ERP, CRM,..)",
+        "dataEngineering": "Datenengineering und Erstellung von Geschäftslogik",
+        "sharedWorkspace": "Geteilter Arbeitsbereich & Dashboarding",
+        "rls": "RLS, Benutzerverwaltung, Rollen und Rechte",
+        "prioritySupport": "Prioritäts- und persönlicher Support während der Geschäftszeiten"
+      }
+    }
+  },
+  "badges": {
+    "popular": "Beliebt",
+    "currentPlan": "Aktueller Plan",
+    "loading": "Wird geladen...",
+    "manageBilling": "Abrechnung verwalten"
+  },
+  "billing": {
+    "checkoutFailed": "Checkout-Session konnte nicht erstellt werden",
+    "subscriptionCanceled": "Abonnement erfolgreich gekündigt",
+    "cancelFailed": "Abonnement konnte nicht gekündigt werden",
+    "paymentCanceled": "Zahlung konnte nicht abgeschlossen werden. Bitte versuche es erneut!",
+    "paymentUpdate": {
+      "title": "Zahlungsaktualisierung",
+      "fallbackMessage": "Ihr Abonnement wurde gekündigt, bleibt jedoch bis zum Ende Ihres aktuellen Abrechnungszeitraums aktiv.",
+      "buttonOk": "Ok",
+      "buttonProcessing": "Wird verarbeitet...",
+      "errorMessage": "Zahlungsaktualisierung konnte nicht verarbeitet werden. Bitte versuchen Sie es erneut."
+    }
+  }
+}

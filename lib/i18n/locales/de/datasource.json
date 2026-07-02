@@ -1,0 +1,163 @@
+{
+  "wizard": {
+    "title": "Datenquellen-Verbindungsassistent",
+    "steps": {
+      "selectWorkflow": "Workflow auswählen",
+      "selectWorkflowDescription": "Verbindungsart wählen",
+      "configure": "Konfigurieren",
+      "configureDescription": "Verbindungsdetails eingeben",
+      "setup": "Einrichten",
+      "setupDescription": "Verbindung herstellen",
+      "ingest": "Aufnehmen & Analysieren",
+      "ingestDescription": "Verarbeite deine Daten und sieh dir die Analyse an"
+    },
+    "workflow": {
+      "title": "Willkommen beim Datenverbindungs-Assistenten",
+      "description": "Lass uns deine Daten verbinden. Wähle deine bevorzugte Verbindungsmethode.",
+      "connect": {
+        "title": "Datenbankverbindung",
+        "description": "Stell eine direkte Verbindung zu MySQL, PostgreSQL, MS SQL, Oracle, SQLite, SAP HANA oder anderen unterstützten Datenbanken her. Einrichtungszeit: 10–15 Minuten",
+        "button": "Verbindung erstellen"
+      },
+      "upload": {
+        "title": "CSV-Upload",
+        "description": "Lade eine oder mehrere CSV-Dateien hoch, um schnell eine neue Datenquelle zu erstellen. Einrichtungszeit: 1–3 Minuten",
+        "button": "CSV-Dateien hochladen"
+      }
+    },
+    "upload": {
+      "title": "Lade deinen Datensatz hoch",
+      "description": "Wir machen die Datei im Hintergrund startklar. Wir korrigieren die Zeichenkodierung, finden das passende Trennzeichen und bringen die Spaltennamen in Form, damit du direkt loslegen kannst. Die Vorbereitung dauert meist ein bis drei Minuten, danke für deine Geduld! 😊",
+      "stepperDescription": "CSV hochladen und Vorschau anzeigen; die Datenquelle wird im nächsten Schritt erstellt",
+      "dropzone": {
+        "title": "Füge deine CSV hinzu",
+        "description": "Zieh deine CSV hierher oder klick, um sie auf deinem Gerät auszuwählen.",
+        "button": "Datei auswählen",
+        "limits": {
+          "maxSize": "Bis zu {{size}}MB pro Datei",
+          "maxColumns": "Bis zu {{count, number}} Spalten",
+          "maxRows": "Bis zu {{count, number}} Zeilen"
+        }
+      },
+      "fileInfo": {
+        "size": "Größe: {{size}}",
+        "dimensions": "{{rows, number}} Zeilen × {{columns, number}} Spalten"
+      },
+      "preview": {
+        "title": "Vorschau deiner Tabelle",
+        "rows": "{{count, number}} Zeilen",
+        "columns": "{{count, number}} Spalten",
+        "showing": "Wir zeigen die ersten {{shown, number}} von insgesamt {{total, number}} Zeilen"
+      },
+      "analysis": {
+        "title": "Automatische Einblicke",
+        "placeholder": "Die Datenprofilierung erscheint hier in Kürze",
+        "description": "Bleib einfach dran, während wir deine Daten verarbeiten"
+      },
+      "navigation": {
+        "next": "Weiter: Importieren & analysieren",
+        "backToUpload": "Zurück zum Upload"
+      },
+      "success": "CSV erfolgreich hochgeladen!"
+    },
+    "processing": {
+      "uploading": "Wir laden deine Datei hoch...",
+      "validating": "Wir prüfen deine Datei noch einmal...",
+      "processing": "Wir bereiten deine Daten vor...",
+      "ingesting": "Wir fügen deine Daten hinzu...",
+      "completed": "Deine Daten sind startklar!",
+      "failed": "Wir konnten die Verarbeitung nicht abschließen",
+      "waiting": "Wir warten auf den Start",
+      "ready": "Bereit, wenn du es bist",
+      "elapsed": "Verstrichene Zeit:",
+      "expected": "Erwartet:",
+      "error": "Fehler",
+      "file": "Datei",
+      "uploadingToServer": "Wir senden deine Datei an unsere Server...",
+      "ingestingData": "Deine Datenquelle wird eingerichtet...",
+      "generatingProfile": "Deine Daten werden analysiert...",
+      "ingestionComplete": "Datenquelle bereit, Analyse läuft...",
+      "profileReady": "Fertig! Weiterleitung zu deinem Datenprofil...",
+      "profileFailed": "Die Datenanalyse konnte nicht abgeschlossen werden, aber deine Datenquelle ist bereit!",
+      "processingToDatabase": "Wir speichern deine Daten für die Auswertung",
+      "retrievingStatus": "Status wird abgerufen...",
+      "percentComplete": "{{percent}}% erledigt",
+      "goToDataSources": "Zu den Datenquellen",
+      "goToDataSource": "Zur Datenquelle",
+      "tasks": {
+        "process_and_load_file": "Wir prüfen deine CSV, damit sie einsatzbereit ist",
+        "create_table": "Wir richten einen Platz für deine Daten ein",
+        "insert_data": "Wir verschieben deine Daten in den Arbeitsbereich",
+        "validate_data": "Wir stellen sicher, dass alles gut aussieht",
+        "create_indexes": "Wir machen alles fit für schnelle Suchen",
+        "analyze_schema": "Wir lernen den Aufbau deiner Daten kennen",
+        "cleanup_temp_files": "Wir räumen temporäre Dateien auf",
+        "finalize_import": "Wir schließen den Import ab",
+        "update_metadata": "Wir aktualisieren die Infos zu dieser Datenquelle",
+        "verify_cdc": "Wir prüfen die Verbindungseinstellungen",
+        "validate_environment_variables": "Wir bestätigen die Systemkonfiguration",
+        "fetch_data_source_details": "Wir sammeln Details zur Datenquelle",
+        "fetching_data_source_details": "Wir schließen die Einrichtung deiner Datenquelle ab",
+        "refreshing_data_sources": "Wir machen deine Datenquelle einsatzbereit",
+        "branch_task": "Wir planen die nächsten Schritte",
+        "generate_schema_description": "Wir beschreiben deine Daten automatisch",
+        "schema_generation_status": "Wir prüfen den Fortschritt der Beschreibung",
+        "finalize_status": "Wir geben deinen Daten den letzten Schliff"
+      }
+    },
+    "validation": {
+      "invalidFile": "Wir konnten die Datei nicht lesen. Achte darauf, dass du eine CSV hochlädst.",
+      "fileTooLarge": "Diese Datei ist größer als 20MB. Teil sie in kleinere Stücke und versuch es noch einmal.",
+      "emptyFile": "Es sieht so aus, als wäre die Datei leer. Wähle eine CSV mit Inhalten.",
+      "tooManyColumns": "Diese CSV hat mehr als {{limit}} Spalten. Entferne ein paar Spalten und versuche es erneut.",
+      "tooManyRows": "Diese CSV hat mehr als {{limit}} Zeilen. Kürze die Zeilen oder teile die Datei und lad sie erneut hoch.",
+      "parseError": "Wir konnten das CSV-Format nicht lesen. Beheb Formatierungsfehler und probier es nochmal.",
+      "parseFailed": "Wir konnten die CSV nicht vollständig einlesen. Prüfe die Datei und lade sie erneut hoch.",
+      "ingestionFailed": "Wir konnten deine Daten nicht hinzufügen. Versuch es gleich noch einmal oder melde dich beim Support.",
+      "pipelineFailed": "Beim Einrichten der Datenquelle ist etwas schiefgelaufen. Versuch es nochmal und kontaktiere uns, wenn es weiterhin passiert."
+    },
+    "success": {
+      "ingested": "CSV wurde erfolgreich aufgenommen"
+    },
+    "configuration": {
+      "title": "Datenbankkonfiguration",
+      "description": "Gib deine Datenquellen-Verbindungsdetails ein"
+    },
+    "setup": {
+      "title": "Einrichtungsfortschritt",
+      "description": "Deine Datenquellenverbindung wird eingerichtet",
+      "complete": {
+        "title": "Einrichtung abgeschlossen",
+        "description": "Deine Datenquellenverbindung ist einsatzbereit",
+        "summary": "Verbindungszusammenfassung",
+        "summaryPlaceholder": "[Verbindungsdetails werden hier angezeigt]",
+        "openButton": "Datenquelle öffnen"
+      },
+      "steps": {
+        "initializing": "Datenquellenverbindung wird initialisiert...",
+        "validating": "Verbindungsparameter werden validiert...",
+        "establishing": "Sichere Verbindung wird hergestellt...",
+        "retrieving": "Datenquellen-Metadaten werden abgerufen...",
+        "configuringRead": "Leseberechtigungen werden konfiguriert...",
+        "configuringWrite": "Schreibberechtigungen werden eingerichtet...",
+        "optimizing": "Verbindungspool wird optimiert...",
+        "success": "Verbindung erfolgreich konfiguriert!"
+      }
+    },
+    "navigation": {
+      "back": "Zurück",
+      "next": "Weiter",
+      "cancel": "Abbrechen",
+      "finish": "Fertigstellen"
+    },
+    "enterpriseDialog": {
+      "title": "Enterprise-Funktion",
+      "description": "Datenbankverbindungen sind nur für Enterprise-Benutzer verfügbar. Vereinbare einen Termin mit unserem Team, um mehr über die Aktualisierung deines Plans zu erfahren.",
+      "cancel": "Abbrechen",
+      "continue": "Termin vereinbaren"
+    }
+  },
+  "configErrors": {
+    "fetchFailed": "Fehler beim Abrufen der Datenbankkonfiguration. Bitte versuche es erneut."
+  }
+}

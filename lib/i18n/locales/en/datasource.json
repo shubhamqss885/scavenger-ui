@@ -1,0 +1,163 @@
+{
+  "wizard": {
+    "title": "Data Source Connection Wizard",
+    "steps": {
+      "selectWorkflow": "Select Workflow",
+      "selectWorkflowDescription": "Choose how to connect",
+      "configure": "Configure",
+      "configureDescription": "Enter connection details",
+      "setup": "Setup",
+      "setupDescription": "Establish connection",
+      "ingest": "Ingest & Analysis",
+      "ingestDescription": "Process your data and view analysis"
+    },
+    "workflow": {
+      "title": "Welcome to the Data Connection Wizard",
+      "description": "Let’s connect your data. Select your preferred connection method.",
+      "connect": {
+        "title": "Database Connection",
+        "description": "Connect directly to MySQL, PostgreSQL, MS SQL, Oracle, SQLite, SAP HANA, or other supported databases. Setup: 10–15 mins",
+        "button": "Create Connection"
+      },
+      "upload": {
+        "title": "CSV Upload",
+        "description": "Upload one or more CSVs to create a new data source quickly. Setup: 1–3 mins",
+        "button": "Upload CSVs"
+      }
+    },
+    "upload": {
+      "title": "Upload your dataset",
+      "description": "We get your file ready behind the scenes. We fix encoding, pick the right delimiter, and tidy column names so you can dive in without extra work. This prep usually takes one to three minutes, so thanks for your patience! 😊",
+      "stepperDescription": "Upload and preview your CSV; the data source is created in the next step",
+      "dropzone": {
+        "title": "Add your CSV file",
+        "description": "Drag your CSV here or click to pick it from your computer.",
+        "button": "Select file",
+        "limits": {
+          "maxSize": "Up to {{size}}MB per file",
+          "maxColumns": "Up to {{count, number}} columns",
+          "maxRows": "Up to {{count, number}} rows"
+        }
+      },
+      "fileInfo": {
+        "size": "Size: {{size}}",
+        "dimensions": "{{rows, number}} rows × {{columns, number}} columns"
+      },
+      "preview": {
+        "title": "Preview your table",
+        "rows": "{{count, number}} rows",
+        "columns": "{{count, number}} columns",
+        "showing": "Showing the first {{shown, number}} of {{total, number}} rows"
+      },
+      "analysis": {
+        "title": "Automatic insights",
+        "placeholder": "Data profiling will appear here soon",
+        "description": "Feel free to continue while we process your data"
+      },
+      "navigation": {
+        "next": "Next: Import & analyze",
+        "backToUpload": "Back to upload"
+      },
+      "success": "CSV uploaded successfully!"
+    },
+    "processing": {
+      "uploading": "Uploading your file...",
+      "validating": "Double-checking your file...",
+      "processing": "Preparing your data...",
+      "ingesting": "Adding your data...",
+      "completed": "Your data is ready!",
+      "failed": "We couldn't finish processing",
+      "waiting": "Waiting to begin",
+      "ready": "Ready when you are",
+      "elapsed": "Time elapsed:",
+      "expected": "Expected:",
+      "error": "Error",
+      "file": "File",
+      "uploadingToServer": "Sending your file to our servers...",
+      "ingestingData": "Setting up your data source...",
+      "generatingProfile": "Analyzing your data for insights...",
+      "ingestionComplete": "Data source ready, generating insights...",
+      "profileReady": "All done! Redirecting to your data profile...",
+      "profileFailed": "Data analysis couldn't complete, but your data source is ready!",
+      "processingToDatabase": "Saving your data for analysis",
+      "retrievingStatus": "Retrieving status...",
+      "percentComplete": "{{percent}}% done",
+      "goToDataSources": "Go to Data Sources",
+      "goToDataSource": "Go to Data Source",
+      "tasks": {
+        "process_and_load_file": "Reviewing your CSV so it's ready to use",
+        "create_table": "Setting up a place for your data",
+        "insert_data": "Moving your data into the workspace",
+        "validate_data": "Making sure everything looks right",
+        "create_indexes": "Tuning things for quick searches",
+        "analyze_schema": "Getting to know your data's structure",
+        "cleanup_temp_files": "Tidying up temporary files",
+        "finalize_import": "Wrapping up the import",
+        "update_metadata": "Updating what we know about this data source",
+        "verify_cdc": "Checking the connection settings",
+        "validate_environment_variables": "Confirming system setup",
+        "fetch_data_source_details": "Gathering data source details",
+        "fetching_data_source_details": "Finishing up your data source setup",
+        "refreshing_data_sources": "Getting your data source ready to use",
+        "branch_task": "Figuring out the next steps",
+        "generate_schema_description": "Describing your data automatically",
+        "schema_generation_status": "Checking on the description progress",
+        "finalize_status": "Putting the finishing touches on your data"
+      }
+    },
+    "validation": {
+      "invalidFile": "We couldn't read that file. Make sure you're uploading a CSV.",
+      "fileTooLarge": "This file is over 20MB. Try splitting it into smaller pieces and upload again.",
+      "emptyFile": "It looks like the file is empty. Pick a CSV that has some data.",
+      "tooManyColumns": "This CSV has more than {{limit}} columns. Remove extra columns and try again.",
+      "tooManyRows": "This CSV has more than {{limit}} rows. Trim the rows or split the file, then upload again.",
+      "parseError": "We had trouble reading the CSV format. Fix any formatting issues and try again.",
+      "parseFailed": "We couldn't finish reading the CSV. Double-check the file and upload it once more.",
+      "ingestionFailed": "We couldn't finish adding your data. Try again in a moment or reach out for help.",
+      "pipelineFailed": "Something went wrong setting up the data source. Try again, and contact support if it keeps happening."
+    },
+    "success": {
+      "ingested": "CSV has been successfully ingested"
+    },
+    "configuration": {
+      "title": "Database Configuration",
+      "description": "Enter your data source connection details"
+    },
+    "setup": {
+      "title": "Setup Progress",
+      "description": "Setting up your data source connection",
+      "complete": {
+        "title": "Setup Complete",
+        "description": "Your data source connection is ready to use",
+        "summary": "Connection Summary",
+        "summaryPlaceholder": "[Connection details will be shown here]",
+        "openButton": "Open Data Source"
+      },
+      "steps": {
+        "initializing": "Initializing data source connection...",
+        "validating": "Validating connection parameters...",
+        "establishing": "Establishing secure connection...",
+        "retrieving": "Retrieving data source metadata...",
+        "configuringRead": "Configuring read permissions...",
+        "configuringWrite": "Setting up write permissions...",
+        "optimizing": "Optimizing connection pool...",
+        "success": "Connection successfully configured!"
+      }
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next",
+      "cancel": "Cancel",
+      "finish": "Finish"
+    },
+    "enterpriseDialog": {
+      "title": "Enterprise Feature",
+      "description": "Database connections are only available for enterprise users. Schedule a call with our team to learn more about upgrading your plan.",
+      "cancel": "Cancel",
+      "continue": "Schedule a Call"
+    }
+  },
+  "configErrors": {
+    "fetchFailed": "Failed to fetch database configuration. Please try again."
+  }
+}

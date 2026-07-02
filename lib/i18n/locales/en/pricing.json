@@ -1,0 +1,80 @@
+{
+  "page": {
+    "title": "Pricing",
+    "heading": "Simple, transparent pricing",
+    "subheading": "Transform your data into insights with Scavenger AI. Choose the plan that fits your data analysis needs.",
+    "billing": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "yearlyDiscount": "off"
+    }
+  },
+  "plans": {
+    "demo": {
+      "name": "Demo",
+      "displayName": "Demo Plan",
+      "description": "A free demo environment with a sample database to showcase capabilities.",
+      "price": {
+        "text": "Free forever"
+      },
+      "cta": "Start Free",
+      "features": {
+        "chatDatabase": "Chat with one sample database",
+        "visualsAndInsights": "Create visuals, code and statistical insights"
+      }
+    },
+    "private": {
+      "name": "Private",
+      "displayName": "Private Plan",
+      "description": "A secure workspace for business professionals, freelancers or students.",
+      "cta": "Get Started",
+      "monthBilled": {
+        "monthly": "/month, billed monthly",
+        "yearly": "/month, billed yearly"
+      },
+      "features": {
+        "inheritDemo": "Everything in Demo, plus:",
+        "uploadData": "Upload your own data (up to 20 CSVs or PDFs)",
+        "businessLogic": "Create business logic & rules",
+        "contextAwareness": "Context awareness and personal dashboard",
+        "gdprCompliance": "Full compliance with GDPR and other privacy laws"
+      }
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "displayName": "Enterprise Plan",
+      "description": "AI, BI & Data Analytics with support and engineering for the whole company.",
+      "price": {
+        "text": "Custom pricing"
+      },
+      "cta": "Book a Meeting",
+      "features": {
+        "inheritPrivate": "Everything in Private, plus:",
+        "connections": "Connections to 200+ data sources (ERP, CRM,..)",
+        "dataEngineering": "Data engineering and creation of business logic",
+        "sharedWorkspace": "Shared workspace & dashboarding",
+        "rls": "RLS, user management, roles and rights",
+        "prioritySupport": "Priority and personal support during business hours"
+      }
+    }
+  },
+  "badges": {
+    "popular": "Popular",
+    "currentPlan": "Current Plan",
+    "loading": "Loading...",
+    "manageBilling": "Manage Billing"
+  },
+  "billing": {
+    "checkoutFailed": "Failed to create checkout session",
+    "subscriptionCanceled": "Subscription canceled successfully",
+    "cancelFailed": "Failed to cancel subscription",
+    "paymentCanceled": "Payment could not be completed. Please try again!",
+    "paymentUpdate": {
+      "title": "Payment Update",
+      "fallbackMessage": "Your subscription has been cancelled but will remain active until the end of your current billing period.",
+      "buttonOk": "Ok",
+      "buttonProcessing": "Processing...",
+      "errorMessage": "Unable to process payment update. Please try again."
+    }
+  }
+}

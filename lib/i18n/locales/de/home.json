@@ -1,0 +1,395 @@
+{
+  "page": {
+    "greeting": "Hallo!",
+    "greetingMorning": "Guten Morgen",
+    "greetingAfternoon": "Guten Tag",
+    "greetingEvening": "Guten Abend",
+    "greetingNight": "Gute Nacht",
+    "question": "Womit kann ich dir heute helfen?",
+    "placeholder": "Wie kann ich dir heute mit deinen Daten helfen?",
+    "newProject": "Neues Projekt",
+    "noDataSourceError": "Bitte verbinde eine Datenquelle, bevor du einen Chat startest",
+    "clearAll": "Alle löschen"
+  },
+  "help": {
+    "button": "Wie funktioniert das?",
+    "title": "Was kann Scavenger?",
+    "description": "Entdecke die wichtigsten Funktionen, die dir helfen, mehr aus deinen Daten herauszuholen.",
+    "tabs": {
+      "chat": {
+        "label": "Chatte mit deinen Daten",
+        "title": "Chatte mit deinen Daten",
+        "description": "Stelle jede Frage zu deinen Daten in einfacher Sprache. Scavenger ist ein KI-Agent, der deine Daten von Anfang bis Ende analysiert: Er schreibt und führt SQL-Abfragen aus, erstellt Visualisierungen (Balken-, Linien-, Torten-, Flächendiagramme und mehr) und durchsucht das Web, wenn externer Kontext bei der Beantwortung hilft. Frag einfach, was du wissen willst."
+      },
+      "context": {
+        "label": "Kontext verwalten",
+        "title": "Kontext verwalten",
+        "description": "Bringe Scavenger bei, wie dein Unternehmen funktioniert. Füge Golden Queries (bewährte Fragen, die immer die richtige Antwort liefern), Geschäftsregeln (Definitionen, KPIs, Logik, der der Agent folgen soll) hinzu und lade Dokumente in den Context Vault hoch. Je mehr Kontext du bereitstellst, desto genauer werden deine Antworten."
+      },
+      "dataUpload": {
+        "label": "Daten hochladen",
+        "title": "Daten hochladen",
+        "description": "Lade Dateien direkt in Scavenger hoch. Unterstützte Formate sind Excel, CSV, PDF, Word, PowerPoint, Text, Markdown, E-Mail und Bilder. Lade mehrere Dateien gleichzeitig hoch, benenne deine Datensätze und verfolge den Indexierungsfortschritt in Echtzeit. Deine hochgeladenen Daten werden sofort Teil der Konversation."
+      },
+      "dataConnection": {
+        "label": "Daten verbinden",
+        "title": "Daten verbinden",
+        "description": "Verbinde deine bestehenden Datenbanken und Data Warehouses sicher. Scavenger unterstützt über 60 Konnektoren, darunter PostgreSQL, MySQL, Snowflake, BigQuery, Databricks, MongoDB und viele mehr. Jede Verbindung unterstützt SSL-Verschlüsselung und SSH-Tunneling, um deine Daten zu schützen."
+      },
+      "dashboards": {
+        "label": "Dashboards teilen",
+        "title": "Dashboards teilen",
+        "description": "Pinne deine besten Diagramme und Tabellen an ein Dashboard und teile es mit deinem Team über einen Link. Dashboards aktualisieren sich automatisch nach einem Zeitplan deiner Wahl, sodass alle immer die neuesten Zahlen sehen, ohne etwas erneut ausführen zu müssen."
+      },
+      "emailReports": {
+        "label": "E-Mails einrichten",
+        "title": "E-Mails einrichten",
+        "description": "Erhalte KI-gestützte Berichte nach Zeitplan direkt in dein Postfach. Scavenger vergleicht die neuesten Daten mit vorherigen Snapshots, hebt Veränderungen hervor, markiert Anomalien und fasst die wichtigsten Erkenntnisse zusammen. Verwalte Empfänger, passe den Inhalt an und ermögliche deinem Team, sich mit einem Klick abzumelden."
+      },
+      "dataQuality": {
+        "label": "Datenqualität prüfen",
+        "title": "Datenqualität prüfen",
+        "description": "Erhalte einen automatischen Gesundheitscheck deiner Daten. Scavenger profiliert deine Tabellen, markiert Anomalien und hilft dir, Lücken oder Inkonsistenzen zu erkennen, damit du den Zahlen vertrauen kannst, bevor du Entscheidungen triffst."
+      }
+    },
+    "mocks": {
+      "chat": {
+        "userMessage": "Was waren unsere Top-5-Produkte nach Umsatz im letzten Quartal?",
+        "chartTitle": "Umsatz nach Produkt",
+        "agentSummary": "Dein Bestseller waren Sneakers mit 48.000 €, ein Plus von 14 % zum Vorquartal."
+      },
+      "context": {
+        "userMessage": "Merke dir, dass Umsatz immer als Netto nach Retouren berechnet wird.",
+        "savedConfirmation": "Als Geschäftsregel im Context Vault gespeichert.",
+        "vaultTitle": "Context Vault",
+        "rule1": "Umsatz = Netto nach Retouren",
+        "rule1Type": "Regel",
+        "rule2": "Monatlich aktive Nutzer",
+        "rule2Type": "Abfrage",
+        "rule3": "Abwanderung = kein Kauf seit 90 Tagen",
+        "rule3Type": "Regel"
+      },
+      "dataUpload": {
+        "dropzoneText": "Dateien hierher ziehen oder klicken zum Hochladen",
+        "supportedFormats": ".xlsx, .csv, .pdf, .docx, .pptx, .txt, .md, .png, .jpg"
+      },
+      "dataConnection": {
+        "moreCount": "60+",
+        "moreLabel": "weitere"
+      },
+      "dashboards": {
+        "chartTitle": "Umsatz nach Region",
+        "pinButton": "Anheften",
+        "shareButton": "Teilen",
+        "sharedWith": "Mit 4 Teammitgliedern geteilt",
+        "autoRefresh": "Aktualisiert sich alle 6 Stunden"
+      },
+      "emailReports": {
+        "reportTitle": "Wöchentlicher Dashboard-Bericht",
+        "reportSubtitle": "Vertriebsübersicht",
+        "aiSummaryTitle": "KI-Zusammenfassung",
+        "aiSummaryBody": "Der Umsatz stieg um 12 % auf 340.000 € im Vergleich zur Vorwoche. Neuanmeldungen stiegen um 8 %, angetrieben durch die Sommerkampagne.",
+        "anomalyWarning": "Kundenabwanderung stieg um 23 % in der EMEA-Region, Preisänderungen prüfen.",
+        "positiveInsight": "APAC-Umsatz hat erstmals in diesem Quartal 74.000 € überschritten.",
+        "sentBadge": "Gesendet",
+        "recipients": "3 Empfänger",
+        "nextReport": "Nächster: 1. Jul 2026"
+      },
+      "dataQuality": {
+        "orders": "Bestellungen",
+        "products": "Produkte",
+        "customers": "Kunden",
+        "inventory": "Inventar",
+        "events": "Events"
+      }
+    }
+  },
+  "suggestedPrompts": {
+    "growth": {
+      "label": "Wachstum",
+      "prompts": [
+        "Identifiziere Bereiche, in denen ich den Umsatz verbessern könnte",
+        "Fasse die Gesamtleistung und Verbesserungsmöglichkeiten zusammen",
+        "Erstelle eine Marketingstrategie basierend auf meinen Daten",
+        "Welche Kundensegmente haben das höchste Wachstumspotenzial?",
+        "Welche Produkte oder Dienstleistungen entwickeln sich positiv oder negativ?"
+      ]
+    },
+    "efficiency": {
+      "label": "Effizienz",
+      "prompts": [
+        "Erstelle eine Liste potenzieller Kosteneinsparungen zur Überprüfung",
+        "Analysiere den Gewinn und schlage vor, wie er gesteigert werden kann",
+        "Welche meiner größten Gewinntreiber sind untergenutzt?",
+        "Wo setze ich Ressourcen mit geringer Rendite ein?",
+        "Welche Prozesse oder Bereiche haben die meisten Ineffizienzen?"
+      ]
+    },
+    "understand": {
+      "label": "Verstehen",
+      "prompts": [
+        "Schlage Metriken vor, die ich gut analysieren und aufschlüsseln kann",
+        "Erkläre die Schlüsselkonzepte in meiner Datenbank in einfacher Sprache",
+        "Welche Details in den Daten werden oft übersehen?",
+        "Gib mir eine Übersicht meiner Daten und welche Fragen sie beantworten können",
+        "Welche Beziehungen bestehen zwischen meinen wichtigsten Entitäten?"
+      ]
+    },
+    "dataQuality": {
+      "label": "Datenqualität",
+      "prompts": [
+        "Was ist wichtig, aber nicht von meinen Daten abgedeckt?",
+        "Erstelle eine semantische Schicht meiner Daten",
+        "Identifiziere eine Strategie zur Bereinigung meiner Daten",
+        "Finde potenzielle Fehler in meinen Daten zur Überprüfung",
+        "Wo gibt es Lücken oder Inkonsistenzen in meinen Daten?"
+      ]
+    },
+    "risk": {
+      "label": "Risiko",
+      "prompts": [
+        "Welche ungewöhnlichen Muster sollte ich untersuchen?",
+        "Identifiziere potenziellen Betrug oder verdächtige Aktivitäten",
+        "Welche Risiken sind in meinen Daten verborgen?",
+        "Markiere Ausreißer, die menschliche Überprüfung benötigen",
+        "Was hat sich unerwartet in den letzten Daten geändert?"
+      ]
+    },
+    "customers": {
+      "label": "Kunden",
+      "prompts": [
+        "Wer sind meine wertvollsten Kunden und warum?",
+        "Welche Kunden sind abwanderungsgefährdet?",
+        "Was haben meine besten Kunden gemeinsam?",
+        "Wie unterscheiden sich Kundensegmente im Verhalten?",
+        "Was treibt den Kundenlebenswert?"
+      ]
+    },
+    "forecasting": {
+      "label": "Prognose",
+      "prompts": [
+        "Für welche Trends sollte ich planen?",
+        "Prognostiziere das nächste Quartal basierend auf historischen Mustern",
+        "Welche saisonalen Muster gibt es in meinen Daten?",
+        "Wo wird die Nachfrage wahrscheinlich steigen oder sinken?",
+        "Welche Frühindikatoren sollte ich beobachten?"
+      ]
+    },
+    "operations": {
+      "label": "Betrieb",
+      "prompts": [
+        "Wo sind meine Engpässe?",
+        "Welche Prozesse dauern länger als erwartet?",
+        "Welche Kapazitäten habe ich verfügbar?",
+        "Wo sind Ressourcen über- oder unterverteilt?",
+        "Welche operativen KPIs sollte ich täglich verfolgen?"
+      ]
+    }
+  },
+  "sidebar": {
+    "navigation": {
+      "home": "Startseite",
+      "projects": "Projekte",
+      "databases": "Datenbanken",
+      "dashboard": "Dashboard",
+      "dashboards": "Dashboards",
+      "dataSources": "Datenquellen",
+      "collapseSidebar": "Seitenleiste einklappen",
+      "expandSidebar": "Seitenleiste ausklappen",
+      "organizationSwitcher": "Organisation wechseln"
+    },
+    "orgSwitcher": {
+      "disabledWhileAddingDb": "Du kannst die Organisation nicht wechseln, während eine Datenbank hinzugefügt wird"
+    },
+    "streamingIndicator": "Agent antwortet",
+    "unreadComplete": "Neue Antwort bereit",
+    "unreadError": "Ausführung fehlgeschlagen",
+    "profile": {
+      "settings": "Einstellungen",
+      "feedback": "Feedback",
+      "logout": "Abmelden",
+      "language": "Sprache"
+    },
+    "settings": {
+      "organization": "Organisation",
+      "pricing": "Preise",
+      "account": "Konto",
+      "billing": "Abrechnung"
+    },
+    "languages": {
+      "en": "Englisch",
+      "de": "Deutsch"
+    },
+    "header": {
+      "loginAsDifferentUser": "Als anderer Benutzer anmelden"
+    },
+    "search": {
+      "placeholder": "Suchen...",
+      "label": "Suchen",
+      "tooltip": "Projekte suchen",
+      "noResults": "Keine Ergebnisse",
+      "showMore": "{{count}} weitere anzeigen",
+      "showLess": "Weniger anzeigen"
+    },
+    "projects": {
+      "title": "Projekte",
+      "pinned": "Angeheftet",
+      "pinnedProjects": "Angeheftete Projekte",
+      "recent": "Kürzlich",
+      "noPinnedProjects": "Es gibt keine angehefteten Projekte",
+      "noMatchingProjects": "Keine passenden Projekte gefunden.",
+      "emptyState": {
+        "title": "Projekt starten",
+        "description": "Projekte organisieren deine Daten. Erstelle ein Projekt, um loszulegen."
+      },
+      "screenReaderPinned": "Angeheftete Projekte"
+    },
+    "chats": {
+      "title": "Chats",
+      "search": {
+        "tooltip": "Chats suchen"
+      },
+      "noMatching": "Keine passenden Chats",
+      "empty": "Noch keine Chats"
+    },
+    "data": {
+      "title": "Daten",
+      "search": {
+        "tooltip": "Datenquellen suchen"
+      },
+      "noMatching": "Keine passenden Datenquellen",
+      "empty": "Noch keine Datenquellen"
+    },
+    "dashboards": {
+      "title": "Dashboards",
+      "create": "Dashboard erstellen",
+      "search": {
+        "tooltip": "Dashboards suchen"
+      },
+      "noMatching": "Keine passenden Dashboards",
+      "empty": "Noch keine Dashboards"
+    },
+    "dataSources": {
+      "noDataSources": "Keine Datenquellen konfiguriert.",
+      "noMatchingDataSources": "Keine passenden Datenquellen gefunden.",
+      "screenReaderDataSources": "Datenquellen",
+      "emptyState": {
+        "title": "Datenquelle verbinden",
+        "description": "Verbinde Datenquellen mit deinen Projekten, um deine Daten zu analysieren."
+      },
+      "search": {
+        "tooltip": "Datenquellen suchen"
+      },
+      "addNew": {
+        "tooltip": "Neue Daten hinzufügen",
+        "limitReached": "Datenquellen-Limit erreicht. Aktualisieren Sie Ihren Plan, um weitere hinzuzufügen.",
+        "title": "Datenquelle hinzufügen",
+        "description": "Verbinden Sie eine neue Datenbank mit Ihrer Organisation"
+      },
+      "limitDialog": {
+        "title": "Datenquellen-Limit erreicht",
+        "description": "Sie haben die maximale Anzahl von Datenquellen für Ihren Plan erreicht. Bitte aktualisieren Sie Ihren Plan, um weitere Datenquellen hinzuzufügen.",
+        "cancel": "Abbrechen",
+        "continue": "Plan aktualisieren"
+      },
+      "actions": {
+        "setDefault": "Als Standard festlegen",
+        "rename": "Umbenennen",
+        "edit": "Verbindung bearbeiten",
+        "delete": "Datenbank löschen",
+        "deleting": "Wird gelöscht...",
+        "confirmDelete": "Löschen bestätigen",
+        "deleteConfirmation": "Sind Sie sicher, dass Sie diese Datenbank löschen möchten?",
+        "cancel": "Abbrechen",
+        "editTitle": "Datenbankverbindung bearbeiten",
+        "editDescription": "Aktualisieren Sie die Verbindungsdetails für diese Datenbank",
+        "setDefaultSuccess": "Datenbank erfolgreich als Standard festgelegt",
+        "setDefaultFailed": "Fehler beim Festlegen der Datenbank als Standard",
+        "cannotDeleteDefault": "Die Standarddatenbank kann nicht gelöscht werden",
+        "deleteSuccess": "Datenbank erfolgreich gelöscht",
+        "deleteFailed": "Fehler beim Löschen der Datenbank"
+      },
+      "status": {
+        "connected": "Verbunden",
+        "connecting": "Verbindung wird hergestellt",
+        "not_connected": "Nicht verbunden"
+      }
+    },
+    "addProject": {
+      "tooltips": {
+        "upgrade": "Upgrade deinen Plan, um weitere Projekte hinzuzufügen.",
+        "addNew": "Chat starten"
+      },
+      "dialog": {
+        "newProject": "Neues Projekt",
+        "editProject": "Projektbeschreibung bearbeiten",
+        "description": "Füge ein neues Projekt zu deinem Dashboard hinzu",
+        "projectNameLabel": "Gib deinen Projektnamen ein und lade Projektdateien hoch.",
+        "projectNamePlaceholder": "Projektnamen eingeben",
+        "enableAgents": "Agenten aktivieren",
+        "agentMode": "Agentenmodus",
+        "agentModeDescription": "Wähle, wie der Agent mit deinen Daten arbeitet.",
+        "selectDatabase": "Datenbank auswählen",
+        "selectDatabasePlaceholder": "Datenbank auswählen",
+        "noDatabasesError": "Projekt kann nicht erstellt werden, da du keine Datenbanken hast. Bitte wende dich an deinen Administrator, um eine Datenbank hinzuzufügen.",
+        "none": "Keine"
+      },
+      "validation": {
+        "minLength": "Der Projektname muss mindestens 2 Zeichen enthalten.",
+        "maxLength": "Der Projektname darf nicht länger als 30 Zeichen sein.",
+        "uniqueChars": "Der Projektname muss mindestens 2 eindeutige Zeichen enthalten.",
+        "nameExists": "Ein Projekt mit diesem Namen existiert bereits."
+      },
+      "buttons": {
+        "submitting": "Wird übermittelt...",
+        "saveChanges": "Änderungen speichern",
+        "createProject": "Projekt erstellen",
+        "skipUpload": "Upload überspringen"
+      },
+      "errors": {
+        "submitFailed": "Projekt konnte nicht übermittelt werden. Bitte versuche es erneut."
+      }
+    },
+    "projectActions": {
+      "pinToSidebar": "Projekt an Seitenleiste anheften",
+      "unpinFromSidebar": "Projekt von Seitenleiste lösen",
+      "editDetails": "Projektdetails bearbeiten",
+      "deleteProject": "Projekt löschen",
+      "confirmDelete": "Löschen bestätigen",
+      "deleteConfirmation": "Bist du sicher, dass du dieses Projekt löschen möchtest?",
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "rename": "Umbenennen",
+      "files": "Projektdateien"
+    },
+    "selection": {
+      "selected": "{{count}} ausgewählt"
+    },
+    "usage": {
+      "tokens": "Token-Verbrauch",
+      "tooltip": "{{used}} von {{total}} Token verbraucht ({{percent}}%) — Verbrauch ansehen"
+    }
+  },
+  "onboardingTour": {
+    "progress": "Schritt {{current}} von {{total}}",
+    "titles": {
+      "connectDatabase": "Datenbank verbinden",
+      "selectDatabase": "Datenquelle wählen",
+      "askQuestions": "Fragen stellen",
+      "manageData": "Daten & Kontext verwalten"
+    },
+    "steps": {
+      "connectDatabase": "Verbinde hier deine Datenbank — jede SQL-Datenbank, Data Warehouse oder füge einen Connection String ein.",
+      "selectDatabase": "Wähle welche Datenquelle du abfragen möchtest.",
+      "askQuestions": "Stelle Fragen in normaler Sprache. Scavenger analysiert deine Daten, führt Abfragen aus und erklärt Erkenntnisse.",
+      "manageData": "Verwalte deine Datenquellen hier. Es gibt auch ein paar Beispiel-Datenbanken zum Ausprobieren."
+    },
+    "buttons": {
+      "back": "Zurück",
+      "close": "Schließen",
+      "finish": "Loslegen",
+      "next": "Weiter",
+      "skip": "Tour überspringen"
+    }
+  }
+}

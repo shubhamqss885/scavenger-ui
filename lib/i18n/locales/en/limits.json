@@ -1,0 +1,26 @@
+{
+  "common": {
+    "cancel": "Cancel",
+    "action": "Upgrade"
+  },
+  "message": {
+    "title": "You've reached the maximum number of messages",
+    "description": "Upgrade your plan to keep chatting with your data."
+  },
+  "token": {
+    "title": "You've reached your token limit",
+    "description": "Upgrade your plan to keep chatting with your data."
+  },
+  "project": {
+    "title": "You've reached the maximum number of projects",
+    "description": "Upgrade your plan to create more projects."
+  },
+  "datasource": {
+    "title": "You've reached the maximum number of data sources",
+    "description": "Remove a data source or upgrade your plan to add more."
+  },
+  "storage": {
+    "title": "You've reached your storage limit",
+    "description": "Free up space or upgrade your plan to upload more files."
+  }
+}

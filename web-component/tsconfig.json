@@ -1,0 +1,32 @@
+{
+  // Typecheck config for the web component (`npm run web-component:typecheck`),
+  // and — because it lives INSIDE web-component/ — the config the editor's TS
+  // server auto-associates with these files. The root tsconfig.json EXCLUDES
+  // web-component/ (it's a Vite build, not part of `next build`), and a
+  // differently-named root config is NOT auto-discovered by the editor — so
+  // without this file `@/*` imports show as unresolved (TS2307) in the IDE even
+  // though the CLI typecheck passes.
+  //
+  // adapters/* and stubs/* are typed against the REAL app modules via type-only
+  // imports, so drift from the real context shape is a compile error (Defect 4).
+  // @/* resolves to the repo root here (tsc knows nothing of the vite aliases),
+  // which is exactly what makes those type-only imports bite.
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    // Re-anchor @/* to the repo root from this nested config.
+    "baseUrl": "..",
+    "paths": { "@/*": ["./*"] }
+  },
+  // Own files + the repo's ambient/global type declarations.
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "../next-env.d.ts",
+    "../global.d.ts",
+    "../types/global.d.ts"
+  ],
+  // Override the inherited exclude — the root's list contains "web-component",
+  // which would otherwise filter every file here back out and empty the project.
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,58 @@
+{
+  "verify": {
+    "title": "Bitte verifizieren Sie Ihre E-Mail-Adresse.",
+    "description": "Um Scavenger weiterhin zu nutzen, verifizieren Sie bitte Ihre E-Mail-Adresse:",
+    "supportText": "Keine E-Mail erhalten? Überprüfen Sie Ihren Spam-Ordner oder",
+    "supportLink": "kontaktieren Sie den Support",
+    "buttons": {
+      "sending": "Wird gesendet...",
+      "resendIn": "Erneut senden in {{count}}s",
+      "sendVerification": "Verifizierungs-E-Mail senden",
+      "checking": "Wird überprüft...",
+      "verified": "Ich habe meine E-Mail verifiziert"
+    },
+    "toasts": {
+      "emailSentSuccess": "Verifizierungs-E-Mail erfolgreich gesendet! Bitte überprüfen Sie Ihren Posteingang.",
+      "emailSentError": "Fehler beim Senden der Verifizierungs-E-Mail. Bitte versuchen Sie es erneut.",
+      "verifiedSuccess": "E-Mail erfolgreich verifiziert! Weiterleitung...",
+      "verifiedError": "E-Mail noch nicht verifiziert. Bitte verifizieren Sie Ihre E-Mail und versuchen Sie es erneut."
+    }
+  },
+  "welcome": {
+    "title": "Willkommen bei Scavenger, Ihrem KI-Business-Berater!",
+    "emailConfirmed": "Ihre E-Mail",
+    "hasBeenConfirmed": "wurde bestätigt.",
+    "letsCreate": "Lassen Sie uns Ihr Konto erstellen.",
+    "agreeText": "Ich stimme den",
+    "termsLink": "Allgemeinen Geschäftsbedingungen",
+    "and": "und der",
+    "privacyLink": "Datenschutzerklärung",
+    "endText": "zu.",
+    "validationError": "Sie müssen den Allgemeinen Geschäftsbedingungen und der Datenschutzerklärung zustimmen, um fortzufahren.",
+    "buttons": {
+      "submitting": "Wird übermittelt...",
+      "continue": "Weiter"
+    }
+  },
+  "planSelection": {
+    "title": "Wählen Sie Ihren Plan zum Starten",
+    "description": "Verwandeln Sie Ihre Daten in Erkenntnisse mit Scavenger AI. Starten Sie mit unserem kostenlosen Demo-Plan oder schalten Sie erweiterte Funktionen mit einem bezahlten Abonnement frei.",
+    "frequency": {
+      "monthly": "Monatlich",
+      "yearly": "Jährlich",
+      "discount": "{{percent}}% Rabatt"
+    },
+    "buttons": {
+      "continueDemo": "Mit Demo fortfahren (Kostenlos)"
+    },
+    "toasts": {
+      "checkoutError": "Fehler beim Erstellen der Checkout-Sitzung"
+    }
+  },
+  "regionNotice": {
+    "title": "Willkommen bei Scavenger AI",
+    "description": "Scavenger AI ist ein Datenanalyse-Agent zum Chatten mit SQL-basierten Datensätzen. Wenn du nach Home-Depot-Penny-Deals oder ähnlichen Angeboten suchst, bist du wahrscheinlich auf der falschen Website.",
+    "continueButton": "Ja, weiter zu Scavenger",
+    "leaveButton": "Nein, ich suche Penny-Deals"
+  }
+}

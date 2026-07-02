@@ -1,0 +1,93 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scavenger Chat — React web component demo</title>
+
+    <!-- Demo config (sets window.SCAV_DEMO_CONFIG). Load FIRST; the mount script at
+         the end of <body> copies it onto <scavenger-chat> as attributes. The widget
+         is PROPS-ONLY — no page env, no process shim. -->
+    <script src="./demo-config.js"></script>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .demo-bar {
+        padding: 6px 12px;
+        background: #0f172a;
+        color: #cbd5e1;
+        font:
+          12px/1.4 system-ui,
+          sans-serif;
+      }
+      .demo-bar code {
+        color: #7dd3fc;
+      }
+      /* Host-page sample chrome — deliberately unstyled elements to prove the
+         widget's Tailwind preflight does NOT leak out of the shadow root. */
+      .host-sample {
+        padding: 8px 12px;
+        border-bottom: 1px solid #e2e8f0;
+        background: #fff;
+      }
+      scavenger-chat {
+        flex: 1 1 0;
+        min-height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-bar">
+      <code>&lt;scavenger-chat&gt;</code> React web component demo — real Auth0
+      + live api-dev WebSocket. Log in to stream a real agentic answer.
+    </div>
+
+    <!-- Bare elements (no widget classes). Under shadow DOM these must keep their
+         browser-default look; if the widget's preflight leaked they'd lose H1
+         margins, the native button chrome, and the list bullets. -->
+    <section class="host-sample">
+      <h1>Host page H1</h1>
+      <p>
+        Host paragraph with a <a href="#">link</a> and a
+        <button>native button</button>.
+      </p>
+      <ul>
+        <li>list item one</li>
+        <li>list item two</li>
+      </ul>
+    </section>
+
+    <scavenger-chat></scavenger-chat>
+
+    <!-- Map the demo config → kebab attributes on the element (the widget reads
+         everything from these props), THEN inject the bundle. Doing it in this order
+         guarantees the attributes exist before the custom element upgrades. -->
+    <script>
+      (() => {
+        window.applyScavDemoConfig(document.querySelector("scavenger-chat"));
+
+        // Bundle. Shadow DOM: the widget adopts its CSS into its own shadow root, so
+        // NO scavenger-chat.css is emitted or linked. The JS entry is UNHASHED (it
+        // re-exports a content-hashed chunk); a per-load cache-bust query forces a
+        // fresh fetch so a stale cached entry can't import a now-deleted chunk.
+        const js = document.createElement("script");
+        js.type = "module";
+        js.src = "../dist-web-component/scavenger-chat.js?t=" + Date.now();
+        document.head.appendChild(js);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scavenger Chat — React web component DEV (Vite HMR)</title>
+
+    <!-- Demo config (sets window.SCAV_DEMO_CONFIG). Load FIRST; the mount script in
+         <body> copies it onto <scavenger-chat> as attributes. The widget is
+         PROPS-ONLY — no page env, no process shim. -->
+    <script src="/demo/demo-config.js"></script>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .demo-bar {
+        padding: 6px 12px;
+        background: #0f172a;
+        color: #cbd5e1;
+        font:
+          12px/1.4 system-ui,
+          sans-serif;
+      }
+      .demo-bar code {
+        color: #7dd3fc;
+      }
+      scavenger-chat {
+        flex: 1 1 0;
+        min-height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-bar">
+      <strong>DEV</strong> (Vite HMR · source) —
+      <code>&lt;scavenger-chat&gt;</code> on <code>localhost:3333</code>, real
+      Auth0 + live api-dev WebSocket. Edits hot-reload — no rebuild.
+    </div>
+
+    <scavenger-chat></scavenger-chat>
+
+    <!-- Map the demo config → kebab attributes on the element (the widget reads
+         everything from these props). This classic script runs during parse, before
+         the deferred module entry below, so attributes exist before the upgrade. -->
+    <script>
+      window.applyScavDemoConfig(document.querySelector("scavenger-chat"));
+    </script>
+
+    <!-- Vite serves the SOURCE entry (NOT the built bundle) → HMR. Its CSS imports
+         (@/app/globals.css, ./styles.css) are processed live by Vite. -->
+    <script type="module" src="/web-component/index.tsx"></script>
+  </body>
+</html>

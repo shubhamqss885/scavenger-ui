@@ -1,0 +1,345 @@
+{
+  "page": {
+    "title": "Dashboard",
+    "welcome": "Welcome to Scavenger",
+    "overview": "Overview",
+    "analytics": "Analytics",
+    "recent": "Recent Activity",
+    "insights": "Insights"
+  },
+  "stats": {
+    "total": "Total",
+    "active": "Active",
+    "pending": "Pending",
+    "completed": "Completed",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month"
+  },
+  "actions": {
+    "create": "Create New",
+    "viewAll": "View All",
+    "refresh": "Refresh",
+    "filter": "Filter",
+    "sort": "Sort"
+  },
+  "charts": {
+    "usage": "Usage",
+    "performance": "Performance",
+    "trends": "Trends"
+  },
+  "orgDashboard": {
+    "page": {
+      "title": "Dashboards",
+      "subtitle": "Pinned charts and tables from your chat sessions, all in one place.",
+      "searchPlaceholder": "Search dashboards...",
+      "loading": "Loading dashboard...",
+      "notFound": "Dashboard not found.",
+      "loadFailed": "Couldn't load dashboard.",
+      "goToDashboards": "Go to dashboards",
+      "noDashboards": "No Dashboards Yet",
+      "noDashboardsDescription": "Create your first dashboard to get started",
+      "noMatchingDashboards": "No dashboards match your search",
+      "noMatchingDashboardsDescription": "Try different keywords or clear filters"
+    },
+    "sections": {
+      "pinned": "Pinned",
+      "recent": "Recent"
+    },
+    "actions": {
+      "addDashboard": "Add Dashboard",
+      "addNew": "Add a new dashboard",
+      "editDashboard": "Edit dashboard",
+      "editTitle": "Edit title",
+      "delete": "Delete dashboard",
+      "pin": "Pin dashboard",
+      "unpin": "Unpin dashboard",
+      "openInbox": "Open Inbox",
+      "closeInbox": "Close Inbox",
+      "viewSharedMessages": "View Shared Messages",
+      "closeView": "Close View",
+      "previewExport": "Preview Export",
+      "exitPreview": "Exit Preview",
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "form": {
+      "title": "Dashboard",
+      "namePlaceholder": "Dashboard name",
+      "validation": {
+        "minLength": "Dashboard name must have at least 2 characters.",
+        "uniqueChars": "Name must contain at least 2 unique characters.",
+        "nameExists": "A dashboard with this name already exists."
+      }
+    },
+    "status": {
+      "pinned": "Dashboard pinned successfully",
+      "unpinned": "Dashboard unpinned successfully",
+      "pinError": "Failed to update dashboard pin status",
+      "updated": "Updated",
+      "saveLabel": "Update"
+    },
+    "inbox": {
+      "upcomingMessages": "Upcoming Messages",
+      "rejectedMessages": "Rejected Messages",
+      "noPendingMessages": "No pending messages.",
+      "noRejectedMessages": "No rejected messages.",
+      "noSharedMessages": "No shared messages yet. Messages approved to this dashboard will appear here.",
+      "approving": "Approving...",
+      "approve": "Approve",
+      "rejecting": "Rejecting...",
+      "reject": "Reject",
+      "resharing": "Resharing...",
+      "reshare": "Reshare",
+      "unsharing": "Unsharing...",
+      "unshare": "Unshare",
+      "reshareSuccess": "Message sent back to inbox and pending approval",
+      "reshareError": "Failed to reshare message"
+    },
+    "export": {
+      "exportDashboard": "Export Dashboard",
+      "exportAsPDF": "Export as PDF",
+      "exportAsPPT": "Export as PPT"
+    },
+    "context": {
+      "success": {
+        "dashboardCreated": "Dashboard created",
+        "dashboardUpdated": "Dashboard updated",
+        "dashboardDeleted": "Dashboard deleted",
+        "messageUnshared": "Message unshared",
+        "messageApproved": "Message approved",
+        "messageRejected": "Message rejected",
+        "messageShared": "Message shared!",
+        "viewDashboard": "View dashboard"
+      },
+      "error": {
+        "createDashboardFailed": "Failed to create dashboard",
+        "updateDashboardFailed": "Failed to update dashboard",
+        "deleteDashboardFailed": "Failed to delete dashboard",
+        "shareFailed": "Failed to share message",
+        "unshareFailed": "Failed to unshare message",
+        "fetchSharedFailed": "Failed to fetch shared messages",
+        "approveFailed": "Failed to approve message",
+        "rejectFailed": "Failed to reject message",
+        "loadLayoutFailed": "Failed to load dashboard layout",
+        "saveLayoutFailed": "Failed to save dashboard layout",
+        "fetchStatsFailed": "Error fetching dashboard stats"
+      },
+      "info": {
+        "alreadyShared": "This message has already been shared to the dashboard selected."
+      }
+    },
+    "list": {
+      "loading": "Loading dashboards...",
+      "newDashboard": "New Dashboard",
+      "emptyTitle": "No dashboards yet",
+      "emptyHint": "Pin charts and tables from your chat sessions to create dashboards.",
+      "createDialogTitle": "Create Dashboard",
+      "createStep1": "Create a dashboard",
+      "createStep2": "Start a chat and ask questions about your data",
+      "createStep3": "Pin charts or tables to the dashboard",
+      "create": "Create"
+    },
+    "emptyState": {
+      "title": "No widgets yet",
+      "viewerHint": "Your admin hasn't shared any dashboards with you yet.",
+      "step1": "Open a chat",
+      "step2": "Ask a question about your data",
+      "step3": "Hit the pin icon on any result or chart",
+      "startChat": "Start a Chat"
+    },
+    "widget": {
+      "count_one": "{{count}} widget",
+      "count_other": "{{count}} widgets",
+      "refreshFailed": "Failed to refresh this widget.",
+      "retryInChat": "Retry in chat",
+      "retryInChatPrompt": "Regenerate the \"{{title}}\" chart. Original SQL:\n```sql\n{{sql}}\n```",
+      "noData": "No data yet. Refresh to load.",
+      "loading": "Loading...",
+      "rowsShowing": "Showing {{displayed}} of {{total}} rows",
+      "showAll": "Show all",
+      "showLess": "Show less",
+      "removeFailed": "Failed to remove widget",
+      "viewSql": "View SQL",
+      "backToWidget": "Back to widget",
+      "copySql": "Copy SQL query",
+      "sqlCopied": "Copied!",
+      "remove": "Delete",
+      "edit": "Edit",
+      "editingWidget": "Editing: {{title}}",
+      "datasourceUnavailable": "Datasource no longer available",
+      "editFailed": "Couldn't open the editor for this widget",
+      "editContextSuffix": "\n\n---\n_Context for the request above: I'm editing an existing dashboard widget titled \"{{title}}\", which is generated from this query:_\n```sql\n{{sql}}\n```\n_Apply my requested change by adjusting this query and/or the chart as needed, run it against this data source, and return the updated chart or table as a result so I can re-add it to the dashboard. Generate the actual visualization — don't just reply with a new title or SQL._",
+      "editStartHint": "Describe what you'd like to change about this widget.",
+      "deleteChat": "Delete chat",
+      "update": "Update widget",
+      "add": "Add as new",
+      "updated": "Widget updated",
+      "added": "Added to dashboard",
+      "updateFailed": "Couldn't update the widget",
+      "addFailed": "Couldn't add the widget",
+      "updateGone": "This widget no longer exists — try \"Add as new\" instead"
+    },
+    "refresh": {
+      "all": "Refresh All",
+      "inProgress": "Refreshing {{index}}/{{total}}",
+      "cancel": "Cancel",
+      "lastRefreshed": "Last refreshed {{time}}"
+    },
+    "schedule": {
+      "trigger": "Schedule",
+      "title": "Auto-refresh schedule",
+      "description": "Pick how often this dashboard refreshes itself in the background.",
+      "intervalLabel": "Refresh frequency",
+      "intervals": {
+        "off": "Off",
+        "hourly": "Hourly",
+        "every_6h": "Every 6 hours",
+        "daily": "Daily",
+        "weekly": "Weekly"
+      },
+      "hourLabel": "Time",
+      "dayLabel": "Day",
+      "summary": {
+        "hourly": "Auto: hourly",
+        "every_6h": "Auto: every 6h",
+        "daily": "Auto: daily {{time}}",
+        "weekly": "Auto: {{day}} {{time}}"
+      },
+      "save": "Save",
+      "cancel": "Cancel",
+      "saved": "Schedule updated",
+      "saveFailed": "Failed to update schedule",
+      "tzNote": "Times shown in {{tz}}",
+      "searchHour": "Search time...",
+      "searchDay": "Search day...",
+      "noMatch": "No match"
+    },
+    "viewers": {
+      "manage": "Manage Viewers",
+      "section": "People with access",
+      "add": "Add viewer",
+      "searchPlaceholder": "Search members...",
+      "loading": "Loading...",
+      "noMembers": "No members found.",
+      "noViewers": "No viewers assigned",
+      "count_one": "{{count}} viewer",
+      "count_other": "{{count}} viewers",
+      "added": "Added {{name}}",
+      "addFailed": "Failed to add viewer",
+      "removed": "Viewer removed",
+      "removeFailed": "Failed to remove viewer",
+      "loadFailed": "Failed to load org members"
+    },
+    "shareLink": {
+      "button": "Share Link",
+      "share": "Share",
+      "title": "Share dashboard",
+      "section": "Share link",
+      "helper": "Anyone in your organization with this link can view this dashboard.",
+      "generate": "Generate Shareable Link",
+      "loadFailed": "Couldn't load the share link",
+      "urlLabel": "Share link URL",
+      "copy": "Copy",
+      "copied": "Link copied to clipboard",
+      "copyFailed": "Couldn't copy — select the link and copy it manually",
+      "revoke": "Revoke link",
+      "revokeConfirm": "Confirm revoke?",
+      "revoked": "Share link revoked",
+      "generateFailed": "Failed to generate share link",
+      "revokeFailed": "Failed to revoke share link",
+      "redeemed": "You now have access to this dashboard",
+      "alreadyHadAccess": "You already have access to this dashboard",
+      "wrongOrg": "You don't have access to this organization",
+      "invalid": "This share link is invalid or has been revoked"
+    },
+    "pin": {
+      "trigger": "Pin to Dashboard",
+      "dialogTitle": "Pin to Dashboard",
+      "createAndPin": "Create & Pin",
+      "namePlaceholder": "New dashboard name",
+      "success": "Pinned to dashboard.",
+      "view": "View",
+      "failed": "Failed to pin to dashboard"
+    },
+    "emailReports": {
+      "button": "Email Reports",
+      "title": "Scheduled Email Report",
+      "tabs": {
+        "schedule": "Schedule",
+        "subscribers": "Subscribers",
+        "history": "History"
+      },
+      "schedule": {
+        "frequencyLabel": "Frequency",
+        "intervals": {
+          "off": "Off",
+          "daily": "Daily",
+          "weekly": "Weekly",
+          "monthly": "Monthly"
+        },
+        "dayOfWeekLabel": "Day of week",
+        "dayOfMonthLabel": "Day of month",
+        "sendAtLabel": "Send at",
+        "searchDay": "Search day...",
+        "searchHour": "Search hour...",
+        "noMatch": "No match",
+        "nextSend": "Next send: {{date}}",
+        "refreshBeforeSend": "Refresh data before sending",
+        "customTitle": "Custom email subject",
+        "customTitlePlaceholder": "Override the default email subject line",
+        "customNote": "Author note",
+        "customNotePlaceholder": "Add a static note that appears in every email",
+        "context": "Context for AI",
+        "contextPlaceholder": "e.g. Focus on revenue metrics and ignore test data",
+        "excludeData": "Omit data tables from email",
+        "maxCharts": "Max charts",
+        "language": "Report language",
+        "languageAuto": "Auto",
+        "languageEnglish": "English",
+        "languageGerman": "Deutsch",
+        "languageFrench": "Français",
+        "languageSpanish": "Español",
+        "resume": "Resume",
+        "pause": "Pause",
+        "save": "Save",
+        "preview": "Preview email",
+        "previewFailed": "Failed to load email preview",
+        "removeSchedule": "Remove schedule",
+        "saved": "Email schedule saved",
+        "saveFailed": "Failed to save email schedule",
+        "removed": "Email schedule removed",
+        "removeFailed": "Failed to remove schedule",
+        "pauseSaved": "Email reports paused",
+        "resumeSaved": "Email reports resumed",
+        "pausedStatus": "Paused"
+      },
+      "subscribers": {
+        "none": "No subscribers yet.",
+        "searchPlaceholder": "Search members or type email...",
+        "emailPlaceholder": "email@example.com",
+        "emptyText": "Type any email address",
+        "add": "Add",
+        "added": "Added {{email}}",
+        "addedAsViewer": "Added {{email}} as org viewer and subscribed",
+        "addFailed": "Failed to add subscriber",
+        "alreadySubscribed": "Already subscribed",
+        "removed": "Removed {{email}}",
+        "removeFailed": "Failed to remove subscriber"
+      },
+      "history": {
+        "none": "No emails sent yet.",
+        "statusSent": "Sent",
+        "statusFailed": "Failed",
+        "statusSkipped": "Skipped",
+        "showing": "Showing last {{count}} entries",
+        "recipients": "recipients"
+      },
+      "loadFailed": "Failed to load email settings"
+    },
+    "unsubscribe": {
+      "successText": "Sign in to manage subscriptions",
+      "errorText": "Invalid or expired unsubscribe link.",
+      "goToDashboards": "Go to dashboards"
+    }
+  }
+}

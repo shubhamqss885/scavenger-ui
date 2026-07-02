@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "Teile dein Feedback"
+  },
+  "form": {
+    "fields": {
+      "username": "Benutzername",
+      "userEmail": "Benutzer-E-Mail"
+    },
+    "question": "Was möchtest du mit uns teilen?",
+    "placeholder": "Teile deine Gedanken, Vorschläge oder melde Probleme, die du festgestellt hast...",
+    "characterCount": "{{current}}/{{max}} Zeichen",
+    "helperText": "Dein Feedback wird an unser Support-Team gesendet.",
+    "validation": {
+      "required": "Bitte gib dein Feedback ein, bevor du es absendest."
+    }
+  },
+  "actions": {
+    "submit": "Feedback absenden",
+    "submitting": "Wird gesendet..."
+  },
+  "messages": {
+    "success": "Feedback erfolgreich übermittelt!",
+    "error": "Feedback konnte nicht übermittelt werden. Bitte versuche es erneut."
+  },
+  "values": {
+    "notAvailable": "N/V"
+  },
+  "serverMessages": {
+    "Feedback recorded successfully.": "Feedback erfolgreich aufgezeichnet."
+  }
+}

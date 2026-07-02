@@ -1,0 +1,395 @@
+{
+  "page": {
+    "greeting": "Hello!",
+    "greetingMorning": "Good morning",
+    "greetingAfternoon": "Good afternoon",
+    "greetingEvening": "Good evening",
+    "greetingNight": "Good night",
+    "question": "What can I help you with today?",
+    "placeholder": "How can I help you with your data today?",
+    "newProject": "New Project",
+    "noDataSourceError": "Please connect a data source before starting a chat",
+    "clearAll": "Clear all"
+  },
+  "help": {
+    "button": "How does it work",
+    "title": "What can Scavenger do?",
+    "description": "Explore the key features that help you get more from your data.",
+    "tabs": {
+      "chat": {
+        "label": "Chat with your Data",
+        "title": "Chat with your Data",
+        "description": "Ask any question about your data in plain language. Scavenger is an AI agent that analyzes your data end-to-end: it writes and runs SQL queries, creates visualizations (bar, line, pie, area charts and more), and searches the web when external context helps answer your question. Just ask what you want to know."
+      },
+      "context": {
+        "label": "Manage Context",
+        "title": "Manage Context",
+        "description": "Teach Scavenger how your business works. Add golden queries (proven questions that always return the right answer), business rules (definitions, KPIs, logic the agent should follow), and upload documents to the context vault. The more context you provide, the more accurate your answers become."
+      },
+      "dataUpload": {
+        "label": "Upload Data",
+        "title": "Upload Data",
+        "description": "Upload files directly into Scavenger. Supported formats include Excel, CSV, PDF, Word, PowerPoint, text, markdown, email, and images. Upload multiple files at once, name your datasets, and track indexing progress in real time. Your uploaded data becomes part of the conversation instantly."
+      },
+      "dataConnection": {
+        "label": "Connect Data",
+        "title": "Connect Data",
+        "description": "Connect your existing databases and data warehouses securely. Scavenger supports 60+ connectors including PostgreSQL, MySQL, Snowflake, BigQuery, Databricks, MongoDB, and many more. Every connection supports SSL encryption and SSH tunneling to keep your data protected."
+      },
+      "dashboards": {
+        "label": "Share Dashboards",
+        "title": "Share Dashboards",
+        "description": "Pin your best charts and tables to a dashboard, then share it with your team via a link. Dashboards auto-refresh on a schedule you choose, so everyone always sees the latest numbers without re-running anything."
+      },
+      "emailReports": {
+        "label": "Set up Email Reports",
+        "title": "Set up Email Reports",
+        "description": "Get AI-powered reports delivered to your inbox on a schedule. Scavenger compares the latest data to previous snapshots, highlights what changed, flags anomalies, and summarizes the key insights. Manage recipients, customize the content, and let your team unsubscribe with one click."
+      },
+      "dataQuality": {
+        "label": "Check Data Quality",
+        "title": "Check Data Quality",
+        "description": "Get an automatic health check of your data. Scavenger profiles your tables, flags anomalies, and helps you spot gaps or inconsistencies so you can trust the numbers before making decisions."
+      }
+    },
+    "mocks": {
+      "chat": {
+        "userMessage": "What were our top 5 products by revenue last quarter?",
+        "chartTitle": "Revenue by Product",
+        "agentSummary": "Your best seller was Sneakers at $48K, up 14% from last quarter."
+      },
+      "context": {
+        "userMessage": "Remember that revenue is always calculated as net after returns.",
+        "savedConfirmation": "Saved to Context Vault as a business rule.",
+        "vaultTitle": "Context Vault",
+        "rule1": "Revenue = net after returns",
+        "rule1Type": "Rule",
+        "rule2": "Monthly Active Users",
+        "rule2Type": "Query",
+        "rule3": "Churn = no purchase in 90 days",
+        "rule3Type": "Rule"
+      },
+      "dataUpload": {
+        "dropzoneText": "Drop files here or click to upload",
+        "supportedFormats": ".xlsx, .csv, .pdf, .docx, .pptx, .txt, .md, .png, .jpg"
+      },
+      "dataConnection": {
+        "moreCount": "60+",
+        "moreLabel": "more"
+      },
+      "dashboards": {
+        "chartTitle": "Revenue by Region",
+        "pinButton": "Pin",
+        "shareButton": "Share",
+        "sharedWith": "Shared with 4 team members",
+        "autoRefresh": "Auto-refreshes every 6 hours"
+      },
+      "emailReports": {
+        "reportTitle": "Weekly Dashboard Report",
+        "reportSubtitle": "Sales Overview",
+        "aiSummaryTitle": "AI Summary",
+        "aiSummaryBody": "Revenue increased 12% to $340K compared to last week. New signups up 8% driven by the summer campaign.",
+        "anomalyWarning": "Customer churn spiked 23% in EMEA region, investigate pricing changes.",
+        "positiveInsight": "APAC revenue crossed $74K for the first time this quarter.",
+        "sentBadge": "Sent",
+        "recipients": "3 recipients",
+        "nextReport": "Next: Jul 1, 2026"
+      },
+      "dataQuality": {
+        "orders": "orders",
+        "products": "products",
+        "customers": "customers",
+        "inventory": "inventory",
+        "events": "events"
+      }
+    }
+  },
+  "suggestedPrompts": {
+    "growth": {
+      "label": "Growth",
+      "prompts": [
+        "Identify areas in which I could improve revenue for my review",
+        "Summarize overall performance and improvement opportunities",
+        "Make a marketing strategy based on my data to drive growth",
+        "Which customer segments have the highest growth potential?",
+        "What products or services are trending up vs down?"
+      ]
+    },
+    "efficiency": {
+      "label": "Efficiency",
+      "prompts": [
+        "Give me a list of potential cost saving opportunities for my review",
+        "Look at profit and suggest how to increase it",
+        "What are my biggest profit drivers which are underutilized?",
+        "Where am I spending resources with low return?",
+        "Which processes or areas have the most inefficiency?"
+      ]
+    },
+    "understand": {
+      "label": "Understand",
+      "prompts": [
+        "Suggest and explain metrics which I can analyze nicely and drill down into",
+        "Explain the key concepts in my database in simple language",
+        "What are details in the data usually overlooked?",
+        "Give me a tour of my data and what questions it can answer",
+        "What are the relationships between my key entities?"
+      ]
+    },
+    "dataQuality": {
+      "label": "Data Quality",
+      "prompts": [
+        "What is important but not covered by my data?",
+        "Create a semantic layer of my data",
+        "Identify a strategy for cleaning my data",
+        "Find potential mistakes in my data for me to check",
+        "Where are there gaps or inconsistencies in my data?"
+      ]
+    },
+    "risk": {
+      "label": "Risk",
+      "prompts": [
+        "What unusual patterns should I investigate?",
+        "Identify potential fraud or suspicious activity",
+        "What risks are hidden in my data?",
+        "Flag outliers that need human review",
+        "What's changed unexpectedly in recent data?"
+      ]
+    },
+    "customers": {
+      "label": "Customers",
+      "prompts": [
+        "Who are my most valuable customers and why?",
+        "Which customers are at risk of churning?",
+        "What do my best customers have in common?",
+        "How do customer segments differ in behavior?",
+        "What drives customer lifetime value?"
+      ]
+    },
+    "forecasting": {
+      "label": "Forecasting",
+      "prompts": [
+        "What trends should I plan for?",
+        "Predict next quarter based on historical patterns",
+        "What seasonal patterns exist in my data?",
+        "Where is demand likely to increase or decrease?",
+        "What leading indicators should I watch?"
+      ]
+    },
+    "operations": {
+      "label": "Operations",
+      "prompts": [
+        "Where are my bottlenecks?",
+        "Which processes take longer than expected?",
+        "What capacity do I have available?",
+        "Where are resources over or under-allocated?",
+        "What operational KPIs should I track daily?"
+      ]
+    }
+  },
+  "sidebar": {
+    "navigation": {
+      "home": "Home",
+      "projects": "Projects",
+      "databases": "Databases",
+      "dashboard": "Dashboard",
+      "dashboards": "Dashboards",
+      "dataSources": "Data Sources",
+      "collapseSidebar": "Collapse Sidebar",
+      "expandSidebar": "Expand Sidebar",
+      "organizationSwitcher": "Organization Switcher"
+    },
+    "orgSwitcher": {
+      "disabledWhileAddingDb": "Can't switch organizations while a database is being added"
+    },
+    "streamingIndicator": "Agent is responding",
+    "unreadComplete": "New response ready",
+    "unreadError": "Run failed",
+    "profile": {
+      "settings": "Settings",
+      "feedback": "Feedback",
+      "logout": "Log out",
+      "language": "Language"
+    },
+    "settings": {
+      "organization": "Organization",
+      "pricing": "Pricing",
+      "account": "Account",
+      "billing": "Billing"
+    },
+    "languages": {
+      "en": "English",
+      "de": "German"
+    },
+    "header": {
+      "loginAsDifferentUser": "Log in as different user"
+    },
+    "search": {
+      "placeholder": "Search...",
+      "label": "Search",
+      "tooltip": "Search projects",
+      "noResults": "No results",
+      "showMore": "Show {{count}} more",
+      "showLess": "Show less"
+    },
+    "projects": {
+      "title": "Projects",
+      "pinned": "Pinned",
+      "pinnedProjects": "Pinned Projects",
+      "recent": "Recent",
+      "noPinnedProjects": "There are no pinned projects",
+      "noMatchingProjects": "No matching projects found.",
+      "emptyState": {
+        "title": "Start a project",
+        "description": "Projects organize your data. Create a project to get started."
+      },
+      "screenReaderPinned": "Pinned Projects"
+    },
+    "chats": {
+      "title": "Chats",
+      "search": {
+        "tooltip": "Search chats"
+      },
+      "noMatching": "No matching chats",
+      "empty": "No chats yet"
+    },
+    "data": {
+      "title": "Data",
+      "search": {
+        "tooltip": "Search data sources"
+      },
+      "noMatching": "No matching data sources",
+      "empty": "No data sources yet"
+    },
+    "dashboards": {
+      "title": "Dashboards",
+      "create": "Create a dashboard",
+      "search": {
+        "tooltip": "Search dashboards"
+      },
+      "noMatching": "No matching dashboards",
+      "empty": "No dashboards yet"
+    },
+    "dataSources": {
+      "noDataSources": "No data sources configured.",
+      "noMatchingDataSources": "No matching data sources found.",
+      "screenReaderDataSources": "Data Sources",
+      "emptyState": {
+        "title": "Connect data source",
+        "description": "Connect data sources to your projects to start analyzing your data."
+      },
+      "search": {
+        "tooltip": "Search data sources"
+      },
+      "addNew": {
+        "tooltip": "Add new data",
+        "limitReached": "Data source limit reached. Contact us to add more.",
+        "title": "Add Data Source",
+        "description": "Connect a new database to your organization"
+      },
+      "limitDialog": {
+        "title": "Data Source Limit Reached",
+        "description": "You've reached the maximum number of data sources for your plan. Please contact us to add more.",
+        "cancel": "Cancel",
+        "continue": "Contact Us"
+      },
+      "actions": {
+        "setDefault": "Set as default",
+        "rename": "Rename",
+        "edit": "Edit connection",
+        "delete": "Delete database",
+        "deleting": "Deleting...",
+        "confirmDelete": "Confirm Delete",
+        "deleteConfirmation": "Are you sure you want to delete this database?",
+        "cancel": "Cancel",
+        "editTitle": "Edit Database Connection",
+        "editDescription": "Update the connection details for this database",
+        "setDefaultSuccess": "Database set as default successfully",
+        "setDefaultFailed": "Failed to set database as default",
+        "cannotDeleteDefault": "Cannot delete the default database",
+        "deleteSuccess": "Database deleted successfully",
+        "deleteFailed": "Failed to delete database"
+      },
+      "status": {
+        "connected": "Connected",
+        "connecting": "Connecting",
+        "not_connected": "Not Connected"
+      }
+    },
+    "addProject": {
+      "tooltips": {
+        "upgrade": "Upgrade your plan to add more projects.",
+        "addNew": "Start a chat"
+      },
+      "dialog": {
+        "newProject": "New Project",
+        "editProject": "Edit Project Description",
+        "description": "Add a new project to your dashboard",
+        "projectNameLabel": "Enter your project name and upload project files.",
+        "projectNamePlaceholder": "Enter project name",
+        "enableAgents": "Enable Agents",
+        "agentMode": "Agent Mode",
+        "agentModeDescription": "Choose how the agent works with your data.",
+        "selectDatabase": "Select Database",
+        "selectDatabasePlaceholder": "Select database",
+        "noDatabasesError": "Cannot create project as you don't have any databases. Please contact your administrator to add a database.",
+        "none": "None"
+      },
+      "validation": {
+        "minLength": "Project name must contain at least 2 characters.",
+        "maxLength": "Project name must not be longer than 30 characters.",
+        "uniqueChars": "Project name must contain at least 2 unique characters.",
+        "nameExists": "A project with this name already exists."
+      },
+      "buttons": {
+        "submitting": "Submitting...",
+        "saveChanges": "Save changes",
+        "createProject": "Create project",
+        "skipUpload": "Skip upload"
+      },
+      "errors": {
+        "submitFailed": "Failed to submit project. Please try again."
+      }
+    },
+    "projectActions": {
+      "pinToSidebar": "Pin project to sidebar",
+      "unpinFromSidebar": "Unpin project from sidebar",
+      "editDetails": "Edit project details",
+      "deleteProject": "Delete project",
+      "confirmDelete": "Confirm Delete",
+      "deleteConfirmation": "Are you sure you want to delete this project?",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "rename": "Rename",
+      "files": "Project files"
+    },
+    "selection": {
+      "selected": "{{count}} selected"
+    },
+    "usage": {
+      "tokens": "Token Usage",
+      "tooltip": "{{used}} of {{total}} tokens used ({{percent}}%) — view usage"
+    }
+  },
+  "onboardingTour": {
+    "progress": "Step {{current}} of {{total}}",
+    "titles": {
+      "connectDatabase": "Connect Your Database",
+      "selectDatabase": "Select Data Source",
+      "askQuestions": "Ask Questions",
+      "manageData": "Manage Data & Context"
+    },
+    "steps": {
+      "connectDatabase": "Connect your database here — any SQL database, data warehouse, or paste a connection string.",
+      "selectDatabase": "Choose which data source to query.",
+      "askQuestions": "Ask questions in plain language. Scavenger analyzes your data, runs queries, and explains insights.",
+      "manageData": "Manage your data sources here. There are also some sample databases to try out."
+    },
+    "buttons": {
+      "back": "Back",
+      "close": "Close",
+      "finish": "Get Started",
+      "next": "Next",
+      "skip": "Skip tour"
+    }
+  }
+}

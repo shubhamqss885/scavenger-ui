@@ -1,0 +1,342 @@
+{
+  "page": {
+    "title": "Dashboard",
+    "welcome": "Willkommen bei Scavenger",
+    "overview": "Übersicht",
+    "analytics": "Analysen",
+    "recent": "Kürzliche Aktivitäten",
+    "insights": "Erkenntnisse"
+  },
+  "stats": {
+    "total": "Gesamt",
+    "active": "Aktiv",
+    "pending": "Ausstehend",
+    "completed": "Abgeschlossen",
+    "thisWeek": "Diese Woche",
+    "thisMonth": "Dieser Monat"
+  },
+  "actions": {
+    "create": "Neu erstellen",
+    "viewAll": "Alle anzeigen",
+    "refresh": "Aktualisieren",
+    "filter": "Filtern",
+    "sort": "Sortieren"
+  },
+  "charts": {
+    "usage": "Nutzung",
+    "performance": "Leistung",
+    "trends": "Trends"
+  },
+  "orgDashboard": {
+    "page": {
+      "title": "Dashboards",
+      "subtitle": "Angeheftete Diagramme und Tabellen aus deinen Chats, alles an einem Ort.",
+      "searchPlaceholder": "Dashboards suchen...",
+      "loading": "Dashboard wird geladen...",
+      "notFound": "Dashboard nicht gefunden.",
+      "loadFailed": "Dashboard konnte nicht geladen werden.",
+      "goToDashboards": "Zu den Dashboards",
+      "noDashboards": "Noch keine Dashboards",
+      "noDashboardsDescription": "Erstelle dein erstes Dashboard, um loszulegen",
+      "noMatchingDashboards": "Keine Dashboards entsprechen deiner Suche",
+      "noMatchingDashboardsDescription": "Versuche andere Suchbegriffe oder setze Filter zurück"
+    },
+    "sections": {
+      "pinned": "Angeheftet",
+      "recent": "Neueste"
+    },
+    "actions": {
+      "addDashboard": "Dashboard hinzufügen",
+      "addNew": "Neues Dashboard hinzufügen",
+      "editDashboard": "Dashboard bearbeiten",
+      "editTitle": "Titel bearbeiten",
+      "delete": "Dashboard löschen",
+      "pin": "Dashboard anheften",
+      "unpin": "Dashboard loslösen",
+      "openInbox": "Posteingang öffnen",
+      "closeInbox": "Posteingang schließen",
+      "viewSharedMessages": "Geteilte Nachrichten anzeigen",
+      "closeView": "Ansicht schließen",
+      "previewExport": "Export-Vorschau",
+      "exitPreview": "Vorschau beenden",
+      "save": "Speichern",
+      "cancel": "Abbrechen"
+    },
+    "form": {
+      "title": "Dashboard",
+      "namePlaceholder": "Dashboard-Name",
+      "validation": {
+        "minLength": "Dashboard-Name muss mindestens 2 Zeichen lang sein.",
+        "uniqueChars": "Name muss mindestens 2 verschiedene Zeichen enthalten.",
+        "nameExists": "Ein Dashboard mit diesem Namen existiert bereits."
+      }
+    },
+    "status": {
+      "pinned": "Dashboard erfolgreich angeheftet",
+      "unpinned": "Dashboard erfolgreich losgelöst",
+      "pinError": "Fehler beim Aktualisieren des Dashboard-Status",
+      "updated": "Aktualisiert",
+      "saveLabel": "Aktualisieren"
+    },
+    "inbox": {
+      "upcomingMessages": "Ausstehende Nachrichten",
+      "rejectedMessages": "Abgelehnte Nachrichten",
+      "noPendingMessages": "Keine ausstehenden Nachrichten.",
+      "noRejectedMessages": "Keine abgelehnten Nachrichten.",
+      "noSharedMessages": "Noch keine geteilten Nachrichten. Für dieses Dashboard genehmigte Nachrichten werden hier angezeigt.",
+      "approving": "Wird genehmigt...",
+      "approve": "Genehmigen",
+      "rejecting": "Wird abgelehnt...",
+      "reject": "Ablehnen",
+      "resharing": "Wird erneut geteilt...",
+      "reshare": "Erneut teilen",
+      "unsharing": "Wird entfernt...",
+      "unshare": "Entfernen",
+      "reshareSuccess": "Nachricht wurde zurück zum Posteingang gesendet und wartet auf Genehmigung",
+      "reshareError": "Fehler beim erneuten Teilen der Nachricht"
+    },
+    "export": {
+      "exportDashboard": "Dashboard exportieren",
+      "exportAsPDF": "Als PDF exportieren",
+      "exportAsPPT": "Als PPT exportieren"
+    },
+    "context": {
+      "success": {
+        "dashboardCreated": "Dashboard erstellt",
+        "dashboardUpdated": "Dashboard aktualisiert",
+        "dashboardDeleted": "Dashboard gelöscht",
+        "messageUnshared": "Nachricht nicht mehr geteilt",
+        "messageApproved": "Nachricht genehmigt",
+        "messageRejected": "Nachricht abgelehnt",
+        "messageShared": "Nachricht geteilt!",
+        "viewDashboard": "Dashboard anzeigen"
+      },
+      "error": {
+        "createDashboardFailed": "Dashboard konnte nicht erstellt werden",
+        "updateDashboardFailed": "Dashboard konnte nicht aktualisiert werden",
+        "deleteDashboardFailed": "Dashboard konnte nicht gelöscht werden",
+        "shareFailed": "Nachricht konnte nicht geteilt werden",
+        "unshareFailed": "Nachricht konnte nicht entfernt werden",
+        "fetchSharedFailed": "Geteilte Nachrichten konnten nicht geladen werden",
+        "approveFailed": "Nachricht konnte nicht genehmigt werden",
+        "rejectFailed": "Nachricht konnte nicht abgelehnt werden",
+        "loadLayoutFailed": "Dashboard-Layout konnte nicht geladen werden",
+        "saveLayoutFailed": "Dashboard-Layout konnte nicht gespeichert werden",
+        "fetchStatsFailed": "Fehler beim Abrufen der Dashboard-Statistiken"
+      },
+      "info": {
+        "alreadyShared": "Diese Nachricht wurde bereits mit dem ausgewählten Dashboard geteilt."
+      }
+    },
+    "list": {
+      "loading": "Dashboards werden geladen...",
+      "newDashboard": "Neues Dashboard",
+      "emptyTitle": "Noch keine Dashboards",
+      "emptyHint": "Hefte Diagramme und Tabellen aus deinen Chats an, um Dashboards zu erstellen.",
+      "createDialogTitle": "Dashboard erstellen",
+      "createStep1": "Dashboard erstellen",
+      "createStep2": "Einen Chat starten und Fragen zu deinen Daten stellen",
+      "createStep3": "Diagramme oder Tabellen an das Dashboard anheften",
+      "create": "Erstellen"
+    },
+    "emptyState": {
+      "title": "Noch keine Widgets",
+      "viewerHint": "Dein Admin hat noch keine Dashboards mit dir geteilt.",
+      "step1": "Öffne einen Chat",
+      "step2": "Stelle eine Frage zu deinen Daten",
+      "step3": "Klicke auf das Pin-Symbol bei einem Ergebnis oder Diagramm",
+      "startChat": "Chat starten"
+    },
+    "widget": {
+      "count_one": "{{count}} Widget",
+      "count_other": "{{count}} Widgets",
+      "refreshFailed": "Dieses Widget konnte nicht aktualisiert werden.",
+      "retryInChat": "Im Chat erneut versuchen",
+      "retryInChatPrompt": "Erzeuge das Diagramm \"{{title}}\" neu. Ursprüngliche SQL:\n```sql\n{{sql}}\n```",
+      "noData": "Noch keine Daten. Aktualisiere zum Laden.",
+      "loading": "Wird geladen...",
+      "rowsShowing": "Zeige {{displayed}} von {{total}} Zeilen",
+      "showAll": "Alle anzeigen",
+      "showLess": "Weniger anzeigen",
+      "removeFailed": "Widget konnte nicht entfernt werden",
+      "viewSql": "SQL anzeigen",
+      "backToWidget": "Zurück zum Widget",
+      "copySql": "SQL-Abfrage kopieren",
+      "sqlCopied": "Kopiert!",
+      "remove": "Löschen",
+      "edit": "Bearbeiten",
+      "editingWidget": "Bearbeiten: {{title}}",
+      "datasourceUnavailable": "Datenquelle nicht mehr verfügbar",
+      "editFailed": "Der Editor für dieses Widget konnte nicht geöffnet werden",
+      "editContextSuffix": "\n\n---\n_Kontext zur obigen Anfrage: Ich bearbeite ein vorhandenes Dashboard-Widget mit dem Titel \"{{title}}\", das aus dieser Abfrage erzeugt wird:_\n```sql\n{{sql}}\n```\n_Wende meine gewünschte Änderung an, indem du diese Abfrage und/oder das Diagramm entsprechend anpasst, sie gegen diese Datenquelle ausführst und das aktualisierte Diagramm oder die Tabelle als Ergebnis zurückgibst, damit ich es wieder zum Dashboard hinzufügen kann. Erzeuge die tatsächliche Visualisierung – antworte nicht nur mit einem neuen Titel oder SQL._",
+      "editStartHint": "Beschreibe, was du an diesem Widget ändern möchtest.",
+      "deleteChat": "Chat löschen",
+      "update": "Widget aktualisieren",
+      "add": "Als neues hinzufügen",
+      "updated": "Widget aktualisiert",
+      "added": "Zum Dashboard hinzugefügt",
+      "updateFailed": "Das Widget konnte nicht aktualisiert werden",
+      "addFailed": "Das Widget konnte nicht hinzugefügt werden",
+      "updateGone": "Dieses Widget existiert nicht mehr – versuche stattdessen \"Als neues hinzufügen\""
+    },
+    "refresh": {
+      "all": "Alle aktualisieren",
+      "inProgress": "Aktualisiere {{index}}/{{total}}",
+      "cancel": "Abbrechen",
+      "lastRefreshed": "Zuletzt aktualisiert {{time}}"
+    },
+    "schedule": {
+      "trigger": "Zeitplan",
+      "title": "Automatische Aktualisierung",
+      "description": "Wähle, wie oft sich dieses Dashboard im Hintergrund aktualisieren soll.",
+      "intervalLabel": "Aktualisierungsintervall",
+      "intervals": {
+        "off": "Aus",
+        "hourly": "Stündlich",
+        "every_6h": "Alle 6 Stunden",
+        "daily": "Täglich",
+        "weekly": "Wöchentlich"
+      },
+      "hourLabel": "Uhrzeit",
+      "dayLabel": "Tag",
+      "summary": {
+        "hourly": "Auto: stündlich",
+        "every_6h": "Auto: alle 6 Std.",
+        "daily": "Auto: täglich {{time}}",
+        "weekly": "Auto: {{day}} {{time}}"
+      },
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "saved": "Zeitplan aktualisiert",
+      "saveFailed": "Zeitplan konnte nicht aktualisiert werden",
+      "tzNote": "Zeiten gelten für {{tz}}",
+      "searchHour": "Uhrzeit suchen...",
+      "searchDay": "Tag suchen...",
+      "noMatch": "Kein Treffer"
+    },
+    "viewers": {
+      "manage": "Viewer verwalten",
+      "section": "Personen mit Zugriff",
+      "add": "Viewer hinzufügen",
+      "searchPlaceholder": "Mitglieder suchen...",
+      "loading": "Wird geladen...",
+      "noMembers": "Keine Mitglieder gefunden.",
+      "noViewers": "Keine Viewer zugewiesen",
+      "count_one": "{{count}} Viewer",
+      "count_other": "{{count}} Viewer",
+      "added": "{{name}} hinzugefügt",
+      "addFailed": "Viewer konnte nicht hinzugefügt werden",
+      "removed": "Viewer entfernt",
+      "removeFailed": "Viewer konnte nicht entfernt werden",
+      "loadFailed": "Mitglieder der Organisation konnten nicht geladen werden"
+    },
+    "shareLink": {
+      "button": "Link teilen",
+      "share": "Teilen",
+      "title": "Dashboard teilen",
+      "section": "Link teilen",
+      "helper": "Alle in deiner Organisation mit diesem Link können dieses Dashboard ansehen.",
+      "generate": "Teilbaren Link erstellen",
+      "loadFailed": "Teil-Link konnte nicht geladen werden",
+      "urlLabel": "Link-URL zum Teilen",
+      "copy": "Kopieren",
+      "copied": "Link in die Zwischenablage kopiert",
+      "copyFailed": "Kopieren fehlgeschlagen – markiere den Link und kopiere ihn manuell",
+      "revoke": "Link widerrufen",
+      "revokeConfirm": "Wirklich widerrufen?",
+      "revoked": "Teil-Link widerrufen",
+      "generateFailed": "Teil-Link konnte nicht erstellt werden",
+      "revokeFailed": "Teil-Link konnte nicht widerrufen werden",
+      "redeemed": "Du hast jetzt Zugriff auf dieses Dashboard",
+      "alreadyHadAccess": "Du hast bereits Zugriff auf dieses Dashboard",
+      "wrongOrg": "Du hast keinen Zugriff auf diese Organisation",
+      "invalid": "Dieser Teil-Link ist ungültig oder wurde widerrufen"
+    },
+    "pin": {
+      "trigger": "An Dashboard anheften",
+      "dialogTitle": "An Dashboard anheften",
+      "createAndPin": "Erstellen & anheften",
+      "namePlaceholder": "Name des neuen Dashboards",
+      "success": "An Dashboard angeheftet.",
+      "view": "Anzeigen",
+      "failed": "Anheften an Dashboard fehlgeschlagen"
+    },
+    "emailReports": {
+      "button": "E-Mail-Berichte",
+      "title": "Geplanter E-Mail-Bericht",
+      "tabs": {
+        "schedule": "Zeitplan",
+        "subscribers": "Abonnenten",
+        "history": "Verlauf"
+      },
+      "schedule": {
+        "frequencyLabel": "Häufigkeit",
+        "intervals": {
+          "off": "Aus",
+          "daily": "Täglich",
+          "weekly": "Wöchentlich",
+          "monthly": "Monatlich"
+        },
+        "dayOfWeekLabel": "Wochentag",
+        "dayOfMonthLabel": "Tag des Monats",
+        "sendAtLabel": "Sendezeit",
+        "searchDay": "Tag suchen...",
+        "searchHour": "Uhrzeit suchen...",
+        "noMatch": "Kein Treffer",
+        "nextSend": "Nächste Sendung: {{date}}",
+        "refreshBeforeSend": "Daten vor dem Senden aktualisieren",
+        "customTitle": "Benutzerdefinierter Betreff",
+        "customTitlePlaceholder": "Standard-Betreffzeile überschreiben",
+        "customNote": "Hinweis vom Autor",
+        "customNotePlaceholder": "Statische Notiz, die in jeder E-Mail erscheint",
+        "context": "Kontext für KI",
+        "contextPlaceholder": "z.B. Fokus auf Umsatzkennzahlen, Testdaten ignorieren",
+        "excludeData": "Datentabellen aus E-Mail weglassen",
+        "maxCharts": "Max. Diagramme",
+        "language": "Berichtssprache",
+        "languageAuto": "Auto",
+        "languageEnglish": "English",
+        "languageGerman": "Deutsch",
+        "languageFrench": "Français",
+        "languageSpanish": "Español",
+        "resume": "Fortsetzen",
+        "pause": "Pausieren",
+        "save": "Speichern",
+        "preview": "E-Mail-Vorschau",
+        "previewFailed": "E-Mail-Vorschau konnte nicht geladen werden",
+        "removeSchedule": "Zeitplan entfernen",
+        "saved": "E-Mail-Zeitplan gespeichert",
+        "saveFailed": "E-Mail-Zeitplan konnte nicht gespeichert werden",
+        "removed": "E-Mail-Zeitplan entfernt",
+        "removeFailed": "Zeitplan konnte nicht entfernt werden"
+      },
+      "subscribers": {
+        "none": "Noch keine Abonnenten.",
+        "searchPlaceholder": "Mitglieder suchen oder E-Mail eingeben...",
+        "emailPlaceholder": "email@beispiel.de",
+        "emptyText": "Beliebige E-Mail-Adresse eingeben",
+        "add": "Hinzufügen",
+        "added": "{{email}} hinzugefügt",
+        "addedAsViewer": "{{email}} als Org-Betrachter hinzugefügt und abonniert",
+        "addFailed": "Abonnent konnte nicht hinzugefügt werden",
+        "alreadySubscribed": "Bereits abonniert",
+        "removed": "{{email}} entfernt",
+        "removeFailed": "Abonnent konnte nicht entfernt werden"
+      },
+      "history": {
+        "none": "Noch keine E-Mails gesendet.",
+        "statusSent": "Gesendet",
+        "statusFailed": "Fehlgeschlagen",
+        "statusSkipped": "Übersprungen",
+        "showing": "Letzte {{count}} Einträge",
+        "recipients": "Empfänger"
+      },
+      "loadFailed": "E-Mail-Einstellungen konnten nicht geladen werden"
+    },
+    "unsubscribe": {
+      "successText": "Anmelden, um Abonnements zu verwalten",
+      "errorText": "Ungültiger oder abgelaufener Abmeldelink.",
+      "goToDashboards": "Zu den Dashboards"
+    }
+  }
+}

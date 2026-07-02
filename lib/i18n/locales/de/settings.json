@@ -1,0 +1,262 @@
+{
+  "modal": {
+    "title": "Einstellungen",
+    "description": "Verwalte deine Kontoeinstellungen und Präferenzen.",
+    "tabs": {
+      "account": "Konto",
+      "databases": "Datenbanken",
+      "preferences": "Einstellungen",
+      "billing": "Abrechnung",
+      "usage": "Nutzung"
+    }
+  },
+  "usage": {
+    "title": "Nutzung",
+    "description": "Verfolge deine aktuelle Nutzung gegen deine Plan-Limits.",
+    "needMoreSpace": "Brauchst du mehr Speicher?",
+    "upgradeToEnterprise": "Auf Enterprise upgraden",
+    "metrics": {
+      "dataSources": "Datenquellen",
+      "storage": "Speicher",
+      "projects": "Projekte",
+      "messages": "Nachrichten",
+      "tokens": "Tokens"
+    }
+  },
+  "account": {
+    "title": "Kontoeinstellungen",
+    "profile": {
+      "title": "Profil",
+      "email": "E-Mail:",
+      "displayName": "Anzeigename",
+      "companyName": "Firmenname",
+      "jobTitle": "Berufsbezeichnung",
+      "profileImage": "Profilbild-URL"
+    },
+    "password": {
+      "title": "Passwort",
+      "description": "Sende dir einen Link zum Zurücksetzen deines Passworts an deine E-Mail.",
+      "resetButton": "Passwort zurücksetzen",
+      "sendingButton": "Wird gesendet...",
+      "sentButton": "E-Mail gesendet",
+      "cooldown": "Erneut versuchen in {{seconds}}s"
+    },
+    "deleteData": {
+      "title": "Alle Daten löschen",
+      "description": "Diese Aktion löscht alle Ihre Daten dauerhaft. Diese Aktion ist nicht rückgängig zu machen.",
+      "button": "Alle Daten löschen",
+      "deletingButton": "Wird gelöscht..."
+    },
+    "deleteAccount": {
+      "title": "Konto löschen",
+      "description": "Diese Aktion löscht dein Konto und alle zugehörigen Daten dauerhaft. Diese Aktion ist nicht rückgängig zu machen.",
+      "button": "Konto löschen",
+      "deletingButton": "Wird gelöscht...",
+      "confirmTitle": "Konto löschen?",
+      "confirmDescription": "Dein Konto und alle zugehörigen Daten werden dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirmButton": "Konto löschen",
+      "cancelButton": "Abbrechen"
+    },
+    "validation": {
+      "displayNameMin": "Anzeigename muss mindestens 2 Zeichen lang sein.",
+      "displayNameMax": "Anzeigename darf nicht länger als 30 Zeichen sein.",
+      "companyNameMin": "Firmenname muss mindestens 2 Zeichen lang sein.",
+      "companyNameMax": "Firmenname darf nicht länger als 100 Zeichen sein.",
+      "jobTitleMin": "Berufsbezeichnung muss mindestens 2 Zeichen lang sein.",
+      "jobTitleMax": "Berufsbezeichnung darf nicht länger als 100 Zeichen sein.",
+      "validUrl": "Bitte gib eine gültige URL ein."
+    },
+    "messages": {
+      "accountDeleted": "Benutzerkonto erfolgreich gelöscht",
+      "accountDeleteFailed": "Fehler beim Löschen des Benutzerprofils",
+      "dataDeleteFailed": "Fehler beim Löschen der Benutzerdaten",
+      "profileUpdateFailed": "Fehler beim Aktualisieren des Benutzerprofils.",
+      "resetEmailFailed": "Fehler beim Senden der E-Mail zum Zurücksetzen des Passworts"
+    }
+  },
+  "profile": {
+    "updateFailed": "Fehler beim Aktualisieren des Profils",
+    "updateSettingsFailed": "Fehler beim Aktualisieren der Kontoeinstellungen.",
+    "imageUpdateSuccess": "Profilbild erfolgreich aktualisiert",
+    "imageUpdateFailed": "Fehler beim Hochladen des Profilbilds."
+  },
+  "databases": {
+    "title": "Datenbank-Einstellungen",
+    "addNew": {
+      "title": "Neue Datenbankverbindung hinzufügen",
+      "button": "Datenbank verbinden"
+    },
+    "list": {
+      "title": "Verbundene Datenbanken",
+      "empty": "Keine Datenbanken verbunden. Füge eine Datenbank hinzu, um zu beginnen."
+    },
+    "connection": {
+      "connectionDetails": "Verbindungsdetails",
+      "connectionName": "Verbindungsname",
+      "requiredInfo": "Erforderliche Informationen",
+      "additionalSecurity": "Zusätzliche Sicherheit (Optional)",
+      "readUserCredentials": "Lesebenutzer-Anmeldedaten",
+      "readUserDescription": "Erforderlich für Datenbankverbindungen",
+      "enableRLS": "RLS aktivieren (Row Level Security)",
+      "rlsNote": "Row Level Security erfordert separate Schreibbenutzer-Anmeldedaten zur Verwaltung von Datenbankschema und Sicherheitsrichtlinien.",
+      "writeUserCredentials": "Schreibbenutzer-Anmeldedaten",
+      "databaseName": "Datenbankname",
+      "databaseHost": "Datenbank-Host",
+      "host": "Host",
+      "port": "Port",
+      "username": "Benutzername",
+      "password": "Passwort",
+      "schema": "Schema",
+      "databaseType": "Datenbanktyp",
+      "selectDatabaseType": "Datenbanktyp auswählen",
+      "ipWhitelist": "IP-Whitelist",
+      "ipWhitelistPlaceholder": "Durch Komma getrennte IPs",
+      "companyBackground": "Unternehmenshintergrund",
+      "databaseDescription": "Datenbankbeschreibung",
+      "tableSpecs": "Tabellenspezifikationen",
+      "cancel": "Abbrechen",
+      "connect": "Verbinden",
+      "connecting": "Verbindung wird hergestellt...",
+      "update": "Aktualisieren",
+      "updating": "Wird aktualisiert..."
+    },
+    "card": {
+      "default": "Standard",
+      "actions": {
+        "manageDescription": "Beschreibung verwalten",
+        "setDefault": "Als Standard festlegen",
+        "edit": "Verbindung bearbeiten",
+        "delete": "Verbindung löschen"
+      }
+    },
+    "validation": {
+      "nameRequired": "Datenbankname ist erforderlich",
+      "nameExists": "Eine Datenbank mit diesem Namen existiert bereits",
+      "hostRequired": "Host ist erforderlich",
+      "portNumber": "Port muss eine Zahl sein",
+      "portRange": "Port muss zwischen 1 und 65535 liegen",
+      "usernameRequired": "Benutzername ist erforderlich",
+      "passwordRequired": "Passwort ist erforderlich",
+      "writeUsernameRequired": "Schreibbenutzer-Benutzername ist erforderlich, wenn RLS aktiviert ist",
+      "writePasswordRequired": "Schreibbenutzer-Passwort ist erforderlich, wenn RLS aktiviert ist",
+      "writeCredentialsRequired": "Schreibbenutzer-Anmeldedaten sind erforderlich, wenn RLS aktiviert ist",
+      "schemaPublicOnly": "Derzeit wird nur das Schema 'public' unterstützt"
+    },
+    "messages": {
+      "orgIdRequired": "Organisations-ID ist erforderlich",
+      "cannotDeleteDefault": "Standard-Datenbank kann nicht gelöscht werden. Bitte lege zuerst eine andere Datenbank als Standard fest.",
+      "setDefaultFailed": "Fehler beim Festlegen der Standard-Datenbank",
+      "deleteFailed": "Fehler beim Löschen der Datenbank"
+    },
+    "types": {
+      "mysql": "MySQL",
+      "postgresql": "PostgreSQL",
+      "microsoftsqlserver": "Microsoft SQL Server"
+    }
+  },
+  "preferences": {
+    "title": "Einstellungen",
+    "placeholder": "Präferenz-Einstellungen kommen hier hin",
+    "saveButton": "Einstellungen speichern"
+  },
+  "billing": {
+    "title": "Abrechnungseinstellungen",
+    "currentPlan": "Aktueller Plan",
+    "activeSince": "Aktiv seit",
+    "nextBilling": "Nächste Abrechnung",
+    "subscriptionCancelled": "Abonnement gekündigt",
+    "activeTill": "Aktiv bis",
+    "month": "Monat",
+    "year": "Jahr",
+    "usageOverview": "Nutzungsübersicht",
+    "needMoreSpace": "Brauchst du mehr Speicher?",
+    "upgradeToEnterprise": "Auf Enterprise upgraden",
+    "dataSources": "Datenquellen",
+    "storage": "Speicher",
+    "projects": "Projekte",
+    "messages": "Nachrichten",
+    "statusActive": "Aktiv",
+    "statusInactive": "Inaktiv",
+    "subscriptionActive": "Dein Abonnement ist aktiv",
+    "subscriptionInactive": "Abonnement-Status unbekannt",
+    "usageDescription": "Verfolge deine aktuelle Nutzung gegen Plan-Limits",
+    "management": "Abrechnungsverwaltung",
+    "managementDescription": "Verwalte deine Zahlungsmethoden und Abrechnungshistorie",
+    "managePayment": "Zahlungen verwalten",
+    "managingPayment": "Portal wird geöffnet...",
+    "renew": "Erneuern",
+    "refundRequest": {
+      "title": "Rückerstattungsanfrage",
+      "description": "Benötigst du eine Rückerstattung? Kontaktiere unser Kundensupport-Team für Unterstützung",
+      "button": "Support kontaktieren",
+      "contactingSupport": "Support wird kontaktiert..."
+    },
+    "downloadInvoices": "Rechnungen herunterladen",
+    "dangerZone": "Gefahrenbereich",
+    "dangerZoneDescription": "Kündige dein Abonnement dauerhaft und stufe auf Demo-Plan herunter",
+    "cancelSubscription": {
+      "title": "Abonnement kündigen",
+      "button": "Konto herunterstufen",
+      "downgradingButton": "Herunterstufen...",
+      "description": "Diese Aktion stuft dein Konto auf ein kostenloses Demo-Konto mit eingeschränkten Funktionen herunter"
+    },
+    "processing": "Zahlung wird verarbeitet...",
+    "processingDescription": "Wir aktivieren dein Abonnement. Dies dauert normalerweise nur wenige Augenblicke.",
+    "checkoutCompleted": "Checkout abgeschlossen",
+    "processingSubscription": "Abonnement wird verarbeitet",
+    "settingUpAccount": "Konto wird eingerichtet",
+    "verifyingActivation": "Abonnement-Aktivierung wird überprüft...",
+    "almostReady": "Fast fertig...",
+    "paymentSuccessRedirecting": "Zahlung erfolgreich! Weiterleitung...",
+    "processingTimeout": "Die Zahlungsverarbeitung dauert länger als erwartet. Bitte kontaktiere den Support, wenn dies weiterhin auftritt.",
+    "havingTrouble": "Probleme? Bitte kontaktiere den Support.",
+    "unableToComplete": "Setup konnte nicht automatisch abgeschlossen werden.",
+    "retry": "Erneut versuchen",
+    "subscriptionActivated": "🎉 Abonnement erfolgreich aktiviert!",
+    "noSubscription": "Kein aktives Abonnement gefunden",
+    "cancelConfirm": "Bist du sicher, dass du dein Abonnement kündigen und auf den Demo-Plan herunterstufen möchtest?",
+    "subscriptionCanceled": "Abonnement erfolgreich gekündigt. Du behältst weiterhin vollen Zugriff bis zum Ende deines aktuellen Abrechnungszeitraums.",
+    "cancelFailed": "Abonnement konnte nicht gekündigt werden. Bitte versuche es erneut oder kontaktiere den Support.",
+    "processingFailed": "Zahlungsverarbeitung fehlgeschlagen. Bitte versuche es erneut oder kontaktiere den Support.",
+    "portalError": "Fehler beim Öffnen des Billing-Portals. Bitte versuche es erneut.",
+    "paymentMethod": {
+      "title": "Zahlungsmethode",
+      "current": "Visa endend auf 1234",
+      "description": "Aktuelle Zahlungsmethode.",
+      "change": "Zahlungsmethode ändern"
+    },
+    "deletePayment": {
+      "title": "Zahlungsmethode löschen",
+      "button": "Zahlungsmethode löschen"
+    },
+    "deleteAccount": {
+      "title": "Konto löschen",
+      "button": "Konto löschen"
+    },
+    "cancelDialog": {
+      "title": "Abonnement kündigen",
+      "description": "Bist du sicher, dass du dein Abonnement kündigen und auf den Demo-Plan herunterstufen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "cancel": "Abonnement behalten",
+      "confirm": "Abonnement kündigen"
+    },
+    "inactive": {
+      "unlockPower": "Entfessle die volle Power von Scavenger AI",
+      "noSubscription": "Kein aktives Abonnement",
+      "upgradeDescription": "Alles in Demo, plus:",
+      "upgradePremium": "Alles in Demo, plus:",
+      "features": {
+        "dataSources": "Laden Sie Ihre eigenen Daten hoch (bis zu 20 CSVs oder PDFs)",
+        "fileStorage": "Erstellen Sie eine Geschäftslogik & Regeln",
+        "unlimitedProjects": "Kontextbewusstsein und persönliches Dashboard",
+        "security": "Vollständige Einhaltung der DSGVO und anderer Datenschutzgesetze"
+      },
+      "upgradeButton": "Auf Private upgraden",
+      "viewPricing": "Detaillierte Preise und Features anzeigen",
+      "currentPlan": "Aktuell im Demo-Plan: 1 Datenquelle • 1 Projekt • 10 Nachrichten"
+    },
+    "saveButton": "Änderungen speichern"
+  },
+  "serverMessages": {
+    "User profile details successfully updated.": "Benutzerprofildetails erfolgreich aktualisiert."
+  }
+}

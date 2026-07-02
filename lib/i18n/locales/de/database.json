@@ -1,0 +1,1001 @@
+{
+  "page": {
+    "title": "Datenbanken",
+    "connect": "Datenbank verbinden",
+    "tables": "Tabellen",
+    "columns": "Spalten",
+    "schema": "Schema",
+    "records": "Datensätze",
+    "metadata": {
+      "title": "Scavenger: Datenquellen",
+      "description": "Verwalten und analysieren Sie Ihre Datenquellen"
+    },
+    "errors": {
+      "somethingWrong": "Etwas ist schiefgelaufen!",
+      "unexpectedError": "Beim Laden der Datenquelle ist ein unerwarteter Fehler aufgetreten.",
+      "tryAgain": "Erneut versuchen",
+      "notFound": "Datenquelle nicht gefunden",
+      "notFoundDesc": "Die gesuchte Datenquelle existiert nicht oder Sie haben keine Zugriffsberechtigung.",
+      "goHome": "Zur Startseite"
+    }
+  },
+  "connection": {
+    "status": "Verbindungsstatus",
+    "connected": "Verbunden",
+    "disconnected": "Getrennt",
+    "testing": "Verbindung wird getestet...",
+    "failed": "Verbindung fehlgeschlagen",
+    "timeout": "Verbindungs-Timeout"
+  },
+  "actions": {
+    "test": "Verbindung testen",
+    "refresh": "Aktualisieren",
+    "refreshing": "Wird aktualisiert...",
+    "schemaUpdated": "Schema erfolgreich aktualisiert",
+    "schemaUpToDate": "Schema ist bereits aktuell",
+    "schemaRefreshError": "Schema konnte nicht aktualisiert werden",
+    "sync": "Synchronisieren",
+    "configure": "Konfigurieren",
+    "settings": "Einstellungen",
+    "connectionDetails": "Verbindungsdetails",
+    "startChatWithYourData": "Chat mit deinen Daten starten",
+    "startingChatWithYourData": "Chat wird gestartet...",
+    "addSuccess": "Datenbank erfolgreich hinzugefügt",
+    "addFailed": "Datenbank konnte nicht hinzugefügt werden",
+    "updateSuccess": "Datenbank erfolgreich aktualisiert",
+    "updateFailed": "Datenbank konnte nicht aktualisiert werden",
+    "deleteSuccess": "Datenbank erfolgreich gelöscht",
+    "deleteFailed": "Datenbank konnte nicht gelöscht werden",
+    "defaultUpdateSuccess": "Standard-Datenbank erfolgreich aktualisiert",
+    "defaultUpdateFailed": "Standard-Datenbank konnte nicht aktualisiert werden"
+  },
+  "navigation": {
+    "home": "Start",
+    "dataSource": "Datenquelle"
+  },
+  "status": {
+    "connected": "Verbunden",
+    "disconnected": "Getrennt"
+  },
+  "selector": {
+    "tooltips": {
+      "processing": "Die Datenbank wird verarbeitet und ist bald verfügbar",
+      "failed": "Datenbankverarbeitung fehlgeschlagen. Bitte versuche die Verbindung erneut herzustellen oder wende dich an den Support.",
+      "locked": "Starte einen neuen Chat, um eine andere Datenbank zu verwenden"
+    },
+    "statusLabels": {
+      "processing": "Wird verarbeitet",
+      "failed": "Fehlgeschlagen"
+    }
+  },
+  "tabs": {
+    "data": "Daten",
+    "er": "Datenmodell",
+    "descriptions": "Beschreibungen",
+    "cleaning": "Bereinigung",
+    "logs": "Protokolle",
+    "rules": "Regeln",
+    "examples": "Beispiele",
+    "dataQuality": "Datenqualität",
+    "feedback": "Feedback",
+    "vault": "Context Vault",
+    "context": "Kontext",
+    "knowledge": "Wissensgraph",
+    "comingSoon": "Demnächst verfügbar",
+    "waitingForDatabase": "Die Datenbank wird noch verarbeitet. Dieser Tab wird verfügbar sein, sobald die Einrichtung abgeschlossen ist."
+  },
+  "feedbackTab": {
+    "results": "Feedback-Anzahl",
+    "filters": {
+      "type": "Typ",
+      "allTypes": "Alle Typen",
+      "chat": "Chat",
+      "textToSql": "Text zu SQL",
+      "rating": "Bewertung",
+      "allRatings": "Alle Bewertungen",
+      "positive": "Positiv",
+      "negative": "Negativ",
+      "startDate": "Startdatum",
+      "endDate": "Enddatum",
+      "reset": "Zurücksetzen",
+      "clearFilters": "Filter löschen",
+      "allUsers": "Alle Benutzer",
+      "searchUsers": "Benutzer suchen...",
+      "noUsers": "Keine Benutzer gefunden.",
+      "status": "Status",
+      "open": "Offen",
+      "resolved": "Erledigt",
+      "allStatuses": "Alle Status"
+    },
+    "columns": {
+      "feedback": "Feedback",
+      "type": "Typ",
+      "prompt": "Anfrage",
+      "response": "Antwort",
+      "comment": "Kommentar",
+      "project": "Projekt",
+      "user": "Benutzer",
+      "time": "Zeit",
+      "save": "Aktionen"
+    },
+    "actions": {
+      "viewDetails": "Details anzeigen",
+      "copyId": "ID kopieren",
+      "saveAsExample": "Als Beispiel speichern",
+      "save": "Speichern",
+      "saveModalTitle": "Abfragebeispiel speichern",
+      "downloadCsv": "Als CSV herunterladen",
+      "markResolved": "Als erledigt markieren",
+      "markUnresolved": "Als offen markieren",
+      "markResolvedToast": "Als erledigt markiert",
+      "markUnresolvedToast": "Als offen markiert",
+      "markResolvedError": "Status konnte nicht aktualisiert werden"
+    },
+    "howItWorks": {
+      "cta": "Wie funktioniert es?",
+      "title": "Wie funktioniert es?",
+      "description": "Der Feedback-Tab zeigt alle Nutzerbewertungen (Daumen hoch/runter) zu Scavengers Antworten an. Nutze ihn, um die Systemleistung zu überwachen und Verbesserungsbereiche zu identifizieren.",
+      "hint": "Klicke auf einen Feedback-Eintrag, um alle Details einschließlich des Gesprächsverlaufs zu sehen. Überprüfe negatives Feedback, um wiederkehrende Probleme zu erkennen — speichere dann eine korrigierte Abfrage als Beispiel oder erstelle Regeln, um dem System das richtige Verhalten beizubringen. Mit der Zeit hilft diese Feedback-Schleife dem System, genauere und zuverlässigere Antworten zu liefern."
+    },
+    "empty": {
+      "noData": {
+        "title": "Noch kein Feedback",
+        "description": "Feedback wird hier angezeigt, wenn Benutzer KI-Antworten mit den Daumen hoch/runter-Buttons bewerten."
+      },
+      "noResults": {
+        "title": "Kein Feedback entspricht Ihren Filtern",
+        "description": "Versuchen Sie, Ihre Filter anzupassen, um mehr Ergebnisse zu sehen."
+      }
+    },
+    "detail": {
+      "title": "Feedback-Details",
+      "user": "Benutzer",
+      "project": "Projekt",
+      "prompt": "Benutzeranfrage",
+      "response": "Scavenger",
+      "generatedSql": "Generiertes SQL",
+      "queryResults": "Abfrageergebnisse",
+      "sqlExplanation": "Erklärung",
+      "comment": "Benutzerkommentar",
+      "sessionInfo": "Sitzungsinfo",
+      "conversationId": "Konversations-ID",
+      "sessionId": "Sitzungs-ID",
+      "copied": "In die Zwischenablage kopiert",
+      "viewConversation": "Vollständige Konversation laden",
+      "conversationHistory": "Konversationsverlauf",
+      "conversationEmpty": "Kein Konversationsverlauf für diese Sitzung gefunden",
+      "conversationError": "Konversationsverlauf konnte nicht geladen werden",
+      "conversationRetry": "Erneut versuchen"
+    }
+  },
+  "details": {
+    "title": "Datenbankdetails",
+    "databaseNotFound": "Datenbank nicht gefunden",
+    "states": {
+      "generatingDescriptions": "Datenbankbeschreibungen werden generiert",
+      "refreshAfterTime": "Bitte aktualisiere nach einiger Zeit",
+      "loadFailed": "Fehler beim Laden der Datenbankbeschreibungen",
+      "contactSupport": "Bitte versuche zu aktualisieren oder wende dich an den Support",
+      "noTables": "Keine Tabellen in dieser Datenbank gefunden",
+      "refreshingDetails": "Datenbankdetails werden aktualisiert..."
+    },
+    "buttons": {
+      "generateEDA": "EDA generieren",
+      "generating": "Wird generiert...",
+      "filter": "Filtern",
+      "searchAndFilter": "Suchen & Filtern",
+      "filters": "Filter",
+      "cancel": "Abbrechen",
+      "updateDescription": "Beschreibung aktualisieren",
+      "updating": "Wird aktualisiert..."
+    },
+    "search": {
+      "placeholder": "Spalten suchen...",
+      "sortLabel": "Sortieren:",
+      "filtersLabel": "Filter:",
+      "sortByConfidence": "Nach Vertrauen",
+      "sortAlphabetically": "Alphabetisch",
+      "sortByConfidenceOption": "Nach Vertrauen sortieren",
+      "sortAlphabeticallyOption": "Alphabetisch sortieren",
+      "showAllColumns": "Alle Spalten anzeigen",
+      "collapseAllColumns": "Alle Spalten einklappen",
+      "maxConfidenceLabel": "Max. Vertrauenswert :"
+    },
+    "filters": {
+      "pendingReview": "Überprüfung ausstehend",
+      "resolved": "Gelöst",
+      "lowConfidence": "Niedriges Vertrauen",
+      "confidenceScore": "Vertrauenswert"
+    },
+    "status": {
+      "pending": "Ausstehend",
+      "approved": "Genehmigt",
+      "pendingReview": "Überprüfung ausstehend",
+      "resolved": "Gelöst",
+      "lowConfidence": "Niedriges Vertrauen",
+      "veryLowConfidence": "Sehr niedriges Vertrauen",
+      "confidence": "Vertrauen",
+      "avgConfidence": "Durchschn. Vertrauen"
+    },
+    "stats": {
+      "tables": "Tabellen",
+      "columns": "Spalten",
+      "pending": "Ausstehend",
+      "lowConfidence": "Niedriges Vertrauen"
+    },
+    "column": {
+      "descriptionLabel": "Spaltenbeschreibung: ",
+      "descriptionPlaceholder": "Bitte gib eine Beschreibung für die Spalte an"
+    },
+    "badges": {
+      "dbDescriptionsPending": "Beschreibungen werden generiert",
+      "dbDescriptionsFailed": "DB-Beschreibungen fehlgeschlagen"
+    }
+  },
+  "provider": {
+    "messages": {
+      "success": {
+        "columnDescriptionUpdated": "Spaltenbeschreibung erfolgreich aktualisiert",
+        "databaseDescriptionsStarted": "Datenbankbeschreibungen werden aktualisiert.",
+        "edaReportGenerated": "EDA-Bericht erfolgreich generiert",
+        "schemaDescriptionCompleted": "Schema-Beschreibungsgenerierung erfolgreich abgeschlossen"
+      },
+      "error": {
+        "columnDescriptionFailed": "Fehler beim Aktualisieren der Spaltenbeschreibung",
+        "databaseDescriptionsFailed": "Fehler beim Starten der Datenbankbeschreibungsgenerierung.",
+        "edaReportFailed": "Fehler beim Generieren des EDA-Berichts",
+        "schemaDescriptionFailed": "Schema-Beschreibungsgenerierung fehlgeschlagen",
+        "databaseNotFound": "Datenbank-ID nicht gefunden",
+        "loadFailed": "Fehler beim Laden der Datenbankdetails",
+        "tableDataFetchFailed": "Fehler beim Abrufen der Tabellendaten"
+      },
+      "info": {
+        "databaseDescriptionsInProgress": "Die Generierung der Datenbankbeschreibung läuft bereits."
+      }
+    }
+  },
+  "erDiagram": {
+    "states": {
+      "generating": "Entitätsbeziehungsdiagramm wird generiert",
+      "analyzingRelationships": "Tabellenbeziehungen werden analysiert...",
+      "noTables": "Keine Tabellen gefunden",
+      "generateSchemaFirst": "Generiere Schema-Beschreibungen, um das Diagramm anzuzeigen",
+      "singleTable": "Einzeltabellen-Datenbank",
+      "requiresTwoTables": "ER-Diagramme zeigen Beziehungen zwischen mehreren Tabellen",
+      "renderFailed": "Diagramm konnte nicht gerendert werden",
+      "noRelationships": "Keine Beziehungen erkannt",
+      "noForeignKeys": "Keine Fremdschlüssel-Einschränkungen in der Datenbank gefunden",
+      "loadingEngine": "Diagramm-Engine wird geladen...",
+      "rendering": "Diagramm wird gerendert..."
+    },
+    "actions": {
+      "export": "Exportieren",
+      "exportPNG": "Als PNG exportieren",
+      "exportSVG": "Als SVG exportieren",
+      "copySource": "Mermaid-Quellcode kopieren",
+      "zoomIn": "Vergrößern",
+      "zoomOut": "Verkleinern",
+      "fitToScreen": "An Bildschirm anpassen",
+      "useAIAnalysis": "AI-Analyse verwenden",
+      "aiInferenceDesc": "Lass die AI Beziehungen basierend auf Namensmustern erkennen"
+    },
+    "messages": {
+      "exported": "Diagramm erfolgreich exportiert",
+      "copiedToClipboard": "Mermaid-Quellcode in die Zwischenablage kopiert",
+      "aiInferenceEnabled": "AI-Beziehungserkennung aktiviert"
+    },
+    "errors": {
+      "copyFailed": "Kopieren in die Zwischenablage fehlgeschlagen",
+      "exportPNGFailed": "Export des Diagramms als PNG fehlgeschlagen",
+      "noDiagramToExport": "Kein Diagramm zum Exportieren",
+      "loadEngineFailed": "Fehler beim Laden der Diagramm-Engine. Bitte aktualisieren Sie die Seite."
+    }
+  },
+  "errors": {
+    "decryptionFailed": "Fehler beim Entschlüsseln der Datenbankinformationen",
+    "loadFailed": "Fehler beim Laden der Datenbanken",
+    "fetchFailed": "Fehler beim Abrufen der Organisationsdatenbanken"
+  },
+  "connectionErrors": {
+    "1044": "Zugriff auf die angegebene Datenbank verweigert. Bitte überprüfen Sie Ihre Berechtigungen.",
+    "1045": "Authentifizierung fehlgeschlagen. Bitte überprüfen Sie Benutzername und Passwort.",
+    "1049": "Die angegebene Datenbank existiert nicht. Bitte überprüfen Sie den Datenbanknamen.",
+    "2003": "Der Datenbankserver ist nicht erreichbar. Bitte überprüfen Sie die Host-Adresse und stellen Sie sicher, dass der Server läuft.",
+    "2005": "Der Datenbank-Host konnte nicht gefunden werden. Bitte überprüfen Sie den Hostnamen.",
+    "2006": "Die Verbindung zur Datenbank wurde unterbrochen. Bitte versuchen Sie es erneut.",
+    "errno101": "Netzwerk nicht erreichbar. Bitte überprüfen Sie Ihre Netzwerkverbindung.",
+    "errno111": "Verbindung abgelehnt. Der Datenbankserver akzeptiert möglicherweise keine Verbindungen auf diesem Port.",
+    "timeout": "Verbindungs-Timeout. Der Server hat zu lange nicht geantwortet.",
+    "default": "Datenbankverbindung fehlgeschlagen. Bitte überprüfen Sie Ihre Verbindungsdaten."
+  },
+  "configErrors": {
+    "fetchFailed": "Fehler beim Laden der Datenbankregeln und Beispiele"
+  },
+  "validation": {
+    "orgIdRequired": "Organisations-ID ist erforderlich"
+  },
+  "connectionDetails": {
+    "title": "Verbindungsdetails",
+    "description": "Datenbank-Verbindungskonfiguration und Status",
+    "name": "Datenbankname",
+    "host": "Host",
+    "port": "Port",
+    "username": "Benutzername",
+    "databaseType": "Datenbanktyp",
+    "schema": "Schema",
+    "status": "Verbindungsstatus",
+    "connected": "Verbunden",
+    "disconnected": "Getrennt",
+    "text2sql": "Text zu SQL",
+    "enabled": "Aktiviert",
+    "disabled": "Deaktiviert",
+    "defaultDatabase": "Standarddatenbank",
+    "yes": "Ja",
+    "close": "Schließen",
+    "placeholder": "-"
+  },
+  "edit": {
+    "title": "Verbindung bearbeiten",
+    "description": "Aktualisieren Sie die Datenbankverbindungsdetails",
+    "save": "Änderungen speichern",
+    "saving": "Speichern...",
+    "cancel": "Abbrechen",
+    "success": "Verbindung erfolgreich aktualisiert"
+  },
+  "businessRules": {
+    "title": "Geschäftsregeln",
+    "empty": {
+      "title": "Keine Geschäftsregeln",
+      "description": "Beginnen Sie mit der Erstellung Ihrer ersten Geschäftsregel, um Datenqualitätsstandards und Einschränkungen für diese Datenbank zu definieren.",
+      "readOnlyDescription": "Für diese Datenbank wurden noch keine Geschäftsregeln konfiguriert. Um Regeln hinzuzufügen, frag den Agenten in deinem Projekt-Chat."
+    },
+    "actions": {
+      "addRule": "Regel hinzufügen",
+      "edit": "Bearbeiten",
+      "remove": "Entfernen"
+    },
+    "modal": {
+      "createTitle": "Geschäftsregel erstellen",
+      "editTitle": "Geschäftsregel bearbeiten",
+      "description": "Schreiben Sie klare und spezifische Geschäftsregeln, die bei der SQL-Generierung helfen."
+    },
+    "form": {
+      "title": "Titel",
+      "titlePlaceholder": "Regeltitel eingeben",
+      "titleRequired": "Titel ist erforderlich",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Beschreiben Sie Ihre Geschäftslogik, Datenbeziehungen und Berechnungsmethoden. Seien Sie präzise und eindeutig.",
+      "category": "Kategorie",
+      "categoryPlaceholder": "z.B. Datenqualität, Sicherheit, Compliance",
+      "categoryRequired": "Kategorie ist erforderlich",
+      "rule": "Regel",
+      "ruleRequired": "Regel ist erforderlich",
+      "sqlPattern": "SQL-Muster",
+      "sqlPatternPlaceholder": "Optionale SQL-Abfrage oder Muster für diese Regel",
+      "active": "Aktiv"
+    },
+    "delete": {
+      "title": "Geschäftsregel löschen",
+      "description": "Sind Sie sicher, dass Sie diese Geschäftsregel löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden."
+    },
+    "labels": {
+      "rule": "Regel",
+      "rules": "Regeln",
+      "active": "aktiv"
+    },
+    "search": {
+      "placeholder": "Regeln suchen..."
+    },
+    "filters": {
+      "showOnlyActive": "Nur aktive anzeigen",
+      "showAll": "Alle anzeigen"
+    },
+    "howItWorks": {
+      "title": "Wie funktioniert es?",
+      "description": "Legen Sie die Spielregeln für Ihre Daten fest. Definieren Sie, welche Datensätze berücksichtigt werden sollen, wie verschiedene Datentabellen miteinander verknüpft sind und was Ihre wichtigsten Kennzahlen tatsächlich bedeuten.",
+      "hint": "Diese Regeln dienen als Leitplanken und stellen sicher, dass alle konsistente, verlässliche Antworten erhalten, die den Standards Ihres Unternehmens entsprechen. Sobald Sie diese dokumentiert haben, wendet das System sie automatisch auf jede Frage an – Ihr Team muss sich nie Sorgen über widersprüchliche oder falsche Informationen machen.",
+      "cta": "Wie funktioniert es?",
+      "dismiss": "Verstanden"
+    },
+    "suggestions": {
+      "createManually": "Regel manuell erstellen",
+      "aiSuggestions": "KI-Vorschläge",
+      "refreshing": "Wird aktualisiert...",
+      "refresh": "Aktualisieren",
+      "refreshFailed": "Vorschläge konnten nicht aktualisiert werden",
+      "confidence": "{{value}}% Konfidenz",
+      "changesToExisting": "Änderungen an bestehender Regel",
+      "reasoning": "Begründung",
+      "empty": {
+        "title": "Aktuell keine Vorschläge.",
+        "description": "Klicke auf Aktualisieren, um basierend auf aktuellem Feedback nach neuen zu suchen."
+      },
+      "actions": {
+        "removeRule": "Regel entfernen",
+        "keepRule": "Regel behalten",
+        "accept": "Annehmen",
+        "editAndAccept": "Bearbeiten & Annehmen",
+        "decline": "Ablehnen"
+      }
+    }
+  },
+  "queryExamples": {
+    "title": "Abfrage-Beispiele",
+    "empty": {
+      "title": "Keine Abfrage-Beispiele",
+      "description": "Beginne mit der Erstellung deines ersten Abfrage-Beispiels, um die SQL-Generierung für diese Datenbank zu unterstützen.",
+      "readOnlyDescription": "Für diese Datenbank wurden noch keine Abfrage-Beispiele konfiguriert. Um Beispiele hinzuzufügen, frag den Agenten in deinem Projekt-Chat."
+    },
+    "error": {
+      "title": "Beispiele können nicht geladen werden",
+      "description": "Es gab ein Problem beim Laden der Beispiele. Bitte versuche es erneut."
+    },
+    "actions": {
+      "addExample": "Beispiel hinzufügen",
+      "validate": "Validieren",
+      "copy": "Kopieren",
+      "edit": "Bearbeiten",
+      "remove": "Entfernen"
+    },
+    "modal": {
+      "createTitle": "Abfrage-Beispiel erstellen",
+      "editTitle": "Abfrage-Beispiel bearbeiten"
+    },
+    "form": {
+      "question": "Frage",
+      "questionPlaceholder": "Welche Frage beantwortet diese SQL-Abfrage?",
+      "titleRequired": "Frage ist erforderlich",
+      "category": "Kategorie",
+      "categoryPlaceholder": "Kategorie eingeben",
+      "categoryRequired": "Kategorie ist erforderlich",
+      "sqlQuery": "SQL-Abfrage",
+      "sqlQueryPlaceholder": "Gib die SQL-Abfrage ein, die die Frage beantwortet",
+      "exampleRequired": "SQL-Abfrage ist erforderlich",
+      "validate": "SQL validieren"
+    },
+    "validation": {
+      "success": "SQL-Abfrage ist gültig",
+      "failed": "SQL-Validierung fehlgeschlagen",
+      "error": "Fehler bei der Validierung der SQL-Abfrage",
+      "valid": "✓ SQL-Abfrage ist gültig und einsatzbereit",
+      "invalid": "SQL-Abfrage ist ungültig. Bitte überprüfen Sie die Syntax und Tabellen-/Spaltennamen."
+    },
+    "delete": {
+      "title": "Abfrage-Beispiel löschen",
+      "description": "Bist du sicher, dass du dieses Abfrage-Beispiel löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden."
+    },
+    "errors": {
+      "fetchFailed": "Fehler beim Abrufen der Beispiele",
+      "createFailed": "Fehler beim Erstellen des Beispiels",
+      "updateFailed": "Fehler beim Aktualisieren des Beispiels",
+      "deleteFailed": "Fehler beim Löschen des Beispiels",
+      "validationFailed": "Fehler bei der Validierung der SQL-Abfrage"
+    },
+    "messages": {
+      "created": "Beispiel erfolgreich gespeichert",
+      "seeAllExamples": "Gespeichertes Beispiel anzeigen",
+      "updated": "Beispiel erfolgreich aktualisiert",
+      "deleted": "Beispiel erfolgreich gelöscht"
+    },
+    "labels": {
+      "example": "Beispiel",
+      "examples": "Beispiele",
+      "sqlQuery": "SQL-Abfrage:",
+      "active": "aktiv"
+    },
+    "search": {
+      "placeholder": "Beispiele suchen..."
+    },
+    "filters": {
+      "showOnlyActive": "Nur aktive anzeigen"
+    },
+    "howItWorks": {
+      "title": "Wie funktioniert es?",
+      "description": "Zeigen Sie dem System, wie gute Ergebnisse aussehen. Speichern Sie die häufigsten Fragen Ihres Teams zusammen mit den richtigen Antworten – zum Beispiel „Welche Regionen performen am besten?“ mit der dazugehörigen bewährten Abfrage.",
+      "hint": "Jedes Beispiel, das Sie hinzufügen, lehrt das System, ähnliche Fragen zu erkennen und sofort mit Ergebnissen zu antworten, die genau so formatiert sind, wie Ihr Team es bevorzugt. Je mehr Beispiele Sie bereitstellen, desto mehr Fragen kann es sicher beantworten.",
+      "cta": "Wie funktioniert es?",
+      "dismiss": "Verstanden"
+    }
+  },
+  "profiler": {
+    "title": "Datenprofil-Bericht",
+    "selectTable": "Tabelle",
+    "selectTablePlaceholder": "Tabelle zum Profilieren auswählen",
+    "actions": {
+      "investigate": "Untersuchen",
+      "investigateError": "Untersuchung konnte nicht erstellt werden. Bitte versuchen Sie es erneut."
+    },
+    "error": {
+      "title": "Profiler kann nicht geladen werden",
+      "description": "Es gab ein Problem beim Laden des Profilers. Bitte versuchen Sie es erneut."
+    },
+    "notGenerated": {
+      "title": "Profil nicht erstellt",
+      "description": "Für diese Datenquelle wurde noch kein Datenprofil erstellt. Erstellen Sie eines, um Einblicke in Ihre Daten zu erhalten.",
+      "descriptionTable": "Für die Tabelle '{{tableName}}' wurde noch kein Datenprofil erstellt. Erstellen Sie eines, um Einblicke in Ihre Daten zu erhalten.",
+      "generateButton": "Profil erstellen"
+    },
+    "generateSuccess": "Datenprofil erfolgreich erstellt",
+    "generateError": "Datenprofil konnte nicht erstellt werden",
+    "export": {
+      "button": "Als PDF exportieren",
+      "exporting": "Exportiere...",
+      "error": "PDF-Export fehlgeschlagen. Bitte versuchen Sie es erneut."
+    },
+    "sections": {
+      "datasetOverview": "Datensatz-Übersicht",
+      "dataQuality": "Datenqualität",
+      "topCorrelations": "Top-Korrelationen",
+      "columnAnalysis": "Spaltenanalyse",
+      "dataQualityAlerts": "Datenqualitäts-Warnungen"
+    },
+    "overview": {
+      "generated": "Erstellt",
+      "dimensions": "Dimensionen",
+      "fileSize": "Dateigröße"
+    },
+    "quality": {
+      "missingData": "Fehlende Daten",
+      "outliers": "Ausreißer",
+      "duplicates": "Duplikate"
+    },
+    "qualityScore": {
+      "badge": "Qualitätsbewertung",
+      "outstanding": {
+        "label": "Hervorragend",
+        "description": "Ihre Datenqualität ist ausgezeichnet. Dieser Datensatz ist makellos und bereit für die Analyse."
+      },
+      "great": {
+        "label": "Sehr gut",
+        "description": "Ihre Datenqualität ist sehr gut. Kleine Verbesserungen könnten die Analysegenauigkeit erhöhen."
+      },
+      "acceptable": {
+        "label": "Akzeptabel",
+        "description": "Ihre Datenqualität ist akzeptabel. Erwägen Sie, einige Qualitätsprobleme für bessere Ergebnisse zu beheben."
+      },
+      "needsAttention": {
+        "label": "Verbesserungsbedarf",
+        "description": "Ihre Daten haben mehrere Qualitätsprobleme, die vor der Analyse behoben werden sollten."
+      }
+    },
+    "correlations": {
+      "noCorrelations": "Keine signifikanten Korrelationen gefunden"
+    },
+    "tooltips": {
+      "correlations": "Korrelationen zeigen, wie zwei Spalten gemeinsam schwanken; berechnet mit einem Korrelationskoeffizienten aus Wertepaaren. Beispiel: Steigen Werbeausgaben, steigen Verkäufe meist ebenfalls, was auf eine positive Beziehung im Gesamttrend hinweist.",
+      "missingValues": "Fehlende Werte sind leere Einträge; berechnet durch Zählen von Leerfeldern oder Nulls je Spalte. Beispiel: 5 von 100 Altersangaben fehlen und zeigen unvollständige Antworten im Datensatz, was heute klar sichtbar ist.",
+      "outliers": "Ausreißer sind ungewöhnlich hohe oder niedrige Werte; berechnet mit statistischen Schwellen wie z-Scores oder IQR. Beispiel: ein 10.000€ Verkauf unter 100€ Verkäufen sticht als seltenes Ereignis im Datensatz hervor.",
+      "dataQualityAlerts": "Datenqualitätswarnungen markieren mögliche Probleme; berechnet durch Regeln zu fehlenden Werten, Duplikaten oder Ausreißern."
+    },
+    "columnAnalysis": {
+      "tabs": {
+        "numerical": "Numerisch",
+        "categorical": "Kategorial",
+        "datetime": "Datum/Zeit"
+      },
+      "headers": {
+        "column": "Spalte",
+        "mean": "Mittelwert",
+        "median": "Median",
+        "range": "Bereich",
+        "stdDev": "Std.-Abw.",
+        "missingPct": "Fehlend %",
+        "outliersPct": "Ausreißer %",
+        "uniquePct": "Eindeutig %",
+        "uniqueCount": "Eindeutige Anzahl",
+        "distribution": "Verteilung",
+        "minDate": "Min. Datum",
+        "maxDate": "Max. Datum",
+        "spanDays": "Zeitspanne (Tage)",
+        "days": "Tage"
+      },
+      "emptyStates": {
+        "numerical": "Keine numerischen Spalten in diesem Datensatz",
+        "categorical": "Keine kategorialen Spalten in diesem Datensatz",
+        "datetime": "Keine Datums-/Zeitspalten in diesem Datensatz"
+      },
+      "other": "Sonstige"
+    },
+    "batch": {
+      "title": "Alle Profile generieren",
+      "description": "Alle {{count}} Tabellen und Ansichten mit einem Klick profilieren.",
+      "generateAll": "Alle generieren",
+      "regenerateAll": "Alle neu generieren",
+      "generating": "Wird generiert...",
+      "retryFailed": "Fehler wiederholen ({{count}})",
+      "progressLabel": "{{done}} / {{total}} abgeschlossen · {{running}} laufen",
+      "doneLabel": "{{done}} / {{total}} abgeschlossen",
+      "doneLabelErrors": "{{done}} / {{total}} abgeschlossen · {{errors}} fehlgeschlagen",
+      "doneLabelSkipped": "{{done}} / {{total}} abgeschlossen · {{skipped}} übersprungen",
+      "doneLabelBoth": "{{done}} / {{total}} abgeschlossen · {{errors}} fehlgeschlagen · {{skipped}} übersprungen",
+      "retrigger": "Diese Tabelle neu profilieren",
+      "failedBanner": "Fehlgeschlagen: {{tables}}. Erneut versuchen oder einzeln neu profilieren.",
+      "skippedBanner": "Übersprungen (Zeilenlimit überschritten): {{tables}}. Diese Tabellen sind zu groß zum Profilieren.",
+      "status": {
+        "pending": "Ausstehend",
+        "running": "Wird profiliert...",
+        "done": "Fertig",
+        "error": "Fehlgeschlagen",
+        "skipped": "Übersprungen",
+        "notStarted": "Nicht profiliert"
+      }
+    }
+  },
+  "dataQuality": {
+    "title": "Datenqualitäts-Bericht",
+    "sectionTitle": "Datenqualitäts-Warnungen",
+    "alerts": {
+      "issueCount_one": "{{count}} Problem",
+      "issueCount_other": "{{count}} Probleme",
+      "noIssues": "0 Probleme",
+      "noIssuesMessage": "Keine Datenqualitätsprobleme erkannt!",
+      "columnLabel": "Spalte:",
+      "uniqueValue": "Eindeutiger Wert:",
+      "parsableNumeric": "Als Zahl interpretierbar:",
+      "invalidExamples": "Ungültige Beispiele:",
+      "patternsDetected": "Erkannte Muster:",
+      "currency": "Währung: {{value}}",
+      "thousands": "Tausender: {{value}}",
+      "decimal": "Dezimal: {{value}}",
+      "codes": {
+        "HIGH_NULL_COLUMNS": "Viele Null-Spalten",
+        "HIGH_MISSING_DATA": "Viele fehlende Daten",
+        "MIXED_TYPE_COLUMN": "Gemischte Datentypen",
+        "HIGH_OUTLIER_PERCENTAGE": "Hoher Ausreißeranteil",
+        "ZERO_VARIANCE": "Keine Varianz",
+        "DUPLICATE_ROWS": "Doppelte Zeilen",
+        "SEPARATOR_CURRENCY_DETECTED": "Währung/Trennzeichen erkannt",
+        "TRAILING_WHITESPACE": "Leerzeichen am Ende",
+        "CONSTANT_COLUMNS": "Konstante Spalten"
+      },
+      "suffixes": {
+        "HIGH_NULL_COLUMNS": {
+          "count": "Spalten mit vielen Nullwerten",
+          "pct": "Nullwerte"
+        },
+        "HIGH_MISSING_DATA": {
+          "count": "leere Zeilen",
+          "pct": "fehlend"
+        },
+        "MIXED_TYPE_COLUMN": {
+          "count": "ungültige Einträge",
+          "pct": "ungültig"
+        },
+        "HIGH_OUTLIER_PERCENTAGE": {
+          "count": "Ausreißer",
+          "pct": "Ausreißer"
+        },
+        "ZERO_VARIANCE": {
+          "count": "Zeilen (gleicher Wert)",
+          "pct": "identisch"
+        },
+        "DUPLICATE_ROWS": {
+          "count": "doppelte Zeilen",
+          "pct": "dupliziert"
+        },
+        "SEPARATOR_CURRENCY_DETECTED": {
+          "count": "erkannt",
+          "pct": "betroffen"
+        },
+        "TRAILING_WHITESPACE": {
+          "count": "Zeilen mit Leerzeichen",
+          "pct": "mit Leerzeichen"
+        },
+        "CONSTANT_COLUMNS": {
+          "count": "konstante Spalten",
+          "pct": "konstant"
+        }
+      },
+      "suggestions": {
+        "HIGH_NULL_COLUMNS": "Diese Spalten haben einen sehr hohen Anteil an Nullwerten. Erwäge, sie zu entfernen oder untersuche, warum Daten fehlen.",
+        "MIXED_TYPE_COLUMN": "Bereinige die Spalte, indem du alle Werte in denselben Typ konvertierst, oder teile sie in separate Spalten auf.",
+        "HIGH_MISSING_DATA": "Erwäge, fehlende Werte mit Standardwerten zu füllen, oder entferne die Spalte, wenn sie nicht kritisch ist.",
+        "SEPARATOR_CURRENCY_DETECTED": "Entferne Währungssymbole und Tausendertrennzeichen vor der Analyse.",
+        "TRAILING_WHITESPACE": "Entferne führende/nachfolgende Leerzeichen mit Datenbereinigungswerkzeugen.",
+        "ZERO_VARIANCE": "Diese Spalte liefert keine Information - erwäge, sie aus der Analyse zu entfernen.",
+        "HIGH_OUTLIER_PERCENTAGE": "Überprüfe Ausreißer, um festzustellen, ob es sich um Fehler oder gültige Extremwerte handelt.",
+        "DUPLICATE_ROWS": "Entferne doppelte Zeilen oder überprüfe, ob Duplikate beabsichtigt sind.",
+        "CONSTANT_COLUMNS": "Diese Spalte hat in allen Zeilen denselben Wert - erwäge, sie aus der Analyse zu entfernen."
+      },
+      "messages": {
+        "HIGH_NULL_COLUMNS": "{{count}} Spalten haben >50% fehlende Werte",
+        "HIGH_MISSING_DATA": "Spalte hat signifikant fehlende Werte ({{pct}}%)",
+        "HIGH_OUTLIER_PERCENTAGE": "Spalte hat ungewöhnlich hohen Ausreißeranteil ({{pct}}%)",
+        "DUPLICATE_ROWS": "Datensatz enthält {{count}} doppelte Zeilen ({{pct}}%)",
+        "CONSTANT_COLUMNS": "{{count}} Spalten haben konstante Werte",
+        "MIXED_TYPE_COLUMN": "Spalte enthält gemischte Datentypen",
+        "ZERO_VARIANCE": "Spalte hat keine Varianz (einzelner eindeutiger Wert)",
+        "SEPARATOR_CURRENCY_DETECTED": "Währungs-/Trennzeichenmuster erkannt",
+        "TRAILING_WHITESPACE": "Leerzeichen am Ende in Werten erkannt"
+      }
+    },
+    "error": {
+      "title": "Datenqualität kann nicht geladen werden",
+      "description": "Es gab ein Problem beim Laden des Datenqualitäts-Berichts. Bitte versuchen Sie es erneut."
+    },
+    "notGenerated": {
+      "title": "Profil nicht erstellt",
+      "description": "Erstellen Sie ein Datenprofil, um Qualitätswarnungen zu sehen.",
+      "generateButton": "Profil erstellen"
+    }
+  },
+  "dataTable": {
+    "emptyStates": {
+      "noTableSelected": "Keine Tabelle ausgewählt",
+      "selectTable": "Wählen Sie eine Tabelle aus dem Dropdown-Menü oben aus, um deren Daten anzuzeigen",
+      "noData": "Keine Daten verfügbar",
+      "tableEmpty": "Die ausgewählte Tabelle enthält keine Daten",
+      "loadError": "Daten können nicht geladen werden",
+      "loadErrorDesc": "Beim Laden der Tabellendaten ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "labels": {
+      "table": "Tabelle:",
+      "selectTable": "Tabelle auswählen",
+      "noTables": "Keine Tabellen verfügbar",
+      "rows": "Zeilen",
+      "rowsPerPage": "Zeilen pro Seite:",
+      "showing": "Anzeige",
+      "of": "von",
+      "page": "Seite",
+      "applyFilters": "Filter anwenden",
+      "reset": "Zurücksetzen",
+      "error": "Fehler:",
+      "loading": "Wird geladen...",
+      "noDataAvailable": "Keine Daten verfügbar",
+      "search": "Alle Spalten durchsuchen...",
+      "columnFilters": "Spaltenfilter",
+      "column": "Spalte",
+      "operator": "Operator",
+      "value": "Wert",
+      "addFilter": "Filter hinzufügen",
+      "searchPrefix": "Suche:"
+    },
+    "operators": {
+      "equals": "Gleich",
+      "contains": "Enthält",
+      "startsWith": "Beginnt mit",
+      "endsWith": "Endet mit"
+    }
+  },
+  "rules": {
+    "labels": {
+      "rule": "Regel"
+    }
+  },
+  "dataTab": {
+    "table": "Tabelle",
+    "view": "Ansicht",
+    "tables": "Tabellen",
+    "views": "Ansichten",
+    "selectTable": "Wähle eine Tabelle",
+    "noTablesAvailable": "Keine Tabellen verfügbar",
+    "rowsCount": "{{count}} Zeilen",
+    "rows": "Zeilen",
+    "filters": "Filter",
+    "filterTableData": "Tabellendaten filtern",
+    "multipleFiltersNote": "Mehrere Filter werden mit UND-Logik kombiniert",
+    "clearAll": "Alles löschen",
+    "applyFilters": "Filter anwenden",
+    "resetAll": "Alles zurücksetzen",
+    "addFilter": "Filter hinzufügen",
+    "selectColumn": "Spalte auswählen",
+    "searchValue": "Wert suchen...",
+    "rowsPerPage": "Zeilen pro Seite",
+    "showing": "Zeige {{start}}-{{end}} von {{total}} Zeilen",
+    "page": "Seite",
+    "of": "von",
+    "filterBadge": {
+      "contains": "enthält",
+      "matches": "entspricht",
+      "resetAllFilters": "Alle Filter zurücksetzen",
+      "removeFilterAriaLabel": "Filter für {{column}} entfernen",
+      "resetAllFiltersAriaLabel": "Alle Filter zurücksetzen"
+    },
+    "filterActions": {
+      "clearValues": "Werte löschen",
+      "applyFilters": "Filter anwenden",
+      "resetFilters": "Filter zurücksetzen",
+      "containsMatchingNote": "Alle Filter verwenden exakte Übereinstimmung."
+    },
+    "tableViewer": {
+      "loading": "Wird geladen...",
+      "noDataAvailable": "Keine Daten verfügbar",
+      "nullValue": "NULL",
+      "trueValue": "wahr",
+      "falseValue": "falsch",
+      "objectValue": "[Objekt]"
+    },
+    "emptyStates": {
+      "noTableSelected": "Keine Tabelle ausgewählt",
+      "noTableSelectedDesc": "Wähle eine Tabelle aus dem Dropdown-Menü oben, um ihre Daten anzuzeigen",
+      "noDataAvailable": "Keine Daten verfügbar",
+      "noDataAvailableDesc": "Die ausgewählte Tabelle enthält keine Daten",
+      "noResultsFound": "Keine Ergebnisse gefunden",
+      "noResultsFoundDesc": "Keine Daten entsprechen deinen aktuellen Filtern. Versuche, die Filter anzupassen oder zu löschen.",
+      "unableToLoadData": "Daten können nicht geladen werden",
+      "unableToLoadDataDesc": "Beim Laden der Tabellendaten ist ein Fehler aufgetreten. Bitte versuche es erneut.",
+      "databaseProcessing": "Datenbank wird verarbeitet",
+      "databaseProcessingDesc": "Die Datenbank wird eingerichtet und analysiert. Tabellendaten sind verfügbar, sobald die Verarbeitung abgeschlossen ist.",
+      "setupRequired": "Datenbank-Einrichtung noch nicht gestartet",
+      "setupRequiredDesc": "Die Datenbank-Einrichtung steht noch aus. Bitte lade die Seite neu oder versuche es in wenigen Momenten erneut.",
+      "setupFailed": "Datenbank-Einrichtung fehlgeschlagen",
+      "setupFailedDesc": "Schema-Generierung fehlgeschlagen. Bitte erneut versuchen oder den Support kontaktieren, falls das Problem weiterhin besteht."
+    },
+    "actions": {
+      "retry": "Erneut versuchen",
+      "clearFilters": "Filter löschen",
+      "resetFilters": "Filter zurücksetzen"
+    }
+  },
+  "common": {
+    "cancel": "Abbrechen",
+    "create": "Erstellen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "retry": "Erneut versuchen"
+  },
+  "vault": {
+    "notInitialized": "Context Vault nicht initialisiert",
+    "notInitializedDesc": "Keine Context Vault-Konfiguration für diese Datenquelle gefunden. Stelle sicher, dass vault_s3 in app.yaml konfiguriert ist und die Datenquelle Regeln oder Beispiele enthält.",
+    "searchPlaceholder": "Context Vault durchsuchen...",
+    "searchContextPlaceholder": "Kontext durchsuchen...",
+    "searchResults": "{{count}} Ergebnis(se) für \"{{query}}\"",
+    "noMatches": "Keine Treffer gefunden.",
+    "searching": "Suche...",
+    "clear": "Zurücksetzen",
+    "failedToReadFile": "Datei konnte nicht gelesen werden",
+    "searchFailed": "Suche fehlgeschlagen",
+    "titlePlaceholder": "Titel",
+    "contentPlaceholder": "Ihr Inhalt hier...",
+    "titleRequired": "Titel ist erforderlich",
+    "contentRequired": "Inhalt ist erforderlich",
+    "titleMustContainAlphanumeric": "Titel muss mindestens einen Buchstaben oder eine Zahl enthalten",
+    "create": "Erstellen",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "fileCreated": "Datei erstellt",
+    "fileUpdated": "Datei aktualisiert",
+    "fileDeleted": "Datei gelöscht",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "viewContext": "Kontext ansehen",
+    "saveFailed": "Speichern fehlgeschlagen",
+    "deleteFailed": "Löschen fehlgeschlagen",
+    "loadFailed": "Context Vault konnte nicht geladen werden",
+    "untitled": "Unbenannt",
+    "newFile": "Neue Datei",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "sql": "SQL",
+    "audit": "Protokoll",
+    "auditTrail": "Änderungsprotokoll",
+    "noAuditHistory": "Noch kein Änderungsprotokoll vorhanden",
+    "auditColumns": {
+      "status": "Status",
+      "tool": "Tool",
+      "file": "Datei",
+      "version": "Version",
+      "requestedBy": "Angefordert von",
+      "requestedAt": "Angefordert am",
+      "reviewedBy": "Geprüft von",
+      "reviewedAt": "Geprüft am",
+      "reason": "Grund"
+    },
+    "editComingSoon": "Bearbeitung bald verfügbar",
+    "deleteComingSoon": "Löschen bald verfügbar",
+    "editInChat": "Zum Bearbeiten den Agenten im Projekt-Chat fragen",
+    "introTitle": "Bringe Agenten deine Daten bei",
+    "introDesc": "Regeln, Golden Queries und Dokumente hier helfen Agenten, bessere und genauere Antworten zu geben. Füge sie per Chat oder direkt in der Seitenleiste hinzu.",
+    "tiles": {
+      "rules": {
+        "title": "Regeln",
+        "desc": "Leitplanken für SQL-Erstellung, die Geschäftslogik, Berechnungen und Datenkonventionen abdecken.",
+        "cta": "Beispiel ansehen"
+      },
+      "goldenQueries": {
+        "title": "Golden Queries",
+        "desc": "Bewährte Frage-SQL-Paare, die Agenten den richtigen Weg zeigen, häufige Fragen zu beantworten.",
+        "cta": "Beispiel ansehen"
+      },
+      "documents": {
+        "title": "Dokumente",
+        "desc": "Referenzmaterialien wie Strategiedokumente, Glossare oder Fachwissen für geschäftlichen Kontext.",
+        "cta": "Beispiel ansehen"
+      },
+      "withContext": "Mit {{type}}",
+      "withoutContext": "Ohne {{type}}",
+      "question": "Frage",
+      "response": "Antwort"
+    },
+    "deleteConfirmTitle": "Context Vault-Datei löschen",
+    "deleteConfirmDesc": "Bist du sicher, dass du diese Datei löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "directories": {
+      "rules": "Regeln",
+      "golden_queries": "Golden Queries",
+      "documents": "Dokumente"
+    },
+    "tabFiles": "Dateien",
+    "tabKnowledge": "Wissensgraph",
+    "kg": {
+      "fetchError": "Wissensgraph konnte nicht geladen werden",
+      "noData": "Keine Graphdaten verfügbar",
+      "noRelationships": "Keine Beziehungen gefunden",
+      "noViews": "Keine Views gefunden",
+      "notGenerated": "Wissensgraph nicht generiert",
+      "notGeneratedDesc": "Generiere einen Wissensgraphen, um dein Datenbankschema, Beziehungen und Metadaten zu erkunden.",
+      "generate": "Wissensgraph generieren",
+      "generating": "Wird generiert...",
+      "generateSuccess": "Wissensgraph erfolgreich generiert",
+      "generateError": "Wissensgraph konnte nicht generiert werden",
+      "generatingTitle": "Wissensgraph wird generiert",
+      "generatingDesc": "Bitte warte, während wir dein Datenbankschema analysieren...",
+      "complete": "abgeschlossen",
+      "lastSynced": "Zuletzt synchronisiert",
+      "legend": "Legende",
+      "legendTable": "Tabelle",
+      "legendView": "View",
+      "legendRelation": "Beziehung",
+      "legendColumn": "Spalte",
+      "typeTable": "Tabelle",
+      "typeView": "View",
+      "typeColumn": "Spalte",
+      "nodes": "Knoten",
+      "edges": "Kanten",
+      "columns": "Spalten",
+      "rows": "Zeilen",
+      "relationship": "Beziehung",
+      "colorHint": "Tabellen nach Namenspräfix eingefärbt.",
+      "hint": "Scrollen zum Zoomen, ziehen zum Verschieben. Hover für Details.",
+      "showColumns": "Spalten anzeigen",
+      "dataType": "Typ",
+      "primaryKey": "Primärschlüssel",
+      "tabs": {
+        "graph": "Graph",
+        "tables": "Tabellen",
+        "columns": "Spalten",
+        "relationships": "Beziehungen",
+        "views": "Views"
+      },
+      "table": {
+        "name": "Name",
+        "type": "Typ",
+        "rows": "Zeilen",
+        "columns": "Spalten",
+        "description": "Beschreibung",
+        "aliases": "Aliase"
+      },
+      "column": {
+        "name": "Name",
+        "dataType": "Datentyp",
+        "pk": "PK",
+        "nullable": "Nullable",
+        "confidence": "Konfidenz",
+        "description": "Beschreibung",
+        "uniqueValues": "Eindeutige Werte",
+        "minValue": "Min. Wert",
+        "maxValue": "Max. Wert",
+        "aliases": "Aliase"
+      },
+      "rel": {
+        "name": "Name",
+        "tables": "Parent → Child",
+        "columns": "Spaltenzuordnung",
+        "leftTable": "Linke Tabelle",
+        "rightTable": "Rechte Tabelle",
+        "columnMapping": "Spaltenzuordnung",
+        "cardinality": "Kardinalität",
+        "certified": "Zertifiziert",
+        "description": "Beschreibung",
+        "businessMeaning": "Fachliche Bedeutung"
+      },
+      "view": {
+        "name": "Name",
+        "rows": "Zeilen",
+        "description": "Beschreibung",
+        "aliases": "Aliase"
+      }
+    }
+  }
+}

@@ -1,0 +1,1015 @@
+{
+  "page": {
+    "title": "Databases",
+    "connect": "Connect Database",
+    "tables": "Tables",
+    "columns": "Columns",
+    "schema": "Schema",
+    "records": "Records",
+    "metadata": {
+      "title": "Scavenger: Data Sources",
+      "description": "Manage and analyze your data sources"
+    },
+    "errors": {
+      "somethingWrong": "Something went wrong!",
+      "unexpectedError": "An unexpected error occurred while loading the data source.",
+      "tryAgain": "Try again",
+      "notFound": "Data source not found",
+      "notFoundDesc": "The data source you're looking for doesn't exist or you don't have permission to access it.",
+      "goHome": "Go to Home"
+    }
+  },
+  "connection": {
+    "status": "Connection Status",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "testing": "Testing connection...",
+    "failed": "Connection failed",
+    "timeout": "Connection timeout"
+  },
+  "actions": {
+    "test": "Test Connection",
+    "refresh": "Refresh",
+    "refreshing": "Refreshing...",
+    "schemaUpdated": "Schema updated successfully",
+    "schemaUpToDate": "Schema is already up to date",
+    "schemaRefreshError": "Failed to refresh schema",
+    "sync": "Sync",
+    "configure": "Configure",
+    "settings": "Settings",
+    "connectionDetails": "Connection Details",
+    "edit": "Edit Connection",
+    "startChatWithYourData": "Start chat with your data",
+    "startingChatWithYourData": "Starting chat...",
+    "addSuccess": "Database added successfully",
+    "addFailed": "Failed to add database",
+    "updateSuccess": "Database updated successfully",
+    "updateFailed": "Failed to update database",
+    "deleteSuccess": "Database deleted successfully",
+    "deleteFailed": "Failed to delete database",
+    "defaultUpdateSuccess": "Database set as default successfully",
+    "defaultUpdateFailed": "Failed to set database as default"
+  },
+  "navigation": {
+    "home": "Home",
+    "dataSource": "Data Source"
+  },
+  "status": {
+    "connected": "Connected",
+    "disconnected": "Disconnected"
+  },
+  "selector": {
+    "tooltips": {
+      "processing": "Database is being processed and will be available soon",
+      "failed": "Database processing failed. Please try reconnecting or contact support.",
+      "locked": "Start a new chat to use a different database"
+    },
+    "statusLabels": {
+      "processing": "Processing",
+      "failed": "Failed"
+    }
+  },
+  "tabs": {
+    "data": "Data",
+    "er": "Data Model",
+    "descriptions": "Descriptions",
+    "cleaning": "Cleaning",
+    "logs": "Logs",
+    "rules": "Rules",
+    "examples": "Examples",
+    "dataQuality": "Data Quality",
+    "feedback": "Feedback",
+    "vault": "Context Vault",
+    "context": "Context",
+    "knowledge": "Knowledge",
+    "comingSoon": "Coming soon",
+    "waitingForDatabase": "Database is still processing. This tab will be available once setup is complete."
+  },
+  "feedbackTab": {
+    "results": "Feedback Count",
+    "filters": {
+      "type": "Type",
+      "allTypes": "All Types",
+      "chat": "Chat",
+      "textToSql": "Text to SQL",
+      "rating": "Rating",
+      "allRatings": "All Ratings",
+      "positive": "Positive",
+      "negative": "Negative",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "reset": "Reset",
+      "clearFilters": "Clear filters",
+      "allUsers": "All Users",
+      "searchUsers": "Search users...",
+      "noUsers": "No users found.",
+      "status": "Status",
+      "open": "Open",
+      "resolved": "Resolved",
+      "allStatuses": "All Statuses"
+    },
+    "columns": {
+      "feedback": "Feedback",
+      "type": "Type",
+      "prompt": "Prompt",
+      "response": "Response",
+      "comment": "Comment",
+      "project": "Project",
+      "user": "User",
+      "time": "Time",
+      "save": "Actions"
+    },
+    "actions": {
+      "viewDetails": "View Details",
+      "copyId": "Copy ID",
+      "saveAsExample": "Save as Example",
+      "save": "Save",
+      "saveModalTitle": "Save Query Example",
+      "downloadCsv": "Download as CSV",
+      "markResolved": "Mark as resolved",
+      "markUnresolved": "Mark as unresolved",
+      "markResolvedToast": "Marked as resolved",
+      "markUnresolvedToast": "Marked as unresolved",
+      "markResolvedError": "Failed to update resolution status"
+    },
+    "howItWorks": {
+      "cta": "How does it work?",
+      "title": "How does it work?",
+      "description": "The feedback tab displays all user ratings (thumbs up/down) on Scavenger's responses. Use it to monitor how well the system is performing and identify areas that need improvement.",
+      "hint": "Click any feedback entry to see full details including the conversation history. Review negative feedback to spot recurring issues—then save a corrected query as an example or create rules to teach the system the correct behavior. Over time, this feedback loop helps the system deliver more accurate, reliable answers."
+    },
+    "empty": {
+      "noData": {
+        "title": "No feedback yet",
+        "description": "Feedback will appear here when users rate AI responses using the thumbs up/down buttons."
+      },
+      "noResults": {
+        "title": "No feedback matches your filters",
+        "description": "Try adjusting your filters to see more results."
+      }
+    },
+    "detail": {
+      "title": "Feedback Details",
+      "user": "User",
+      "project": "Project",
+      "prompt": "User Prompt",
+      "response": "Scavenger",
+      "generatedSql": "Generated SQL",
+      "queryResults": "Query Results",
+      "sqlExplanation": "Explanation",
+      "comment": "User Comment",
+      "sessionInfo": "Session Info",
+      "conversationId": "Conversation ID",
+      "sessionId": "Session ID",
+      "copied": "Copied to clipboard",
+      "viewConversation": "Load full conversation",
+      "conversationHistory": "Conversation History",
+      "conversationEmpty": "No conversation history found for this session",
+      "conversationError": "Failed to load conversation history",
+      "conversationRetry": "Retry"
+    }
+  },
+  "details": {
+    "title": "Database details",
+    "databaseNotFound": "Database not found",
+    "states": {
+      "generatingDescriptions": "Database descriptions are being generated",
+      "refreshAfterTime": "Please refresh after some time",
+      "loadFailed": "Failed to load database descriptions",
+      "contactSupport": "Please try refreshing or contact support",
+      "noTables": "No tables found in this database",
+      "refreshingDetails": "Refreshing database details..."
+    },
+    "buttons": {
+      "generateEDA": "Generate EDA",
+      "generating": "Generating...",
+      "filter": "Filter",
+      "searchAndFilter": "Search & Filter",
+      "filters": "filters",
+      "cancel": "Cancel",
+      "updateDescription": "Update Description",
+      "updating": "Updating..."
+    },
+    "search": {
+      "placeholder": "Search columns...",
+      "sortLabel": "Sort:",
+      "filtersLabel": "Filters:",
+      "sortByConfidence": "By Confidence",
+      "sortAlphabetically": "Alphabetically",
+      "sortByConfidenceOption": "Sort by Confidence",
+      "sortAlphabeticallyOption": "Sort Alphabetically",
+      "showAllColumns": "Show All Columns",
+      "collapseAllColumns": "Collapse All Columns",
+      "maxConfidenceLabel": "Max Confidence Score :"
+    },
+    "filters": {
+      "pendingReview": "Pending Review",
+      "resolved": "Resolved",
+      "lowConfidence": "Low Confidence",
+      "confidenceScore": "Confidence Score"
+    },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "pendingReview": "Pending Review",
+      "resolved": "Resolved",
+      "lowConfidence": "Low Confidence",
+      "veryLowConfidence": "Very Low Confidence",
+      "confidence": "confidence",
+      "avgConfidence": "avg confidence"
+    },
+    "stats": {
+      "tables": "Tables",
+      "columns": "Columns",
+      "pending": "Pending",
+      "lowConfidence": "Low Confidence"
+    },
+    "column": {
+      "descriptionLabel": "Column description: ",
+      "descriptionPlaceholder": "Please provide a description for the column"
+    },
+    "badges": {
+      "dbDescriptionsPending": "Generating Descriptions",
+      "dbDescriptionsFailed": "DB Descriptions Failed"
+    }
+  },
+  "provider": {
+    "messages": {
+      "success": {
+        "columnDescriptionUpdated": "Column description updated successfully",
+        "databaseDescriptionsStarted": "Database descriptions are being updated.",
+        "edaReportGenerated": "EDA report generated successfully",
+        "schemaDescriptionCompleted": "Schema description generation completed successfully"
+      },
+      "error": {
+        "columnDescriptionFailed": "Failed to update column description",
+        "databaseDescriptionsFailed": "Failed to start database description generation.",
+        "edaReportFailed": "Failed to generate EDA report",
+        "schemaDescriptionFailed": "Schema description generation failed",
+        "databaseNotFound": "Database ID not found",
+        "loadFailed": "Failed to load database details",
+        "tableDataFetchFailed": "Failed to fetch table data"
+      },
+      "info": {
+        "databaseDescriptionsInProgress": "Database description generation is already in progress."
+      }
+    }
+  },
+  "erDiagram": {
+    "states": {
+      "generating": "Generating entity relationship diagram",
+      "analyzingRelationships": "Analyzing table relationships...",
+      "noTables": "No tables found",
+      "generateSchemaFirst": "Generate schema descriptions to view the diagram",
+      "singleTable": "Single table database",
+      "requiresTwoTables": "ER diagrams show relationships between multiple tables",
+      "renderFailed": "Failed to render diagram",
+      "noRelationships": "No relationships detected",
+      "noForeignKeys": "No foreign key constraints found in the database",
+      "loadingEngine": "Loading diagram engine...",
+      "rendering": "Rendering diagram..."
+    },
+    "actions": {
+      "export": "Export",
+      "exportPNG": "Export as PNG",
+      "exportSVG": "Export as SVG",
+      "copySource": "Copy Mermaid Source",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "fitToScreen": "Fit to Screen",
+      "useAIAnalysis": "Use AI Analysis",
+      "aiInferenceDesc": "Let AI detect relationships based on naming patterns"
+    },
+    "messages": {
+      "exported": "Diagram exported successfully",
+      "copiedToClipboard": "Mermaid source copied to clipboard",
+      "aiInferenceEnabled": "AI relationship inference enabled"
+    },
+    "errors": {
+      "copyFailed": "Failed to copy to clipboard",
+      "exportPNGFailed": "Failed to export diagram as PNG",
+      "noDiagramToExport": "No diagram to export",
+      "loadEngineFailed": "Failed to load diagram engine. Please refresh the page."
+    }
+  },
+  "errors": {
+    "decryptionFailed": "Failed to decrypt database information",
+    "loadFailed": "Failed to load databases",
+    "fetchFailed": "Failed to fetch organization databases"
+  },
+  "connectionErrors": {
+    "1044": "Access denied to the specified database. Please check your permissions.",
+    "1045": "Authentication failed. Please check your username and password.",
+    "1049": "The specified database does not exist. Please check the database name.",
+    "2003": "Unable to reach the database server. Please check the host address and ensure the server is running.",
+    "2005": "The database host could not be found. Please verify the hostname.",
+    "2006": "Connection to database was lost. Please try again.",
+    "errno101": "Network is unreachable. Please check your network connection.",
+    "errno111": "Connection refused. The database server may not be accepting connections on this port.",
+    "timeout": "Connection timed out. The server took too long to respond.",
+    "default": "Database connection failed. Please verify your connection details."
+  },
+  "configErrors": {
+    "fetchFailed": "Failed to load database rules and examples"
+  },
+  "validation": {
+    "orgIdRequired": "Organization ID is required"
+  },
+  "connectionDetails": {
+    "title": "Connection Details",
+    "description": "Database connection configuration and status",
+    "name": "Database Name",
+    "host": "Host",
+    "port": "Port",
+    "username": "Username",
+    "password": "Password",
+    "databaseType": "Database Type",
+    "schema": "Schema",
+    "status": "Connection Status",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "text2sql": "Text to SQL",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "defaultDatabase": "Default Database",
+    "yes": "Yes",
+    "close": "Close",
+    "placeholder": "-"
+  },
+  "edit": {
+    "title": "Edit Connection",
+    "description": "Update the database connection details",
+    "save": "Save Changes",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "success": "Connection updated successfully"
+  },
+  "businessRules": {
+    "title": "Business Rules",
+    "empty": {
+      "title": "No Business Rules",
+      "description": "Start by creating your first business rule to define data quality standards and constraints for this database.",
+      "readOnlyDescription": "No business rules have been configured for this database yet. To add rules, ask the agent in your project chat."
+    },
+    "actions": {
+      "addRule": "Add Rule",
+      "edit": "Edit",
+      "remove": "Remove"
+    },
+    "modal": {
+      "createTitle": "Create Business Rule",
+      "editTitle": "Edit Business Rule",
+      "description": "Write clear and specific business rules that will help guide SQL generation."
+    },
+    "form": {
+      "title": "Title",
+      "titlePlaceholder": "Enter rule title",
+      "titleRequired": "Title is required",
+      "description": "Description",
+      "descriptionPlaceholder": "Describe your business logic, data relationships, and calculation methods. Be precise and unambiguous.",
+      "category": "Category",
+      "categoryPlaceholder": "e.g., Data Quality, Security, Compliance",
+      "categoryRequired": "Category is required",
+      "rule": "Rule",
+      "ruleRequired": "Rule is required",
+      "sqlPattern": "SQL Pattern",
+      "sqlPatternPlaceholder": "Optional SQL query or pattern for this rule",
+      "active": "Active"
+    },
+    "delete": {
+      "title": "Delete Business Rule",
+      "description": "Are you sure you want to delete this business rule? This action cannot be undone."
+    },
+    "messages": {
+      "created": "Business rule created successfully",
+      "updated": "Business rule updated successfully",
+      "deleted": "Business rule deleted successfully"
+    },
+    "errors": {
+      "createFailed": "Failed to create business rule",
+      "updateFailed": "Failed to update business rule",
+      "deleteFailed": "Failed to delete business rule"
+    },
+    "labels": {
+      "rule": "rule",
+      "rules": "rules",
+      "active": "active"
+    },
+    "search": {
+      "placeholder": "Search rules..."
+    },
+    "filters": {
+      "showOnlyActive": "Show Only Active",
+      "showAll": "Show All"
+    },
+    "howItWorks": {
+      "title": "How does it work?",
+      "description": "Set the ground rules for your data. Define which records should be included, how different data tables connect, and what your key metrics actually mean.",
+      "hint": "These rules act as guardrails—ensuring everyone gets consistent, trustworthy answers that follow your company's standards. Once you've documented them, the system automatically applies them to every question, so your team never has to worry about getting conflicting or incorrect information.",
+      "cta": "How does it work?",
+      "dismiss": "Got it"
+    },
+    "suggestions": {
+      "createManually": "Create rule manually",
+      "aiSuggestions": "AI Suggestions",
+      "refreshing": "Refreshing...",
+      "refresh": "Refresh",
+      "refreshFailed": "Failed to refresh suggestions",
+      "confidence": "{{value}}% confidence",
+      "changesToExisting": "Changes to existing rule",
+      "reasoning": "Reasoning",
+      "empty": {
+        "title": "No suggestions right now.",
+        "description": "Click refresh to check for new ones based on recent feedback."
+      },
+      "actions": {
+        "removeRule": "Remove Rule",
+        "keepRule": "Keep Rule",
+        "accept": "Accept",
+        "editAndAccept": "Edit & Accept",
+        "decline": "Decline"
+      }
+    }
+  },
+  "queryExamples": {
+    "title": "Query Examples",
+    "empty": {
+      "title": "No Query Examples",
+      "description": "Start by creating your first query example to help guide SQL generation for this database.",
+      "readOnlyDescription": "No query examples have been configured for this database yet. To add examples, ask the agent in your project chat."
+    },
+    "error": {
+      "title": "Unable to Load Examples",
+      "description": "There was a problem loading the examples. Please try again."
+    },
+    "actions": {
+      "addExample": "Add Example",
+      "validate": "Validate",
+      "copy": "Copy",
+      "edit": "Edit",
+      "remove": "Remove"
+    },
+    "modal": {
+      "createTitle": "Create Query Example",
+      "editTitle": "Edit Query Example"
+    },
+    "form": {
+      "question": "Question",
+      "questionPlaceholder": "What question does this SQL query answer?",
+      "titleRequired": "Question is required",
+      "category": "Category",
+      "categoryPlaceholder": "Enter category",
+      "categoryRequired": "Category is required",
+      "sqlQuery": "SQL Query",
+      "sqlQueryPlaceholder": "Enter the SQL query that answers the question",
+      "exampleRequired": "SQL query is required",
+      "validate": "Validate SQL"
+    },
+    "validation": {
+      "success": "SQL query is valid",
+      "failed": "SQL validation failed",
+      "error": "Error validating SQL query",
+      "valid": "✓ SQL query is valid and ready to use",
+      "invalid": "SQL query is invalid. Please check the syntax and table/column names."
+    },
+    "delete": {
+      "title": "Delete Query Example",
+      "description": "Are you sure you want to delete this query example? This action cannot be undone."
+    },
+    "errors": {
+      "fetchFailed": "Failed to fetch examples",
+      "createFailed": "Failed to create example",
+      "updateFailed": "Failed to update example",
+      "deleteFailed": "Failed to delete example",
+      "validationFailed": "Failed to validate SQL query"
+    },
+    "messages": {
+      "created": "Example saved successfully",
+      "seeAllExamples": "See saved example",
+      "updated": "Example updated successfully",
+      "deleted": "Example deleted successfully"
+    },
+    "labels": {
+      "example": "Example",
+      "examples": "examples",
+      "sqlQuery": "SQL Query:",
+      "active": "active"
+    },
+    "howItWorks": {
+      "title": "How does it work?",
+      "description": "Show the system what good looks like. Save your team's most common questions alongside the correct answers—like \"Which regions are performing best?\" with its proven query.",
+      "hint": "Each example you add teaches the system to recognize similar questions and respond instantly with results formatted exactly how your team prefers. The more examples you provide, the wider the range of questions it can handle confidently.",
+      "cta": "How does it work?",
+      "dismiss": "Got it"
+    },
+    "search": {
+      "placeholder": "Search examples..."
+    },
+    "filters": {
+      "showOnlyActive": "Show Only Active"
+    }
+  },
+  "profiler": {
+    "title": "Data Profile Report",
+    "selectTable": "Table",
+    "selectTablePlaceholder": "Select a table to profile",
+    "actions": {
+      "investigate": "Investigate",
+      "investigateError": "Failed to create investigation. Please try again."
+    },
+    "error": {
+      "title": "Unable to Load Profiler",
+      "description": "There was a problem loading the profiler. Please try again."
+    },
+    "notGenerated": {
+      "title": "Profile Not Generated",
+      "description": "A data profile hasn't been generated for this data source yet. Generate one to see insights about your data.",
+      "descriptionTable": "A data profile hasn't been generated for the '{{tableName}}' table yet. Generate one to see insights about your data.",
+      "generateButton": "Generate Profile"
+    },
+    "generateSuccess": "Data profile generated successfully",
+    "generateError": "Failed to generate data profile",
+    "export": {
+      "button": "Export as PDF",
+      "exporting": "Exporting...",
+      "error": "Failed to export PDF. Please try again."
+    },
+    "sections": {
+      "datasetOverview": "Dataset Overview",
+      "dataQuality": "Data Quality",
+      "topCorrelations": "Top Correlations",
+      "columnAnalysis": "Column Analysis",
+      "dataQualityAlerts": "Data Quality Alerts"
+    },
+    "overview": {
+      "generated": "Generated",
+      "dimensions": "Dimensions",
+      "fileSize": "File Size"
+    },
+    "quality": {
+      "missingData": "Missing Data",
+      "outliers": "Outliers",
+      "duplicates": "Duplicates"
+    },
+    "qualityScore": {
+      "badge": "Quality Score",
+      "outstanding": {
+        "label": "Outstanding",
+        "description": "Your data quality is exceptional. This dataset is pristine and ready for analysis."
+      },
+      "great": {
+        "label": "Great Quality",
+        "description": "Your data quality is very good. Minor improvements could enhance analysis accuracy."
+      },
+      "acceptable": {
+        "label": "Acceptable",
+        "description": "Your data quality is acceptable. Consider addressing some quality issues for better results."
+      },
+      "needsAttention": {
+        "label": "Needs Attention",
+        "description": "Your data has several quality issues that should be addressed before analysis."
+      }
+    },
+    "correlations": {
+      "noCorrelations": "No significant correlations found"
+    },
+    "tooltips": {
+      "correlations": "Correlations show how two columns move together, calculated using a correlation coefficient from paired values. For example, as marketing spend rises, sales typically increase, indicating a positive overall trend.",
+      "missingValues": "Missing values are empty entries, calculated by counting blanks or nulls per column. For example, if 5 out of 100 ages are missing in a survey, it indicates incomplete responses and potential bias in the analysis.",
+      "outliers": "Outliers are unusually high or low values, calculated using statistical thresholds like z-scores or IQR. For example, a $10,000 sale among $100 sales clearly stands out as a rare event in the data.",
+      "dataQualityAlerts": "Data quality alerts flag potential issues, calculated based on rules regarding missingness, duplicates, or outliers."
+    },
+    "columnAnalysis": {
+      "tabs": {
+        "numerical": "Numerical",
+        "categorical": "Categorical",
+        "datetime": "DateTime"
+      },
+      "headers": {
+        "column": "Column",
+        "mean": "Mean",
+        "median": "Median",
+        "range": "Range",
+        "stdDev": "Std Dev",
+        "missingPct": "Missing %",
+        "outliersPct": "Outliers %",
+        "uniquePct": "Unique %",
+        "uniqueCount": "Unique Count",
+        "distribution": "Distribution",
+        "minDate": "Min Date",
+        "maxDate": "Max Date",
+        "spanDays": "Span (days)",
+        "days": "days"
+      },
+      "emptyStates": {
+        "numerical": "No numerical columns in this dataset",
+        "categorical": "No categorical columns in this dataset",
+        "datetime": "No datetime columns in this dataset"
+      },
+      "other": "Other"
+    },
+    "batch": {
+      "title": "Generate All Profiles",
+      "description": "Profile all {{count}} tables and views in one click.",
+      "generateAll": "Generate All",
+      "regenerateAll": "Regenerate All",
+      "generating": "Generating...",
+      "retryFailed": "Retry Failed ({{count}})",
+      "progressLabel": "{{done}} / {{total}} complete · {{running}} running",
+      "doneLabel": "{{done}} / {{total}} complete",
+      "doneLabelErrors": "{{done}} / {{total}} complete · {{errors}} failed",
+      "doneLabelSkipped": "{{done}} / {{total}} complete · {{skipped}} skipped",
+      "doneLabelBoth": "{{done}} / {{total}} complete · {{errors}} failed · {{skipped}} skipped",
+      "retrigger": "Re-profile this table",
+      "failedBanner": "Failed: {{tables}}. Click retry or re-profile individually.",
+      "skippedBanner": "Skipped (row limit exceeded): {{tables}}. These tables are too large to profile.",
+      "status": {
+        "pending": "Pending",
+        "running": "Profiling...",
+        "done": "Done",
+        "error": "Failed",
+        "skipped": "Skipped",
+        "notStarted": "Not profiled"
+      }
+    }
+  },
+  "dataQuality": {
+    "title": "Data Quality Report",
+    "sectionTitle": "Data Quality Alerts",
+    "alerts": {
+      "issueCount_one": "{{count}} issue",
+      "issueCount_other": "{{count}} issues",
+      "noIssues": "0 issues",
+      "noIssuesMessage": "No data quality issues detected!",
+      "columnLabel": "Column:",
+      "uniqueValue": "Unique value:",
+      "parsableNumeric": "Parsable as numeric:",
+      "invalidExamples": "Invalid examples:",
+      "patternsDetected": "Patterns detected:",
+      "currency": "Currency: {{value}}",
+      "thousands": "Thousands: {{value}}",
+      "decimal": "Decimal: {{value}}",
+      "codes": {
+        "HIGH_NULL_COLUMNS": "High Null Columns",
+        "HIGH_MISSING_DATA": "High Missing Data",
+        "MIXED_TYPE_COLUMN": "Mixed Type Column",
+        "HIGH_OUTLIER_PERCENTAGE": "High Outlier Percentage",
+        "ZERO_VARIANCE": "Zero Variance",
+        "DUPLICATE_ROWS": "Duplicate Rows",
+        "SEPARATOR_CURRENCY_DETECTED": "Currency/Separator Detected",
+        "TRAILING_WHITESPACE": "Trailing Whitespace",
+        "CONSTANT_COLUMNS": "Constant Columns"
+      },
+      "suffixes": {
+        "HIGH_NULL_COLUMNS": {
+          "count": "columns with high nulls",
+          "pct": "null values"
+        },
+        "HIGH_MISSING_DATA": {
+          "count": "empty rows",
+          "pct": "missing"
+        },
+        "MIXED_TYPE_COLUMN": {
+          "count": "invalid entries",
+          "pct": "invalid"
+        },
+        "HIGH_OUTLIER_PERCENTAGE": {
+          "count": "outliers",
+          "pct": "outliers"
+        },
+        "ZERO_VARIANCE": {
+          "count": "rows (same value)",
+          "pct": "identical"
+        },
+        "DUPLICATE_ROWS": {
+          "count": "duplicate rows",
+          "pct": "duplicated"
+        },
+        "SEPARATOR_CURRENCY_DETECTED": {
+          "count": "detected",
+          "pct": "affected"
+        },
+        "TRAILING_WHITESPACE": {
+          "count": "rows with extra spaces",
+          "pct": "with spaces"
+        },
+        "CONSTANT_COLUMNS": {
+          "count": "constant columns",
+          "pct": "constant"
+        }
+      },
+      "suggestions": {
+        "HIGH_NULL_COLUMNS": "These columns have a very high percentage of null values. Consider removing them or investigating why data is missing.",
+        "MIXED_TYPE_COLUMN": "Clean the column by converting all values to the same type, or split into separate columns.",
+        "HIGH_MISSING_DATA": "Consider filling missing values with defaults, or remove the column if not critical.",
+        "SEPARATOR_CURRENCY_DETECTED": "Remove currency symbols and thousands separators before analysis.",
+        "TRAILING_WHITESPACE": "Trim leading/trailing whitespace using data cleaning tools.",
+        "ZERO_VARIANCE": "This column provides no information - consider removing it from analysis.",
+        "HIGH_OUTLIER_PERCENTAGE": "Review outliers to determine if they're errors or valid extreme values.",
+        "DUPLICATE_ROWS": "Remove duplicate rows or verify if duplicates are intentional.",
+        "CONSTANT_COLUMNS": "This column has the same value in all rows - consider removing it from analysis."
+      },
+      "messages": {
+        "HIGH_NULL_COLUMNS": "{{count}} columns have >50% missing values",
+        "HIGH_MISSING_DATA": "Column has significant missing values ({{pct}}%)",
+        "HIGH_OUTLIER_PERCENTAGE": "Column has unusually high percentage of outliers ({{pct}}%)",
+        "DUPLICATE_ROWS": "Dataset contains {{count}} duplicate rows ({{pct}}%)",
+        "CONSTANT_COLUMNS": "{{count}} columns have constant values",
+        "MIXED_TYPE_COLUMN": "Column contains mixed data types",
+        "ZERO_VARIANCE": "Column has zero variance (single unique value)",
+        "SEPARATOR_CURRENCY_DETECTED": "Currency/separator patterns detected",
+        "TRAILING_WHITESPACE": "Trailing whitespace detected in values"
+      }
+    },
+    "error": {
+      "title": "Unable to Load Data Quality",
+      "description": "There was a problem loading the data quality report. Please try again."
+    },
+    "notGenerated": {
+      "title": "Profile Not Generated",
+      "description": "Generate a data profile to see quality alerts.",
+      "generateButton": "Generate Profile"
+    }
+  },
+  "dataTable": {
+    "emptyStates": {
+      "noTableSelected": "No table selected",
+      "selectTable": "Select a table from the dropdown above to view its data",
+      "noData": "No data available",
+      "tableEmpty": "The selected table contains no data",
+      "loadError": "Unable to load data",
+      "loadErrorDesc": "There was an error loading the table data. Please try again."
+    },
+    "labels": {
+      "table": "Table:",
+      "selectTable": "Select a table",
+      "noTables": "No tables available",
+      "rows": "rows",
+      "rowsPerPage": "Rows per page:",
+      "showing": "Showing",
+      "of": "of",
+      "page": "Page",
+      "applyFilters": "Apply Filters",
+      "reset": "Reset",
+      "error": "Error:",
+      "loading": "Loading...",
+      "noDataAvailable": "No data available",
+      "search": "Search all columns...",
+      "columnFilters": "Column Filters",
+      "column": "Column",
+      "operator": "Operator",
+      "value": "Value",
+      "addFilter": "Add Filter",
+      "searchPrefix": "Search:"
+    },
+    "operators": {
+      "equals": "Equals",
+      "contains": "Contains",
+      "startsWith": "Starts with",
+      "endsWith": "Ends with"
+    }
+  },
+  "rules": {
+    "labels": {
+      "rule": "Rule"
+    }
+  },
+  "dataTab": {
+    "table": "Table",
+    "view": "View",
+    "tables": "Tables",
+    "views": "Views",
+    "selectTable": "Select a table",
+    "noTablesAvailable": "No tables available",
+    "rowsCount": "{{count}} rows",
+    "rows": "rows",
+    "filters": "Filters",
+    "filterTableData": "Filter Table Data",
+    "multipleFiltersNote": "Multiple filters are combined with AND logic",
+    "clearAll": "Clear All",
+    "applyFilters": "Apply Filters",
+    "resetAll": "Reset All",
+    "addFilter": "Add Filter",
+    "selectColumn": "Select column",
+    "searchValue": "Search value...",
+    "filterOperator": "contains",
+    "filterHelp": "All filters use 'contains' matching (partial text search)",
+    "rowsPerPage": "Rows per page",
+    "showing": "Showing {{start}}-{{end}} of {{total}} rows",
+    "page": "Page",
+    "of": "of",
+    "filterBadge": {
+      "contains": "contains",
+      "matches": "matches",
+      "resetAllFilters": "Reset All Filters",
+      "removeFilterAriaLabel": "Remove filter for {{column}}",
+      "resetAllFiltersAriaLabel": "Reset all filters"
+    },
+    "filterActions": {
+      "clearValues": "Clear Values",
+      "applyFilters": "Apply Filters",
+      "resetFilters": "Reset Filters",
+      "containsMatchingNote": "All filters use exact matching."
+    },
+    "tableViewer": {
+      "loading": "Loading...",
+      "noDataAvailable": "No data available",
+      "nullValue": "NULL",
+      "trueValue": "true",
+      "falseValue": "false",
+      "objectValue": "[Object]"
+    },
+    "emptyStates": {
+      "noTableSelected": "No table selected",
+      "noTableSelectedDesc": "Select a table from the dropdown above to view its data",
+      "noDataAvailable": "No data available",
+      "noDataAvailableDesc": "The selected table contains no data",
+      "noResultsFound": "No results found",
+      "noResultsFoundDesc": "No data matches your current filters. Try adjusting or clearing filters.",
+      "unableToLoadData": "Unable to load data",
+      "unableToLoadDataDesc": "There was an error loading the table data. Please try again.",
+      "databaseProcessing": "Database Processing",
+      "databaseProcessingDesc": "Database is being set up and analyzed. Table data will be available once processing is complete.",
+      "setupRequired": "Database Setup Not Started",
+      "setupRequiredDesc": "Database setup is still pending. Please refresh the page or try again in a few moments.",
+      "setupFailed": "Database Setup Failed",
+      "setupFailedDesc": "Schema generation failed. Please try again or contact support if the problem persists."
+    },
+    "actions": {
+      "retry": "Retry",
+      "clearFilters": "Clear Filters",
+      "resetFilters": "Reset Filters"
+    }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "create": "Create",
+    "save": "Save",
+    "delete": "Delete",
+    "active": "Active",
+    "inactive": "Inactive",
+    "retry": "Retry"
+  },
+  "vault": {
+    "notInitialized": "Context vault not initialized",
+    "notInitializedDesc": "No context vault configuration found for this data source. Ensure vault_s3 is configured in app.yaml and the data source has rules or examples.",
+    "searchPlaceholder": "Search context vault...",
+    "searchContextPlaceholder": "Search context...",
+    "searchResults": "{{count}} result(s) for \"{{query}}\"",
+    "noMatches": "No matches found.",
+    "searching": "Searching...",
+    "clear": "Clear",
+    "failedToReadFile": "Failed to read file",
+    "searchFailed": "Search failed",
+    "titlePlaceholder": "Title",
+    "contentPlaceholder": "Your content here...",
+    "titleRequired": "Title is required",
+    "contentRequired": "Content is required",
+    "titleMustContainAlphanumeric": "Title must contain at least one letter or number",
+    "create": "Create",
+    "cancel": "Cancel",
+    "save": "Save",
+    "fileCreated": "File created",
+    "fileUpdated": "File updated",
+    "fileDeleted": "File deleted",
+    "edit": "Edit",
+    "delete": "Delete",
+    "viewContext": "View context",
+    "saveFailed": "Save failed",
+    "deleteFailed": "Delete failed",
+    "loadFailed": "Failed to load context vault",
+    "untitled": "Untitled",
+    "newFile": "new file",
+    "copy": "Copy",
+    "copied": "Copied",
+    "sql": "SQL",
+    "audit": "Audit",
+    "auditTrail": "Audit trail",
+    "noAuditHistory": "No audit history yet",
+    "auditColumns": {
+      "status": "Status",
+      "tool": "Tool",
+      "file": "File",
+      "version": "Version",
+      "requestedBy": "Requested by",
+      "requestedAt": "Requested at",
+      "reviewedBy": "Reviewed by",
+      "reviewedAt": "Reviewed at",
+      "reason": "Reason"
+    },
+    "editComingSoon": "Editing coming soon",
+    "deleteComingSoon": "Deleting coming soon",
+    "editInChat": "To edit, ask the agent in your project chat",
+    "introTitle": "Teach agents about your data",
+    "introDesc": "Rules, golden queries, and documents stored here help agents give better, more accurate answers. Add them via chat or directly in the sidebar.",
+    "tiles": {
+      "rules": {
+        "title": "Rules",
+        "desc": "Guardrails for how Scavenger writes SQL, covering business logic, calculations, and data conventions.",
+        "cta": "See example"
+      },
+      "goldenQueries": {
+        "title": "Golden Queries",
+        "desc": "Proven question-to-SQL pairs that teach agents the correct way to answer common questions.",
+        "cta": "See example"
+      },
+      "documents": {
+        "title": "Documents",
+        "desc": "Reference materials like strategy docs, glossaries, or domain knowledge that give agents business context.",
+        "cta": "See example"
+      },
+      "withContext": "With {{type}}",
+      "withoutContext": "Without {{type}}",
+      "question": "Question",
+      "response": "Response"
+    },
+    "deleteConfirmTitle": "Delete Context Vault File",
+    "deleteConfirmDesc": "Are you sure you want to delete this file? This action cannot be undone.",
+    "directories": {
+      "rules": "rules",
+      "golden_queries": "golden queries",
+      "documents": "documents"
+    },
+    "tabFiles": "Files",
+    "tabKnowledge": "Knowledge",
+    "kg": {
+      "fetchError": "Failed to load knowledge graph",
+      "noData": "No graph data available",
+      "noRelationships": "No relationships found",
+      "noViews": "No views found",
+      "notGenerated": "Knowledge Graph Not Generated",
+      "notGeneratedDesc": "Generate a knowledge graph to explore your database schema, relationships, and metadata.",
+      "generate": "Generate Knowledge Graph",
+      "generating": "Generating...",
+      "generateSuccess": "Knowledge graph generated successfully",
+      "generateError": "Failed to generate knowledge graph",
+      "generatingTitle": "Generating Knowledge Graph",
+      "generatingDesc": "Please wait while we analyze your database schema...",
+      "complete": "complete",
+      "lastSynced": "Last synced",
+      "legend": "Legend",
+      "legendTable": "Table",
+      "legendView": "View",
+      "legendRelation": "Relationship",
+      "legendColumn": "Column",
+      "typeTable": "Table",
+      "typeView": "View",
+      "typeColumn": "Column",
+      "nodes": "nodes",
+      "edges": "edges",
+      "columns": "columns",
+      "rows": "rows",
+      "relationship": "Relationship",
+      "colorHint": "Tables colored by name prefix.",
+      "hint": "Scroll to zoom, drag to pan. Hover for details.",
+      "showColumns": "Show Columns",
+      "dataType": "Type",
+      "primaryKey": "Primary Key",
+      "tabs": {
+        "graph": "Graph",
+        "tables": "Tables",
+        "columns": "Columns",
+        "relationships": "Relationships",
+        "views": "Views"
+      },
+      "table": {
+        "name": "Name",
+        "type": "Type",
+        "rows": "Rows",
+        "columns": "Columns",
+        "description": "Description",
+        "aliases": "Aliases"
+      },
+      "column": {
+        "name": "Name",
+        "dataType": "Data Type",
+        "pk": "PK",
+        "nullable": "Nullable",
+        "confidence": "Confidence",
+        "description": "Description",
+        "uniqueValues": "Unique Values",
+        "minValue": "Min Value",
+        "maxValue": "Max Value",
+        "aliases": "Aliases"
+      },
+      "rel": {
+        "name": "Name",
+        "tables": "Parent → Child",
+        "columns": "Column Mapping",
+        "leftTable": "Left Table",
+        "rightTable": "Right Table",
+        "columnMapping": "Column Mapping",
+        "cardinality": "Cardinality",
+        "certified": "Certified",
+        "description": "Description",
+        "businessMeaning": "Business Meaning"
+      },
+      "view": {
+        "name": "Name",
+        "rows": "Rows",
+        "description": "Description",
+        "aliases": "Aliases"
+      }
+    }
+  }
+}

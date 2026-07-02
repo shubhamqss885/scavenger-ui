@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "Share Your Feedback"
+  },
+  "form": {
+    "fields": {
+      "username": "Username",
+      "userEmail": "User Email"
+    },
+    "question": "What would you like to share with us?",
+    "placeholder": "Share your thoughts, suggestions, or report any issues you've encountered...",
+    "characterCount": "{{current}}/{{max}} characters",
+    "helperText": "Your feedback will be sent to our support team.",
+    "validation": {
+      "required": "Please enter your feedback before submitting."
+    }
+  },
+  "actions": {
+    "submit": "Submit feedback",
+    "submitting": "Submitting..."
+  },
+  "messages": {
+    "success": "Feedback submitted successfully!",
+    "error": "Failed to submit feedback. Please try again."
+  },
+  "values": {
+    "notAvailable": "N/A"
+  },
+  "serverMessages": {
+    "Feedback recorded successfully.": "Feedback recorded successfully."
+  }
+}

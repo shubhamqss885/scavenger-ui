@@ -1,0 +1,75 @@
+{
+  "buttons": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "upload": "Upload",
+    "download": "Download"
+  },
+  "status": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "failed": "Failed",
+    "pending": "Pending",
+    "completed": "Completed"
+  },
+  "topBar": {
+    "cta": {
+      "text": "Interested to see how this works with your own data?",
+      "action": "Try it now!"
+    },
+    "maintenance": {
+      "prefix": "Scheduled maintenance from",
+      "to": "to",
+      "suffix": "We're improving our systems. Thank you for your patience."
+    }
+  },
+  "actions": {
+    "copy": "Copy",
+    "paste": "Paste",
+    "cut": "Cut",
+    "share": "Share",
+    "export": "Export",
+    "import": "Import"
+  },
+  "retry": "Retry",
+  "errors": {
+    "fetchOrgDetails": "Failed to fetch organization details",
+    "switchOrg": "Failed to switch organization",
+    "networkLost": "It seems your network connection got lost. Please connect to the Internet and try again.",
+    "sessionExpired": "Your session expired. Please try your message again.",
+    "tokenLimitReached": "You've reached your token limit. Upgrade your plan to continue.",
+    "dbConnectionFailed": "Could not connect to the database. Please check your connection settings and try again."
+  },
+  "shortcuts": {
+    "title": "Keyboard Shortcuts",
+    "descriptions": {
+      "REFRESH_PROMPTS": "Refresh suggested prompts",
+      "TOGGLE_SIDEBAR": "Toggle sidebar",
+      "SWITCH_TO_DASHBOARD": "Switch to project dashboard",
+      "NEW_PROJECT": "Create new project",
+      "PIN_LAST_MESSAGE": "Pin last message",
+      "REFRESH_LAST_MESSAGE": "Refresh last message",
+      "COPY_LAST_MESSAGE": "Copy last message",
+      "THUMBS_UP_LAST_MESSAGE": "Thumbs up last message",
+      "THUMBS_DOWN_LAST_MESSAGE": "Thumbs down last message",
+      "COPY_CHART_LAST_MESSAGE": "Copy chart from last message",
+      "DOWNLOAD_TABLE_LAST_MESSAGE": "Download table from last message",
+      "REFRESH_TEXT2SQL_LAST_MESSAGE": "Refresh Text2SQL last message",
+      "SWITCH_TEXT2SQL_TABS": "Switch Text2SQL tabs",
+      "SUMMARIZE_PROJECT_HISTORY": "Summarize project history",
+      "SHOW_SHORTCUTS_HELP": "Show keyboard shortcuts help"
+    },
+    "categories": {
+      "general": "General Actions",
+      "messages": "Message Actions",
+      "text2sql": "Text2SQL Actions"
+    }
+  }
+}

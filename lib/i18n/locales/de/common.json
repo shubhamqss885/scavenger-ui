@@ -1,0 +1,75 @@
+{
+  "buttons": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "back": "Zurück",
+    "next": "Weiter",
+    "submit": "Absenden",
+    "upload": "Hochladen",
+    "download": "Herunterladen"
+  },
+  "status": {
+    "loading": "Lädt...",
+    "error": "Fehler",
+    "success": "Erfolgreich",
+    "failed": "Fehlgeschlagen",
+    "pending": "Ausstehend",
+    "completed": "Abgeschlossen"
+  },
+  "topBar": {
+    "cta": {
+      "text": "Interessiert zu sehen, wie das mit deinen eigenen Daten funktioniert?",
+      "action": "Probier's jetzt aus!"
+    },
+    "maintenance": {
+      "prefix": "Geplante Wartung von",
+      "to": "bis",
+      "suffix": "Wir verbessern unsere Systeme. Vielen Dank für deine Geduld."
+    }
+  },
+  "actions": {
+    "copy": "Kopieren",
+    "paste": "Einfügen",
+    "cut": "Ausschneiden",
+    "share": "Teilen",
+    "export": "Exportieren",
+    "import": "Importieren"
+  },
+  "retry": "Wiederholen",
+  "errors": {
+    "fetchOrgDetails": "Fehler beim Abrufen der Organisationsdetails",
+    "switchOrg": "Fehler beim Wechseln der Organisation",
+    "networkLost": "Es scheint, als wäre deine Netzwerkverbindung unterbrochen worden. Bitte verbinde dich mit dem Internet und versuche es erneut.",
+    "sessionExpired": "Deine Sitzung ist abgelaufen. Bitte sende deine Nachricht erneut.",
+    "tokenLimitReached": "Du hast dein Token-Limit erreicht. Upgrade deinen Plan, um fortzufahren.",
+    "dbConnectionFailed": "Die Verbindung zur Datenbank konnte nicht hergestellt werden. Bitte überprüfe deine Verbindungseinstellungen und versuche es erneut."
+  },
+  "shortcuts": {
+    "title": "Tastenkürzel",
+    "descriptions": {
+      "REFRESH_PROMPTS": "Vorschläge aktualisieren",
+      "TOGGLE_SIDEBAR": "Seitenleiste umschalten",
+      "SWITCH_TO_DASHBOARD": "Zum Projekt-Dashboard wechseln",
+      "NEW_PROJECT": "Neues Projekt erstellen",
+      "PIN_LAST_MESSAGE": "Letzte Nachricht anheften",
+      "REFRESH_LAST_MESSAGE": "Letzte Nachricht aktualisieren",
+      "COPY_LAST_MESSAGE": "Letzte Nachricht kopieren",
+      "THUMBS_UP_LAST_MESSAGE": "Letzte Nachricht positiv bewerten",
+      "THUMBS_DOWN_LAST_MESSAGE": "Letzte Nachricht negativ bewerten",
+      "COPY_CHART_LAST_MESSAGE": "Diagramm aus letzter Nachricht kopieren",
+      "DOWNLOAD_TABLE_LAST_MESSAGE": "Tabelle aus letzter Nachricht herunterladen",
+      "REFRESH_TEXT2SQL_LAST_MESSAGE": "Letzte Text2SQL-Nachricht aktualisieren",
+      "SWITCH_TEXT2SQL_TABS": "Text2SQL-Tabs wechseln",
+      "SUMMARIZE_PROJECT_HISTORY": "Projektverlauf zusammenfassen",
+      "SHOW_SHORTCUTS_HELP": "Tastenkürzel-Hilfe anzeigen"
+    },
+    "categories": {
+      "general": "Allgemeine Aktionen",
+      "messages": "Nachrichtenaktionen",
+      "text2sql": "Text2SQL-Aktionen"
+    }
+  }
+}

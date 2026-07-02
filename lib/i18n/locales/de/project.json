@@ -1,0 +1,82 @@
+{
+  "page": {
+    "title": "Projekte",
+    "create": "Projekt erstellen",
+    "edit": "Projekt bearbeiten",
+    "delete": "Projekt löschen",
+    "name": "Projektname",
+    "description": "Beschreibung"
+  },
+  "status": {
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "archived": "Archiviert"
+  },
+  "actions": {
+    "view": "Projekt anzeigen",
+    "share": "Projekt teilen",
+    "duplicate": "Projekt duplizieren",
+    "addFailed": "Projekt konnte nicht hinzugefügt werden",
+    "renameSuccess": "Projekt erfolgreich umbenannt",
+    "renameFailed": "Projektname konnte nicht aktualisiert werden",
+    "deleteFailed": "Projekt konnte nicht gelöscht werden",
+    "pinSuccess": "Projekt angeheftet",
+    "pinFailed": "Projekt konnte nicht angeheftet werden",
+    "unpinSuccess": "Projekt gelöst",
+    "unpinFailed": "Projekt konnte nicht gelöst werden",
+    "cancel": "Abbrechen",
+    "continue": "Fortfahren"
+  },
+  "chat": {
+    "placeholder": "Nachricht eingeben...",
+    "send": "Senden",
+    "typing": "Tippt...",
+    "online": "Online",
+    "offline": "Offline",
+    "messages": {
+      "empty": "Noch keine Nachrichten",
+      "failed": "Nachricht konnte nicht gesendet werden",
+      "retry": "Wiederholen"
+    }
+  },
+  "files": {
+    "upload": "Hochladen",
+    "uploadFiles": "Projektdateien hochladen",
+    "processing": "Wird verarbeitet...",
+    "success": "Upload erfolgreich",
+    "failed": "Upload fehlgeschlagen",
+    "noFiles": "Keine Dateien zum Hochladen",
+    "sizeExceeded": "Datei überschreitet die maximale Größenbegrenzung von 100 MB",
+    "allSuccess": "Alle Dateien erfolgreich hochgeladen",
+    "partialSuccess": "{{successCount}} Dateien erfolgreich hochgeladen, {{failureCount}} fehlgeschlagen",
+    "uploadFailed": "Upload fehlgeschlagen",
+    "qaFailed": "Fehler beim Verarbeiten von QA möglich",
+    "indexFailed": "Fehler beim Indizieren der Datei",
+    "tokenLimitExceeded": "Indizierung übersprungen: Datei überschreitet Token-Limits"
+  },
+  "date": {
+    "yesterdayAt": "Gestern um {{time}}",
+    "invalidDate": "Ungültiges Datum"
+  },
+  "database": {
+    "updateSuccess": "Datenbank erfolgreich aktualisiert",
+    "updateFailed": "Datenbank konnte nicht aktualisiert werden"
+  },
+  "serverMessages": {
+    "Project successfully created.": "Projekt erfolgreich erstellt.",
+    "Project successfully deleted.": "Projekt erfolgreich gelöscht.",
+    "Project files deleted successfully.": "Projektdateien erfolgreich gelöscht."
+  },
+  "table": {
+    "search": "Suchen...",
+    "columns": "Spalten",
+    "toggleColumns": "Spalten umschalten",
+    "previewWarning": "Das sind die ersten 50 Zeilen. Die vollständigen Daten können",
+    "downloadFullData": "hier heruntergeladen werden"
+  },
+  "nonAgentic": {
+    "title": "Dieses Projekt ist nicht verfügbar",
+    "description": "Es nutzt eine ältere Chat-Erfahrung, die nicht mehr unterstützt wird. Bitte wende Dich an Deinen Admin, um dieses Projekt zu migrieren.",
+    "backToHome": "Zurück zur Startseite"
+  }
+}
