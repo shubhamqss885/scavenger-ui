@@ -72,6 +72,17 @@ const AgenticChatLayout = ({
       active: isStreaming,
     });
 
+  // Stable handler so AgentMessage's React.memo isn't broken by a fresh inline
+  // function on every layout re-render (setters are stable, so deps are empty).
+  const handleSqlBlockClick = useCallback(
+    (block: SqlBlock, tab?: "table" | "sql") => {
+      setSelectedBlock(block);
+      setSheetTab(tab ?? "table");
+      setSheetOpen(true);
+    },
+    [],
+  );
+
   // Preload the recharts chart chunk on mount so charts already present in the
   // conversation history render with no wait. recharts is code-split out of the
   // route's First Load JS (see ChartChip's dynamic AgenticChart import); this
@@ -157,13 +168,7 @@ const AgenticChatLayout = ({
               </p>
             </div>
           )}
-          <AgenticMessageList
-            onSqlBlockClick={(block, tab) => {
-              setSelectedBlock(block);
-              setSheetTab(tab ?? "table");
-              setSheetOpen(true);
-            }}
-          />
+          <AgenticMessageList onSqlBlockClick={handleSqlBlockClick} />
           <div ref={endRef} className={spacerHeight} />
         </div>
       </div>

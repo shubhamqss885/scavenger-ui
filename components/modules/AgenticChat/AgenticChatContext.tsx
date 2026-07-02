@@ -69,6 +69,18 @@ import {
   type ModelProvider,
 } from "@/components/blocks/InputBarShell/ModelSwitcher";
 
+// SSR-safe sessionStorage access. These are read inside useState initializers,
+// which run during render (including server render), where `sessionStorage` is
+// undefined — reading it unguarded throws. On the server we return null and the
+// initializers fall back to their defaults; the client hydrates the real value.
+const ss = {
+  get: (key: string): string | null =>
+    typeof window === "undefined" ? null : sessionStorage.getItem(key),
+  remove: (key: string): void => {
+    if (typeof window !== "undefined") sessionStorage.removeItem(key);
+  },
+};
+
 // --- Context value ---
 
 type AgenticChatContextValue = Readonly<{
@@ -198,18 +210,15 @@ export const AgenticChatProvider = ({
   // session). Off → Claude-only via the cloud WS; on → all models via the Agno WS.
   // forceAgno overrides to always-on (e.g., for group chats).
   const [isAgnoEnabled, setAgnoEnabled] = useState(
-    () =>
-      forceAgno ||
-      sessionStorage.getItem(`project_${projectId}_agno`) === "true",
+    () => forceAgno || ss.get(`project_${projectId}_agno`) === "true",
   );
 
   // Model provider — seeded from the home input bar handoff (or a prior session)
   // via sessionStorage, default Claude. Mirrors the webSearchEnabled pattern below.
   // Invariant: with Agno off, only Claude is valid.
   const [provider, setProvider] = useState<ModelProvider>(() => {
-    const agnoOn =
-      sessionStorage.getItem(`project_${projectId}_agno`) === "true";
-    const stored = sessionStorage.getItem(`project_${projectId}_provider`);
+    const agnoOn = ss.get(`project_${projectId}_agno`) === "true";
+    const stored = ss.get(`project_${projectId}_provider`);
 
     if (!agnoOn) return DEFAULT_MODEL_PROVIDER;
     return isModelProvider(stored) ? stored : DEFAULT_MODEL_PROVIDER;
@@ -241,8 +250,8 @@ export const AgenticChatProvider = ({
 
   const [isNewChat] = useState(
     () =>
-      !!sessionStorage.getItem(`project_${projectId}_initialMessage`) ||
-      !!sessionStorage.getItem(`project_${projectId}_agenticMode`),
+      !!ss.get(`project_${projectId}_initialMessage`) ||
+      !!ss.get(`project_${projectId}_agenticMode`),
   );
 
   const {
@@ -259,9 +268,7 @@ export const AgenticChatProvider = ({
 
   // Web search toggle (persisted per session, default: off)
   const [webSearchEnabled, setWebSearchEnabled] = useState(() => {
-    const stored = sessionStorage.getItem(
-      `project_${projectId}_webSearchEnabled`,
-    );
+    const stored = ss.get(`project_${projectId}_webSearchEnabled`);
     return stored === "true";
   });
 
@@ -288,12 +295,10 @@ export const AgenticChatProvider = ({
   const [isLoadingFiles, setIsLoadingFiles] = useState(true);
   const [isUploadingFile, setIsUploadingFile] = useState(false);
   const [isFilesPanelOpen, setFilesPanelOpen] = useState(() => {
-    const shouldOpen = sessionStorage.getItem(
-      `project_${projectId}_openFilesPanel`,
-    );
+    const shouldOpen = ss.get(`project_${projectId}_openFilesPanel`);
 
     if (shouldOpen) {
-      sessionStorage.removeItem(`project_${projectId}_openFilesPanel`);
+      ss.remove(`project_${projectId}_openFilesPanel`);
       return true;
     }
     return false;

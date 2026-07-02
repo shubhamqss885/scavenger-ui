@@ -1,6 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Strip console.* in production builds (keep error/warn for observability).
+  compiler: {
+    removeConsole:
+      process.env.NODE_ENV === "production"
+        ? { exclude: ["error", "warn"] }
+        : false,
+  },
+  // Tree-shake barrel imports from large libraries so each route only ships
+  // the icons/components it actually uses.
+  experimental: {
+    optimizePackageImports: [
+      "lucide-react",
+      "date-fns",
+      "recharts",
+      "@radix-ui/react-icons",
+      "react-syntax-highlighter",
+    ],
+  },
   images: {
     remotePatterns: [
       {

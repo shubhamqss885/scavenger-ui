@@ -1,11 +1,18 @@
 "use client";
 
-import { SqlBlock } from "../../types";
+import { ProgressStep, SqlBlock } from "../../types";
 import { useContextSelector } from "use-context-selector";
 import { AgenticChatContext } from "../../AgenticChatContext";
 import RotatingStatus from "./RotatingStatus";
 import UserMessage from "./UserMessage";
 import AgentMessage from "./AgentMessage";
+
+// Stable empty reference for non-last messages. `progressSteps` and
+// `statusMessage` only matter for the message currently streaming; passing the
+// live (per-token changing) values to every message would break AgentMessage's
+// React.memo and re-render the whole history on each token. Non-last messages
+// get these stable values instead so their memo holds.
+const EMPTY_STEPS: ProgressStep[] = [];
 
 type AgenticMessageListProps = Readonly<{
   onSqlBlockClick: (block: SqlBlock, tab?: "table" | "sql") => void;
@@ -52,23 +59,27 @@ const AgenticMessageList = ({ onSqlBlockClick }: AgenticMessageListProps) => {
 
   return (
     <>
-      {messages.map((msg, index) =>
-        msg.role === "user" ? (
+      {messages.map((msg, index) => {
+        const isLast = index === messages.length - 1;
+
+        return msg.role === "user" ? (
           <UserMessage key={`${msg.id}-user`} message={msg} />
         ) : (
           <AgentMessage
             key={`${msg.id}-agent`}
             message={msg}
-            isStreaming={isStreaming && index === messages.length - 1}
-            progressSteps={progressSteps}
+            isStreaming={isStreaming && isLast}
+            // Live streaming props only for the last message; stable values for
+            // the rest so their React.memo holds during streaming.
+            progressSteps={isLast ? progressSteps : EMPTY_STEPS}
             projectId={projectId}
             onSqlBlockClick={onSqlBlockClick}
             onSendQuery={sendQuery}
-            isLastAgentMessage={!isStreaming && index === messages.length - 1}
-            statusMessage={statusMessage}
+            isLastAgentMessage={!isStreaming && isLast}
+            statusMessage={isLast ? statusMessage : null}
           />
-        ),
-      )}
+        );
+      })}
       {/* Show typing indicator when another group member is querying */}
       {groupTypingUser && !isStreaming && (
         <div className="mb-6 ml-auto flex items-center gap-2 rounded-lg bg-muted/50 px-4 py-3">
