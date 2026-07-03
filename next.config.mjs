@@ -1,3 +1,12 @@
+import bundleAnalyzer from "@next/bundle-analyzer";
+
+// Enabled only when ANALYZE=true (dev-only). Writes static HTML reports to
+// .next/analyze/ without opening a browser. No effect on normal builds.
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+  openAnalyzer: false,
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -49,4 +58,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

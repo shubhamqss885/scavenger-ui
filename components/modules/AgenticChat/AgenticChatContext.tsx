@@ -305,6 +305,11 @@ export const AgenticChatProvider = ({
   });
 
   // Fetch project files on mount; seed indexing state for refresh recovery
+  // Files deleted optimistically but which an eventually-consistent backend
+  // list might still return for a short window. We drop these from any merge so
+  // a just-deleted file can't flicker back in. Entries auto-expire (see delete).
+  const recentlyDeletedRef = useRef<Set<string>>(new Set());
+
   const fetchProjectFiles = useCallback(async () => {
     if (!projectId) return;
     try {
@@ -317,13 +322,18 @@ export const AgenticChatProvider = ({
       // hasn't caught up to yet. A plain replace here races with the optimistic
       // add on a second upload and can drop a just-uploaded file.
       setProjectFiles((prev) => {
-        if (prev.length === 0) return filesRes.files;
+        // Ignore backend entries for files we just deleted (backend may lag).
+        const backendFiles = filesRes.files.filter(
+          (f) => !recentlyDeletedRef.current.has(f.file_id),
+        );
+
+        if (prev.length === 0) return backendFiles;
         const backendById = new Map(
-          filesRes.files.map((f) => [f.file_id, f] as const),
+          backendFiles.map((f) => [f.file_id, f] as const),
         );
         const seen = new Set(prev.map((f) => f.file_id));
         const refreshed = prev.map((f) => backendById.get(f.file_id) ?? f);
-        const additions = filesRes.files.filter((f) => !seen.has(f.file_id));
+        const additions = backendFiles.filter((f) => !seen.has(f.file_id));
         return [...refreshed, ...additions];
       });
       // Only seed files still in progress. Terminal stages (done/failed/dead)
@@ -498,6 +508,10 @@ export const AgenticChatProvider = ({
         removeIndexingEvent(fileId);
         indexingNotifiedRef.current.delete(fileId);
         indexingPrevStageRef.current.delete(fileId);
+        // Tombstone the id so the re-fetch merge can't resurrect it if the
+        // backend list is still catching up. Clears after a short window.
+        recentlyDeletedRef.current.add(fileId);
+        setTimeout(() => recentlyDeletedRef.current.delete(fileId), 15000);
         setProjectFiles((prev) => prev.filter((f) => f.file_id !== fileId));
         toast.success(t("files.deleteSuccess"));
         await fetchProjectFiles();

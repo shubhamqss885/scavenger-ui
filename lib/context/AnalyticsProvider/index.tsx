@@ -16,6 +16,7 @@ import posthog from "posthog-js";
 import { PostHogProvider as PHProvider } from "posthog-js/react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { useUserContext } from "@/lib/context/UserDataContext";
+import { reportWebVitals } from "@/lib/analytics/reportWebVitals";
 import {
   AnalyticsContextType,
   AnalyticsProviderProps,
@@ -171,6 +172,10 @@ export function AnalyticsProvider({ children, gaId }: AnalyticsProviderProps) {
         defaults: "2025-05-24",
       });
       isPostHogInitialized.current = true;
+
+      // Report real-user Web Vitals (LCP/INP/CLS/FCP/TTFB) to PostHog. Runs
+      // once, only after analytics consent + init. web-vitals loads lazily.
+      void reportWebVitals(posthog);
 
       // Expose to window for debugging
       if (globalThis.window !== undefined) {
