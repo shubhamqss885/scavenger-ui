@@ -47,3 +47,4 @@ dist-web-component/
 dist-web-component-analyze/
 # saved auth state for the widget demo browser (contains live session tokens)
 .auth-state.json
+.claude/

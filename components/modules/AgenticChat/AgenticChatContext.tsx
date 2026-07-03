@@ -69,6 +69,18 @@ import {
   type ModelProvider,
 } from "@/components/blocks/InputBarShell/ModelSwitcher";
 
+// SSR-safe sessionStorage access. These are read inside useState initializers,
+// which run during render (including server render), where `sessionStorage` is
+// undefined — reading it unguarded throws. On the server we return null and the
+// initializers fall back to their defaults; the client hydrates the real value.
+const ss = {
+  get: (key: string): string | null =>
+    typeof window === "undefined" ? null : sessionStorage.getItem(key),
+  remove: (key: string): void => {
+    if (typeof window !== "undefined") sessionStorage.removeItem(key);
+  },
+};
+
 // --- Context value ---
 
 type AgenticChatContextValue = Readonly<{
@@ -198,18 +210,15 @@ export const AgenticChatProvider = ({
   // session). Off → Claude-only via the cloud WS; on → all models via the Agno WS.
   // forceAgno overrides to always-on (e.g., for group chats).
   const [isAgnoEnabled, setAgnoEnabled] = useState(
-    () =>
-      forceAgno ||
-      sessionStorage.getItem(`project_${projectId}_agno`) === "true",
+    () => forceAgno || ss.get(`project_${projectId}_agno`) === "true",
   );
 
   // Model provider — seeded from the home input bar handoff (or a prior session)
   // via sessionStorage, default Claude. Mirrors the webSearchEnabled pattern below.
   // Invariant: with Agno off, only Claude is valid.
   const [provider, setProvider] = useState<ModelProvider>(() => {
-    const agnoOn =
-      sessionStorage.getItem(`project_${projectId}_agno`) === "true";
-    const stored = sessionStorage.getItem(`project_${projectId}_provider`);
+    const agnoOn = ss.get(`project_${projectId}_agno`) === "true";
+    const stored = ss.get(`project_${projectId}_provider`);
 
     if (!agnoOn) return DEFAULT_MODEL_PROVIDER;
     return isModelProvider(stored) ? stored : DEFAULT_MODEL_PROVIDER;
@@ -241,8 +250,8 @@ export const AgenticChatProvider = ({
 
   const [isNewChat] = useState(
     () =>
-      !!sessionStorage.getItem(`project_${projectId}_initialMessage`) ||
-      !!sessionStorage.getItem(`project_${projectId}_agenticMode`),
+      !!ss.get(`project_${projectId}_initialMessage`) ||
+      !!ss.get(`project_${projectId}_agenticMode`),
   );
 
   const {
@@ -259,9 +268,7 @@ export const AgenticChatProvider = ({
 
   // Web search toggle (persisted per session, default: off)
   const [webSearchEnabled, setWebSearchEnabled] = useState(() => {
-    const stored = sessionStorage.getItem(
-      `project_${projectId}_webSearchEnabled`,
-    );
+    const stored = ss.get(`project_${projectId}_webSearchEnabled`);
     return stored === "true";
   });
 
@@ -288,18 +295,21 @@ export const AgenticChatProvider = ({
   const [isLoadingFiles, setIsLoadingFiles] = useState(true);
   const [isUploadingFile, setIsUploadingFile] = useState(false);
   const [isFilesPanelOpen, setFilesPanelOpen] = useState(() => {
-    const shouldOpen = sessionStorage.getItem(
-      `project_${projectId}_openFilesPanel`,
-    );
+    const shouldOpen = ss.get(`project_${projectId}_openFilesPanel`);
 
     if (shouldOpen) {
-      sessionStorage.removeItem(`project_${projectId}_openFilesPanel`);
+      ss.remove(`project_${projectId}_openFilesPanel`);
       return true;
     }
     return false;
   });
 
   // Fetch project files on mount; seed indexing state for refresh recovery
+  // Files deleted optimistically but which an eventually-consistent backend
+  // list might still return for a short window. We drop these from any merge so
+  // a just-deleted file can't flicker back in. Entries auto-expire (see delete).
+  const recentlyDeletedRef = useRef<Set<string>>(new Set());
+
   const fetchProjectFiles = useCallback(async () => {
     if (!projectId) return;
     try {
@@ -312,13 +322,18 @@ export const AgenticChatProvider = ({
       // hasn't caught up to yet. A plain replace here races with the optimistic
       // add on a second upload and can drop a just-uploaded file.
       setProjectFiles((prev) => {
-        if (prev.length === 0) return filesRes.files;
+        // Ignore backend entries for files we just deleted (backend may lag).
+        const backendFiles = filesRes.files.filter(
+          (f) => !recentlyDeletedRef.current.has(f.file_id),
+        );
+
+        if (prev.length === 0) return backendFiles;
         const backendById = new Map(
-          filesRes.files.map((f) => [f.file_id, f] as const),
+          backendFiles.map((f) => [f.file_id, f] as const),
         );
         const seen = new Set(prev.map((f) => f.file_id));
         const refreshed = prev.map((f) => backendById.get(f.file_id) ?? f);
-        const additions = filesRes.files.filter((f) => !seen.has(f.file_id));
+        const additions = backendFiles.filter((f) => !seen.has(f.file_id));
         return [...refreshed, ...additions];
       });
       // Only seed files still in progress. Terminal stages (done/failed/dead)
@@ -493,6 +508,10 @@ export const AgenticChatProvider = ({
         removeIndexingEvent(fileId);
         indexingNotifiedRef.current.delete(fileId);
         indexingPrevStageRef.current.delete(fileId);
+        // Tombstone the id so the re-fetch merge can't resurrect it if the
+        // backend list is still catching up. Clears after a short window.
+        recentlyDeletedRef.current.add(fileId);
+        setTimeout(() => recentlyDeletedRef.current.delete(fileId), 15000);
         setProjectFiles((prev) => prev.filter((f) => f.file_id !== fileId));
         toast.success(t("files.deleteSuccess"));
         await fetchProjectFiles();

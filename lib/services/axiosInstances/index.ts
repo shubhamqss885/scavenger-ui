@@ -34,7 +34,14 @@ interface RetryableRequest extends InternalAxiosRequestConfig {
   _retry?: boolean;
 }
 
-const handle401WithRefresh = async (error: AxiosError): Promise<any> => {
+// `instance` is the axios instance that owns this interceptor. Retrying through
+// it (instead of the global `axios`) re-runs that instance's request
+// interceptors — notably the local-dev service-URL rewrite — and keeps the
+// correct baseURL. Retrying via the bare `axios` export dropped both.
+const handle401WithRefresh = async (
+  error: AxiosError,
+  instance: AxiosInstance,
+): Promise<any> => {
   const originalRequest: RetryableRequest | undefined = error.config;
 
   if (error.response?.status !== 401) throw error;
@@ -47,7 +54,7 @@ const handle401WithRefresh = async (error: AxiosError): Promise<any> => {
       failedQueue.push({
         resolve: (token: string) => {
           originalRequest.headers.Authorization = `Bearer ${token}`;
-          resolve(axios(originalRequest));
+          resolve(instance(originalRequest));
         },
         reject,
       });
@@ -63,16 +70,15 @@ const handle401WithRefresh = async (error: AxiosError): Promise<any> => {
     // Update Authorization header on all axios instances
     [axiosInstance, indexingLambdaAxiosInstance, qaPossibleLambdaAxiosInstance]
       .filter(Boolean)
-      .forEach((instance) => {
-        instance!.defaults.headers.common["Authorization"] =
-          `Bearer ${newToken}`;
+      .forEach((inst) => {
+        inst!.defaults.headers.common["Authorization"] = `Bearer ${newToken}`;
       });
 
     processQueue(null, newToken);
 
-    // Retry original request with new token
+    // Retry original request with new token on its owning instance
     originalRequest.headers.Authorization = `Bearer ${newToken}`;
-    return axios(originalRequest);
+    return instance(originalRequest);
   } catch (refreshError: any) {
     processQueue(refreshError, null);
     throw error;
@@ -104,7 +110,7 @@ export const createAxiosInstance = (accessToken: string) => {
 
   axiosInstance.interceptors.response.use(
     (response) => response,
-    handle401WithRefresh,
+    (error) => handle401WithRefresh(error, axiosInstance!),
   );
 
   indexingLambdaAxiosInstance = axios.create({
@@ -117,7 +123,7 @@ export const createAxiosInstance = (accessToken: string) => {
 
   indexingLambdaAxiosInstance.interceptors.response.use(
     (response) => response,
-    handle401WithRefresh,
+    (error) => handle401WithRefresh(error, indexingLambdaAxiosInstance!),
   );
 
   qaPossibleLambdaAxiosInstance = axios.create({
@@ -129,7 +135,7 @@ export const createAxiosInstance = (accessToken: string) => {
 
   qaPossibleLambdaAxiosInstance.interceptors.response.use(
     (response) => response,
-    handle401WithRefresh,
+    (error) => handle401WithRefresh(error, qaPossibleLambdaAxiosInstance!),
   );
 };
 

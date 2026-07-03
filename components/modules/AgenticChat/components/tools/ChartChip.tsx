@@ -329,10 +329,16 @@ export const ChartChip = ({
               <AgenticChart spec={chartSpec} isMaximized={isMaximized} />
             </div>
           ) : legacyImage ? (
+            // Legacy chart image is a runtime URL of unknown dimensions/origin
+            // (often a data URL), so next/image isn't appropriate here; we
+            // lazy-load the raw <img> instead.
+            // eslint-disable-next-line @next/next/no-img-element
             <img
               src={legacyImage}
               alt={displayTitle}
               className="rounded w-full"
+              loading="lazy"
+              decoding="async"
             />
           ) : null}
 
